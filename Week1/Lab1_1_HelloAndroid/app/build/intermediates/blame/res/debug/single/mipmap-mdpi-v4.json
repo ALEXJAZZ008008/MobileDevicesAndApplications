@@ -1,6 +1,14 @@
+<<<<<<< .mine
+[
+    {
+        "merged": "C:\\Lab1_1_HelloAndroid\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_launcher.png",
+        "source": "C:\\Lab1_1_HelloAndroid\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    }
+]||||||| .r0
+=======
 [
     {
         "merged": "Z:\\Mobile Devices and Applications\\Week1\\Lab1_1_HelloAndroid\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_launcher.png",
         "source": "Z:\\Mobile Devices and Applications\\Week1\\Lab1_1_HelloAndroid\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
     }
-]
+]>>>>>>> .r764
