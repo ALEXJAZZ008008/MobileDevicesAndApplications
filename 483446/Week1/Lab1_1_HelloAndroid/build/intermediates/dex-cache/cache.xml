@@ -5,7 +5,7 @@
         jar="C:\Lab1_1_HelloAndroid\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         revision="25.0.2"
-        sha1="94ad289804274fd2d0a8640798e0392006a20f99">
+        sha1="81c68c64129621145903d1a758b00b069782ca90">
         <dex dex="C:\Lab1_1_HelloAndroid\app\build\intermediates\pre-dexed\debug\instant-run-bootstrap_e35f845d10baca353ba93077ae59e8206893350d.jar" />
     </item>
 

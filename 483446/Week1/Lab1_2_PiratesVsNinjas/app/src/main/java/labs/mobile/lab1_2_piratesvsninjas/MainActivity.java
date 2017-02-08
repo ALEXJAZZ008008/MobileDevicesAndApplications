@@ -27,15 +27,15 @@ public class MainActivity extends AppCompatActivity {
     private String GetPunchline()
     {
         String result = "";
-        if(mPirates < mNinjas)
+        if(mPirates > mNinjas)
         {
-            result = "I don't know, the ninjas scared them all away!";
+            result = getString(R.string.punchline1);
             ImageView imageView = (ImageView) findViewById(R.id.imageView);
             imageView.setImageResource(R.drawable.ninja);
         }
         else
         {
-            result = "Because they Aarr!";
+            result = getString(R.string.punchline2);
             ImageView imageView = (ImageView) findViewById(R.id.imageView);
             imageView.setImageResource(R.drawable.pirate);
         }

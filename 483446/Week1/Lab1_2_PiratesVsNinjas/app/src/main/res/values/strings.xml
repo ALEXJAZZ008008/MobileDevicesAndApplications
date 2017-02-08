@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Lab1_2_PiratesVsNinjas</string>
+    <string name="punchline1">I don\'t know, the ninjas scared them all away!</string>
+    <string name="punchline2">Because they Aarr!</string>
 </resources>
