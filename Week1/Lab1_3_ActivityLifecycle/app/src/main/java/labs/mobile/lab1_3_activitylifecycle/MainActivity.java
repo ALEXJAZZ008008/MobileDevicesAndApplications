@@ -42,4 +42,10 @@ public class MainActivity extends AppCompatActivity {
         super.onDestroy();
         Log.i("Activity Lifecycle", "onDestroy Method Called");
     }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.i("Activity Lifecycle", "onPause Method Called");
+    }
 }

@@ -12,7 +12,7 @@
         android:name="com.android.tools.fd.runtime.BootstrapApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="Hello, Android"
+        android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
         <activity android:name="labs.mobile.lab1_1_helloandroid.MainActivity" >

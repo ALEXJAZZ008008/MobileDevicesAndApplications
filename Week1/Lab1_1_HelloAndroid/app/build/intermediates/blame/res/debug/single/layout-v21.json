@@ -1,4 +1,3 @@
-<<<<<<< .mine
 [
     {
         "merged": "C:\\Lab1_1_HelloAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action.xml",
@@ -16,23 +15,4 @@
         "merged": "C:\\Lab1_1_HelloAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_icon_group.xml",
         "source": "C:\\Lab1_1_HelloAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.1\\res\\layout-v21\\notification_template_icon_group.xml"
     }
-]||||||| .r0
-=======
-[
-    {
-        "merged": "Z:\\Mobile Devices and Applications\\Week1\\Lab1_1_HelloAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action.xml",
-        "source": "Z:\\Mobile Devices and Applications\\Week1\\Lab1_1_HelloAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.1\\res\\layout-v21\\notification_action.xml"
-    },
-    {
-        "merged": "Z:\\Mobile Devices and Applications\\Week1\\Lab1_1_HelloAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_custom_big.xml",
-        "source": "Z:\\Mobile Devices and Applications\\Week1\\Lab1_1_HelloAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.1\\res\\layout-v21\\notification_template_custom_big.xml"
-    },
-    {
-        "merged": "Z:\\Mobile Devices and Applications\\Week1\\Lab1_1_HelloAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_icon_group.xml",
-        "source": "Z:\\Mobile Devices and Applications\\Week1\\Lab1_1_HelloAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.1\\res\\layout-v21\\notification_template_icon_group.xml"
-    },
-    {
-        "merged": "Z:\\Mobile Devices and Applications\\Week1\\Lab1_1_HelloAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action_tombstone.xml",
-        "source": "Z:\\Mobile Devices and Applications\\Week1\\Lab1_1_HelloAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.1\\res\\layout-v21\\notification_action_tombstone.xml"
-    }
-]>>>>>>> .r764
+]

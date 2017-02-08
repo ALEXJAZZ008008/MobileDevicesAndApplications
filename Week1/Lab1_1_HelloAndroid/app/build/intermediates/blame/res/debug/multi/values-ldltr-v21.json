@@ -1,4 +1,3 @@
-<<<<<<< .mine
 [
     {
         "outputFile": "C:\\Lab1_1_HelloAndroid\\app\\build\\intermediates\\res\\merged\\debug\\values-ldltr-v21\\values-ldltr-v21.xml",
@@ -24,31 +23,4 @@
             }
         ]
     }
-]||||||| .r0
-=======
-[
-    {
-        "outputFile": "Z:\\Mobile Devices and Applications\\Week1\\Lab1_1_HelloAndroid\\app\\build\\intermediates\\res\\merged\\debug\\values-ldltr-v21\\values-ldltr-v21.xml",
-        "map": [
-            {
-                "to": {
-                    "startLine": 2,
-                    "startColumn": 4,
-                    "startOffset": 55,
-                    "endColumn": 112,
-                    "endOffset": 163
-                },
-                "from": {
-                    "file": "Z:\\Mobile Devices and Applications\\Week1\\Lab1_1_HelloAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.1\\res\\values-ldltr-v21\\values-ldltr-v21.xml",
-                    "position": {
-                        "startLine": 2,
-                        "startColumn": 4,
-                        "startOffset": 55,
-                        "endColumn": 112,
-                        "endOffset": 163
-                    }
-                }
-            }
-        ]
-    }
-]>>>>>>> .r764
+]
