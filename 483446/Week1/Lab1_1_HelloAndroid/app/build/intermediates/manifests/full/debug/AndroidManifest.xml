@@ -1,3 +1,31 @@
+<<<<<<< .mine
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="labs.mobile.lab1_1_helloandroid"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="25" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Hello, Android"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+        <activity android:name="labs.mobile.lab1_1_helloandroid.MainActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>||||||| .r0
+=======
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="labs.mobile.lab1_1_helloandroid"
@@ -23,4 +51,4 @@
         </activity>
     </application>
 
-</manifest>
+</manifest>>>>>>>> .r764
