@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">Find ye inner pirate!</string>
+    <string name="anon_greeting">What be ye name, ye scurvy dog?</string>
+    <string name="chooseShip">Choose ye pirate vessel</string>
+    <string name="chooseColour">Choose ye favourite colour</string>
+    <string name="chooseMotive">What be ye porpoise?</string>
+
+    <string-array name="colours">
+        <item>Red</item>
+        <item>Orange</item>
+        <item>Yellow</item>
+        <item>Green</item>
+        <item>Blue</item>
+        <item>Indigo</item>
+        <item>Violet</item>
+    </string-array>
+
+    <string name="fame">Fame</string>
+    <string name="fun">Fun</string>
+    <string name="fortune">Fortune</string>
+
+    <string-array name="pirateNames">
+        <item>Captain Barnacle</item>
+        <item>Peg Leg Periwinkle</item>
+        <item>Skipper Jim</item>
+        <item>Horatio Kidd</item>
+        <item>Shipmate Crow</item>
+        <item>Pirate Steve</item>
+        <item>Lady Marie duPlanc</item>
+        <item>Miss Charlotte Cutless</item>
+    </string-array>
+
+    <string-array name="pirateShips">
+        <item>Adventure Galley</item>
+        <item>CSS Alabama</item>
+        <item>Flying Dragon</item>
+        <item>Golden Hind</item>
+        <item>Queen Anne\'s Revenge</item>
+        <item>Roebuck</item>
+        <item>Royal Fortune</item>
+        <item>Squirrel</item>
+    </string-array>
+</resources>
