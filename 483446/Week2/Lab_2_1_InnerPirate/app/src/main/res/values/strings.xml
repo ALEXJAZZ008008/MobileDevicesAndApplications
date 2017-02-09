@@ -18,8 +18,18 @@
     <string name="fame">Fame</string>
     <string name="fun">Fun</string>
     <string name="fortune">Fortune</string>
+    <string name="find_ye_pirate_name">Find ye pirate name!</string>
+    <string name="share_this">Share This</string>
+    <string name="arrr_what_be_ye_favourite_colour">Arrr, what be ye favourite colour?</string>
+    <string name="arrr_why_do_ye_want_to_be_a_pirate">Arrr, why do ye want to be a pirate?</string>
+    <string name="what_be_ye_calling_me">What be ye calling me?</string>
+    <string name="find_a_ship_and_crew">Find a ship and crew!</string>
+    <string name="set_sail_alone">Set sail alone!</string>
+    <string name="choose_ye_ship_matey">Choose ye ship, matey!</string>
+    <string name="i_choose_this_one">I choose this one!</string>
 
     <string-array name="pirateNames">
+        <item>Alex</item>
         <item>Captain Barnacle</item>
         <item>Peg Leg Periwinkle</item>
         <item>Skipper Jim</item>
