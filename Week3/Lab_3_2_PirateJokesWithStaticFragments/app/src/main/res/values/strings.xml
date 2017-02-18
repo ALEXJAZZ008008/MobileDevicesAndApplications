@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Pirate Jokes</string>
+    <array name="setups">
+        <item>Why does it take pirates so long to learn the alphabet?</item>
+        <item>What did the pirate say when his wooden leg got stuck in the freezer?</item>
+        <item>What is a pirate\'s least favourite vegetable?</item>
+        <item>How do pirates know that they are pirates?</item>
+        <item>Why is pirating addictive?</item>
+        <item>Why couldn\'t the pirates play cards?</item>
+        <item>What has eight eyes and eight legs?</item>
+        <item>What do you call a pirate with two eyes and two legs?</item>
+        <item>What is Captain Hook\'s favorite store?</item>
+    </array>
+    <array name="punchlines">
+        <item>Because they can spend years at C!</item>
+        <item>Shiver me timbers!</item>
+        <item>Leeks!</item>
+        <item>They think, therefore they ARRRR!!!!!</item>
+        <item>They say once ye lose yer first hand, ye get hooked!</item>
+        <item>The captain was standing on the deck!</item>
+        <item>Eight pirates!</item>
+        <item>Rookie!</item>
+        <item>The second hand shop</item>
+    </array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
