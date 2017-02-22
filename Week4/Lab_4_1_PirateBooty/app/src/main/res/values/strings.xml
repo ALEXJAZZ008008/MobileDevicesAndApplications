@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Pirate Booty</string>
+    <string name="high_score_label">High score : %1s Treasures!</string>
+    <string name="fail_label">You are Dead!</string>
+    <string name="plunder_label">Plunder!</string>
+    <string name="current_score_label">You have %1s Treasures!</string>
+    <string name="grogs_toast_label">You have drank %1s Grogs!</string>
+    <string name="grog_label">Drink Grog!</string>
+</resources>
