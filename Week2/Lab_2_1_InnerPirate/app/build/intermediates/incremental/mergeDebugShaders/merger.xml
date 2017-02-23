@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="C:\Lab_2_1_InnerPirate\app\src\main\shaders"/></dataSet><dataSet config="debug"><source path="C:\Lab_2_1_InnerPirate\app\src\debug\shaders"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="C:\Week2\Lab_2_1_InnerPirate\app\src\main\shaders"/></dataSet><dataSet config="debug"><source path="C:\Week2\Lab_2_1_InnerPirate\app\src\debug\shaders"/></dataSet></merger>
