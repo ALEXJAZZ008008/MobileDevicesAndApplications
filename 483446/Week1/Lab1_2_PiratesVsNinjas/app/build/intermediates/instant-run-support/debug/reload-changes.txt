@@ -1,6 +1,0 @@
-CHANGED,C:\Lab1_2_PiratesVsNinjas\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\labs\mobile\lab1_2_piratesvsninjas\R$string$override.class
-CHANGED,C:\Lab1_2_PiratesVsNinjas\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\android\tools\fd\runtime\AppPatchesLoaderImpl.class
-CHANGED,C:\Lab1_2_PiratesVsNinjas\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\labs\mobile\lab1_2_piratesvsninjas\R$style$override.class
-CHANGED,C:\Lab1_2_PiratesVsNinjas\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\android\support\v7\appcompat\R$string$override.class
-CHANGED,C:\Lab1_2_PiratesVsNinjas\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\labs\mobile\lab1_2_piratesvsninjas\R$styleable$override.class
-CHANGED,C:\Lab1_2_PiratesVsNinjas\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\labs\mobile\lab1_2_piratesvsninjas\MainActivity$override.class

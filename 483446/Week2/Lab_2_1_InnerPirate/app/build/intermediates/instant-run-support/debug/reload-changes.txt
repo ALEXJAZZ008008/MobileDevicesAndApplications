@@ -1,4 +1,0 @@
-CHANGED,C:\Lab_2_1_InnerPirate\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\labs\mobile\lab_2_1_innerpirate\R$string$override.class
-CHANGED,C:\Lab_2_1_InnerPirate\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\android\tools\fd\runtime\AppPatchesLoaderImpl.class
-CHANGED,C:\Lab_2_1_InnerPirate\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\labs\mobile\lab_2_1_innerpirate\R$style$override.class
-CHANGED,C:\Lab_2_1_InnerPirate\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\labs\mobile\lab_2_1_innerpirate\R$styleable$override.class
