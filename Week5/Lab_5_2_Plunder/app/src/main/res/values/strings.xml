@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Plunder</string>
+    <string name="score_label">You have %1s Treasures!</string>
+</resources>
