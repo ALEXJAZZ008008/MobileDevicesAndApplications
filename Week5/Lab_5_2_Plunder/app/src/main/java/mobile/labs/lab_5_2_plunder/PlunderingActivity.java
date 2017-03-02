@@ -23,6 +23,7 @@ public class PlunderingActivity extends AppCompatActivity {
     private int m_CurrentImageView;
     private int m_CurrentImageValue;
     private Random m_RNG;
+    private GestureDetector m_GestureDetector;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +38,72 @@ public class PlunderingActivity extends AppCompatActivity {
 
         SetRandomImage(m_ImageView1);
         m_CurrentImageView = 1;
+
+        m_GestureDetector = new GestureDetector(this, new GestureDetector.SimpleOnGestureListener()
+        {
+            @Override
+            public boolean onFling(MotionEvent pEvent1, MotionEvent pEvent2, float pVelocityX, float pVelocityY)
+            {
+                if(pVelocityX > 10.0f)
+                {
+                    FlingRight();
+                }
+                else
+                {
+                    if(pVelocityX < -10.0f)
+                    {
+                        FlingLeft();
+                    }
+                }
+                return true;
+            }
+        });
+    }
+
+    public void FlingRight()
+    {
+        m_ViewFlipper.setInAnimation(inFromLeftAnimation());
+        m_ViewFlipper.setOutAnimation(outToRightAnimation());
+        addCurrentScore(m_CurrentImageValue);
+
+        if(m_CurrentImageView == 1)
+        {
+            m_CurrentImageView = 2;
+            m_CurrentImageValue = SetRandomImage(m_ImageView2);
+        }
+        else
+        {
+            m_CurrentImageView = 1;
+            m_CurrentImageValue = SetRandomImage(m_ImageView1);
+        }
+
+        m_ViewFlipper.showPrevious();
+    }
+
+    public void FlingLeft()
+    {
+        m_ViewFlipper.setInAnimation(inFromRightAnimation());
+        m_ViewFlipper.setOutAnimation(outToLeftAnimation());
+        addCurrentScore(m_CurrentImageValue);
+
+        if(m_CurrentImageView == 1)
+        {
+            m_CurrentImageView = 2;
+            m_CurrentImageValue = SetRandomImage(m_ImageView2);
+        }
+        else
+        {
+            m_CurrentImageView = 1;
+            m_CurrentImageValue = SetRandomImage(m_ImageView1);
+        }
+
+        m_ViewFlipper.showPrevious();
+    }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent pEvent)
+    {
+        return m_GestureDetector.onTouchEvent(pEvent);
     }
 
     // sets a random image to the ImageView parameter and returns the score for that image
