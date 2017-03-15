@@ -12,12 +12,6 @@ import java.util.ArrayList;
 
 public class CustomAdapter extends ArrayAdapter<Puzzle> implements View.OnClickListener
 {
-    // View lookup cache
-    private static class ViewHolder
-    {
-        TextView stateTextView, titleTextView, scoreTextView;
-    }
-
     private Context context;
 
     private ArrayList<Puzzle> puzzle;
@@ -52,6 +46,8 @@ public class CustomAdapter extends ArrayAdapter<Puzzle> implements View.OnClickL
 
         final View result;
 
+        Animation animation;
+
         if (convertView == null)
         {
             viewHolder = new ViewHolder();
@@ -60,9 +56,9 @@ public class CustomAdapter extends ArrayAdapter<Puzzle> implements View.OnClickL
 
             convertView = inflater.inflate(R.layout.list_template, parent, false);
 
-            viewHolder.stateTextView = (TextView)convertView.findViewById(R.id.state);
-            viewHolder.titleTextView = (TextView)convertView.findViewById(R.id.title);
-            viewHolder.scoreTextView = (TextView)convertView.findViewById(R.id.score);
+            viewHolder.SetStateTextView((TextView)convertView.findViewById(R.id.state));
+            viewHolder.SetTitleTextView((TextView)convertView.findViewById(R.id.title));
+            viewHolder.SetScoreTextView((TextView)convertView.findViewById(R.id.score));
 
             result=convertView;
 
@@ -74,13 +70,21 @@ public class CustomAdapter extends ArrayAdapter<Puzzle> implements View.OnClickL
             result=convertView;
         }
 
-        Animation animation = AnimationUtils.loadAnimation(context, (position > lastPosition) ? R.anim.up_from_bottom : R.anim.down_from_top);
+        if(position > lastPosition)
+        {
+            animation = AnimationUtils.loadAnimation(context, R.anim.up_from_bottom);
+        }
+        else
+        {
+            animation = AnimationUtils.loadAnimation(context, R.anim.down_from_top);
+        }
+
         result.startAnimation(animation);
         lastPosition = position;
 
-        viewHolder.stateTextView.setText(puzzle.GetState());
-        viewHolder.titleTextView.setText(puzzle.GetTitle());
-        viewHolder.scoreTextView.setText(puzzle.GetScore());
+        viewHolder.GetStateTextView().setText(puzzle.GetState());
+        viewHolder.GetTitleTextView().setText(puzzle.GetTitle());
+        viewHolder.GetScoreTextView().setText(puzzle.GetScore());
 
         // Return the completed view to render on screen
         return convertView;
