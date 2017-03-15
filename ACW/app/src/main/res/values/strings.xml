@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">ACW</string>
+    <string name="android_pair_matching_application">Android Pair Matching Application</string>
+    <string name="state">state</string>
+    <string name="title">title</string>
+    <string name="download">Download:\u0020</string>
+    <string name="play">Play:\u0020</string>
+    <string name="nullTitle">Null\u0020</string>
+    <string name="scoreTitle">Score:\u0020</string>
+    <string name="score">score</string>
+    <string name="initialScore">0</string>
 </resources>

@@ -1,0 +1,26 @@
+[
+    {
+        "outputFile": "E:\\Year 3\\ACW\\app\\build\\intermediates\\res\\merged\\debug\\values-sq\\values-sq.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 40,
+                    "endOffset": 91
+                },
+                "from": {
+                    "file": "E:\\Year 3\\ACW\\app\\src\\main\\res\\values-sq\\strings.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 57,
+                        "endColumn": 40,
+                        "endOffset": 93
+                    }
+                }
+            }
+        ]
+    }
+]
