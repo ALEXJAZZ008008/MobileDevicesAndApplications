@@ -6,25 +6,11 @@ public class Puzzle
 {
     private String state, title, score;
 
-    public Puzzle(Context context)
-    {
-        SetState(context.getResources().getString(R.string.download));
-        SetTitle(context.getResources().getString(R.string.title));
-        SetScore(context.getResources().getString(R.string.initialScore));
-    }
-
-    public Puzzle(String inTitle, Context context)
+    public Puzzle(Context context, String inTitle)
     {
         SetState(context.getResources().getString(R.string.download));
         SetTitle(inTitle);
         SetScore(context.getResources().getString(R.string.initialScore));
-    }
-
-    public Puzzle(String inState, String inTitle, String inScore)
-    {
-        SetState(inState);
-        SetTitle(inTitle);
-        SetScore(inScore);
     }
 
     public void SetState(String newState)

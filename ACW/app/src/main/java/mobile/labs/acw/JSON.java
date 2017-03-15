@@ -1,6 +1,5 @@
 package mobile.labs.acw;
 
-import android.content.Context;
 import android.os.AsyncTask;
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -10,26 +9,33 @@ import java.io.InputStreamReader;
 import java.net.URL;
 import java.util.ArrayList;
 
-public class JSON extends AsyncTask<String, String, ArrayList<String>>
+public class JSON extends AsyncTask<URL, Void, ArrayList<ArrayList<String>>>
 {
-    private MenuActivity menuActivity;
-    private String switchString;
+    private ArrayList<ArrayList<String>> jsonArrays;
 
-    public JSON(Context context, String arg)
+    private String key;
+    private String[] arguments;
+
+    public JSON(ArrayList<ArrayList<String>> inJSONArrays, String inKey, String[] inArguments)
     {
-        menuActivity = (MenuActivity)context;
+        jsonArrays = inJSONArrays;
 
-        switchString = arg;
+        key = inKey;
+        arguments = inArguments;
     }
 
-    protected ArrayList<String> doInBackground(String... args)
+    protected ArrayList<ArrayList<String>> doInBackground(URL... url)
     {
         String result = "";
-        ArrayList<String> resultList = new ArrayList<>();
+
+        JSONArray jsonArray;
+
+        ArrayList<String> resultList;
+        ArrayList<ArrayList<String>> resultLists = new ArrayList<>();
 
         try
         {
-            InputStream inputStream = (InputStream)new URL(args[0]).getContent();
+            InputStream inputStream = (InputStream)url[0].getContent();
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
 
             String line = "";
@@ -38,17 +44,67 @@ public class JSON extends AsyncTask<String, String, ArrayList<String>>
             {
                 result += line;
                 line = bufferedReader.readLine();
+
+                if (isCancelled())
+                {
+                    break;
+                }
             }
 
-            JSONObject jsonObject = new JSONObject(result);
-
-            JSONArray jsonArray = jsonObject.getJSONArray(switchString);
-
-            result = "";
-
-            for(int i = 0; i < jsonArray.length(); i++)
+            if(arguments.length == 0)
             {
-                resultList.add(jsonArray.get(i).toString());
+                resultList = new ArrayList<>();
+
+                jsonArray = new JSONObject(result).getJSONArray(key);
+
+                for (int j = 0; j < jsonArray.length(); j++)
+                {
+                    resultList.add(jsonArray.get(j).toString());
+
+                    if (isCancelled())
+                    {
+                        break;
+                    }
+                }
+
+                resultLists.add(resultList);
+            }
+            else
+            {
+                JSONObject jsonObject = new JSONObject(result).getJSONObject(key);
+
+                for(String string : arguments)
+                {
+                    resultList = new ArrayList<>();
+
+                    Object item = jsonObject.get(string);
+
+                    if (item instanceof JSONArray)
+                    {
+                        jsonArray = (JSONArray)item;
+
+                        for (int j = 0; j < jsonArray.length(); j++)
+                        {
+                            resultList.add(jsonArray.get(j).toString());
+
+                            if (isCancelled())
+                            {
+                                break;
+                            }
+                        }
+                    }
+                    else
+                    {
+                        resultList.add(item.toString());
+                    }
+
+                    jsonArrays.add(resultList);
+
+                    if (isCancelled())
+                    {
+                        break;
+                    }
+                }
             }
         }
         catch(Exception e)
@@ -56,11 +112,14 @@ public class JSON extends AsyncTask<String, String, ArrayList<String>>
             e.printStackTrace();
         }
 
-        return resultList;
+        return resultLists;
     }
 
-    protected void onPostExecute(ArrayList<String> resultList)
+    protected void onPostExecute(ArrayList<ArrayList<String>> resultLists)
     {
-        menuActivity.jsonArray = resultList;
+        for(int i = 0; i < resultLists.size(); i++)
+        {
+            jsonArrays.add(resultLists.get(i));
+        }
     }
 }

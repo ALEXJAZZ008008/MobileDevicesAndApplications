@@ -1,6 +1,7 @@
 package mobile.labs.acw;
 
 import android.app.Activity;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.widget.ListView;
 import java.util.ArrayList;
@@ -8,9 +9,9 @@ import java.util.ArrayList;
 public class MenuActivity extends Activity
 {
     public ArrayList<Puzzle> puzzleList;
-    public ArrayList<String> jsonArray;
-    private ListView listView;
-    private CustomAdapter customAdapter;
+
+    public ListView listView;
+    public CustomAdapter customAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -21,15 +22,20 @@ public class MenuActivity extends Activity
 
         Initialise();
 
+        StartTask("StartList");
         StartList();
     }
 
     private void Initialise()
     {
-        listView = (ListView)findViewById(R.id.list);
-
         puzzleList = new ArrayList<>();
-        jsonArray = new ArrayList<>();
+
+        listView = (ListView)findViewById(R.id.list);
+    }
+
+    private void StartTask(String taskArg)
+    {
+        new Tasks(this).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, taskArg);
     }
 
     private void StartList()
