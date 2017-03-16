@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="labs.mobile.lab_6_piratecrew.MainActivity">
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Download Crew Data"
+        android:id="@+id/downloadCrewButton"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/addPirateButton"
+        android:layout_alignStart="@+id/addPirateButton"
+        android:onClick="onClickDownloadData" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add New Pirate"
+        android:id="@+id/addPirateButton"
+        android:layout_below="@+id/editPirateButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="onClickAddPirate" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Edit Pirate"
+        android:id="@+id/editPirateButton"
+        android:layout_below="@+id/downloadCrewButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="onClickEditPirate" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Ship"
+        android:id="@+id/addShipButton"
+        android:layout_below="@+id/editShipButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="onClickAddShip" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Edit New Ship"
+        android:id="@+id/editShipButton"
+        android:layout_below="@+id/addPirateButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="onClickEditShip" />
+</RelativeLayout>
