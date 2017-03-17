@@ -26,84 +26,23 @@ public class JSON extends AsyncTask<URL, Void, ArrayList<ArrayList<String>>>
 
     protected ArrayList<ArrayList<String>> doInBackground(URL... url)
     {
-        String result = "";
-
-        JSONArray jsonArray;
-
-        ArrayList<String> resultList;
         ArrayList<ArrayList<String>> resultLists = new ArrayList<>();
 
         try
         {
-            InputStream inputStream = (InputStream)url[0].getContent();
-            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
+            String result = Input(url[0]);
 
-            String line = "";
-
-            while(line != null)
+            if(key.equals("null"))
             {
-                result += line;
-                line = bufferedReader.readLine();
-
-                if (isCancelled())
-                {
-                    break;
-                }
-            }
-
-            if(arguments.length == 0)
-            {
-                resultList = new ArrayList<>();
-
-                jsonArray = new JSONObject(result).getJSONArray(key);
-
-                for (int j = 0; j < jsonArray.length(); j++)
-                {
-                    resultList.add(jsonArray.get(j).toString());
-
-                    if (isCancelled())
-                    {
-                        break;
-                    }
-                }
-
-                resultLists.add(resultList);
+                resultLists.add(SingleArray(result, arguments[0]));
             }
             else
             {
-                JSONObject jsonObject = new JSONObject(result).getJSONObject(key);
+                ArrayList<ArrayList<String>> returnLists = MultipleObjects(result);
 
-                for(String string : arguments)
+                for(ArrayList<String> arrayList : returnLists)
                 {
-                    resultList = new ArrayList<>();
-
-                    Object item = jsonObject.get(string);
-
-                    if (item instanceof JSONArray)
-                    {
-                        jsonArray = (JSONArray)item;
-
-                        for (int j = 0; j < jsonArray.length(); j++)
-                        {
-                            resultList.add(jsonArray.get(j).toString());
-
-                            if (isCancelled())
-                            {
-                                break;
-                            }
-                        }
-                    }
-                    else
-                    {
-                        resultList.add(item.toString());
-                    }
-
-                    jsonArrays.add(resultList);
-
-                    if (isCancelled())
-                    {
-                        break;
-                    }
+                    resultLists.add(arrayList);
                 }
             }
         }
@@ -113,6 +52,122 @@ public class JSON extends AsyncTask<URL, Void, ArrayList<ArrayList<String>>>
         }
 
         return resultLists;
+    }
+
+    private String Input(URL url)
+    {
+        String result = "";
+
+        try
+        {
+            InputStream inputStream = (InputStream) url.getContent();
+            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
+
+            String line = "";
+
+            while (line != null)
+            {
+                result += line;
+                line = bufferedReader.readLine();
+
+                if (isCancelled())
+                {
+                    break;
+                }
+            }
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+        }
+
+        return result;
+    }
+
+    private ArrayList<ArrayList<String>> MultipleObjects(String result)
+    {
+        ArrayList<ArrayList<String>> resultLists = new ArrayList<>();
+
+        try
+        {
+            JSONObject jsonObject = new JSONObject(result).getJSONObject(key);
+
+            for (String string : arguments)
+            {
+                Object item = jsonObject.get(string);
+
+                if (item instanceof JSONArray)
+                {
+                    resultLists.add(ArrayObject((JSONArray)item));
+                }
+                else
+                {
+                    resultLists.add(SingleObject(item));
+                }
+
+                if (isCancelled())
+                {
+                    break;
+                }
+            }
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+        }
+
+        return resultLists;
+    }
+
+    private ArrayList<String> SingleArray(String result, String argument)
+    {
+        ArrayList<String> resultList = new ArrayList<>();
+
+        try
+        {
+            JSONArray jsonArray = new JSONObject(result).getJSONArray(argument);
+
+            resultList = ArrayObject(jsonArray);
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+        }
+
+        return resultList;
+    }
+
+    private ArrayList<String> ArrayObject(JSONArray jsonArray)
+    {
+        ArrayList<String> resultList = new ArrayList<>();
+
+        try
+        {
+            for (int j = 0; j < jsonArray.length(); j++)
+            {
+                resultList.add(jsonArray.get(j).toString());
+
+                if (isCancelled())
+                {
+                    break;
+                }
+            }
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+        }
+
+        return resultList;
+    }
+
+    private ArrayList<String> SingleObject(Object item)
+    {
+        ArrayList<String> resultList = new ArrayList<>();
+
+        resultList.add(item.toString());
+
+        return resultList;
     }
 
     protected void onPostExecute(ArrayList<ArrayList<String>> resultLists)

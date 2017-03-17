@@ -38,6 +38,11 @@
                 <action android:name="android.intent.action.MENU" />
             </intent-filter>
         </activity>
+        <activity android:name="mobile.labs.acw.GameActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.GAME" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
