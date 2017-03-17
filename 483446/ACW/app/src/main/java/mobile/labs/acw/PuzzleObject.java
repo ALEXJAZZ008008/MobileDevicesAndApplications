@@ -1,24 +1,17 @@
 package mobile.labs.acw;
 
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.os.Parcel;
 import android.os.Parcelable;
-import android.util.Base64;
-
-import java.io.ByteArrayOutputStream;
 import java.util.ArrayList;
 
 public class PuzzleObject implements Parcelable
 {
     private  String Id, PictureSet, Rows;
     private ArrayList<String> Layout;
-    private  ArrayList<Bitmap> images;
 
     public PuzzleObject()
     {
         Layout = new ArrayList<>();
-        images = new ArrayList<>();
     }
 
     public PuzzleObject(Parcel parcel)
@@ -99,15 +92,5 @@ public class PuzzleObject implements Parcelable
     public ArrayList<String> GetLayout()
     {
         return Layout;
-    }
-
-    public void SetImages(ArrayList<Bitmap> newImages)
-    {
-        images = newImages;
-    }
-
-    public ArrayList<Bitmap> GetImages()
-    {
-        return images;
     }
 }

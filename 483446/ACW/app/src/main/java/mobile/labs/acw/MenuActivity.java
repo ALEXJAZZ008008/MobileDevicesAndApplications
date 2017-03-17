@@ -15,7 +15,7 @@ public class MenuActivity extends Activity
     public ArrayList<PuzzleListItemObject> puzzleList;
     public Boolean puzzleListBoolean;
 
-    public ListView downloadListView;
+    public ListView listView;
     public CustomAdapter customAdapter;
 
     @Override
@@ -27,7 +27,6 @@ public class MenuActivity extends Activity
 
         Initialise();
 
-        GoToTask(new String[] { "StartList" });
         StartList();
     }
 
@@ -36,21 +35,16 @@ public class MenuActivity extends Activity
         puzzleList = new ArrayList<>();
         puzzleListBoolean = false;
 
-        downloadListView = (ListView)findViewById(R.id.list);
-    }
-
-    public void GoToTask(String[] taskArgs)
-    {
-        new Tasks(this).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, taskArgs);
+        listView = (ListView)findViewById(R.id.list);
     }
 
     private void StartList()
     {
         customAdapter = new CustomAdapter(this, puzzleList);
 
-        downloadListView.setAdapter(customAdapter);
+        listView.setAdapter(customAdapter);
 
-        downloadListView.setOnItemClickListener(new AdapterView.OnItemClickListener()
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener()
         {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id)
@@ -59,7 +53,7 @@ public class MenuActivity extends Activity
                 {
                     if (!puzzleListBoolean)
                     {
-                        GoToTask(new String[]{"GetPuzzle", String.valueOf(puzzleListBoolean), String.valueOf(position)});
+                        GoToTasks(new String[]{"GetPuzzle", String.valueOf(puzzleListBoolean), String.valueOf(position)});
 
                         Toast.makeText(view.getContext(), "Downloading puzzle", Toast.LENGTH_SHORT).show();
                     }
@@ -81,5 +75,12 @@ public class MenuActivity extends Activity
                 startActivity(intent);
             }
         });
+
+        GoToTasks(new String[] { "StartList" });
+    }
+
+    public void GoToTasks(String[] taskArgs)
+    {
+        new MenuTasks(this).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, taskArgs);
     }
 }
