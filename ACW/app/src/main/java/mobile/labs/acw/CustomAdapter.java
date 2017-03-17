@@ -10,36 +10,24 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 import java.util.ArrayList;
 
-public class CustomAdapter extends ArrayAdapter<Puzzle> implements View.OnClickListener
+public class CustomAdapter extends ArrayAdapter<PuzzleListItemObject>
 {
     private Context context;
 
-    private ArrayList<Puzzle> puzzle;
-
     private int lastPosition = -1;
 
-    public CustomAdapter(ArrayList<Puzzle> data, Context context)
+    public CustomAdapter(Context context, ArrayList<PuzzleListItemObject> data)
     {
         super(context, R.layout.list_template, data);
 
-        this.puzzle = data;
         this.context = context;
-
-    }
-
-    @Override
-    public void onClick(View v)
-    {
-        int position = (Integer)v.getTag();
-        Object object = getItem(position);
-        Puzzle puzzle = (Puzzle)object;
     }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent)
     {
         // Get the data item for this position
-        Puzzle puzzle = getItem(position);
+        PuzzleListItemObject puzzleListItem = getItem(position);
 
         // Check if an existing view is being reused, otherwise inflate the view
         ViewHolder viewHolder; // view lookup cache stored in tag
@@ -82,9 +70,9 @@ public class CustomAdapter extends ArrayAdapter<Puzzle> implements View.OnClickL
         result.startAnimation(animation);
         lastPosition = position;
 
-        viewHolder.GetStateTextView().setText(puzzle.GetState());
-        viewHolder.GetTitleTextView().setText(puzzle.GetTitle());
-        viewHolder.GetScoreTextView().setText(puzzle.GetScore());
+        viewHolder.GetStateTextView().setText(puzzleListItem.GetState());
+        viewHolder.GetTitleTextView().setText(puzzleListItem.GetTitle());
+        viewHolder.GetScoreTextView().setText(puzzleListItem.GetScore());
 
         // Return the completed view to render on screen
         return convertView;
