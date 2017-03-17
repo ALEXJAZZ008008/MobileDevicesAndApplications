@@ -2,40 +2,32 @@
 <instant-run
     abi="x86"
     api-level="16"
-    density="xxhdpi"
+    density="420dpi"
     format="7"
-    timestamp="910544345479017"
-    token="2398660413112812879"
-    verifier="COMPATIBLE" >
+    timestamp="187045289156777"
+    token="2398660413112812879" >
 
     <task
         name="javac"
-        duration="2899" />
+        duration="1663" />
     <task
         name="instant-run-dex"
-        duration="1046" />
+        duration="0" />
     <task
         name="instant-run-transform"
-        duration="176" />
+        duration="175" />
     <task
         name="verifier"
-        duration="38" />
+        duration="37" />
 
     <artifact
-        location="E:\Year 3\ACW\app\build\intermediates\reload-dex\debug\classes.dex"
-        type="RELOAD_DEX" />
+        location="E:\Year 3\ACW\app\build\outputs\apk\app-debug.apk"
+        type="MAIN" />
 
-    <build timestamp="910366826047376" >
+    <build timestamp="187045289156777" >
         <artifact
             location="E:\Year 3\ACW\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
-    </build>
-    <build
-        timestamp="910544345479017"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="E:\Year 3\ACW\app\build\intermediates\reload-dex\debug\classes.dex"
-            type="RELOAD_DEX" />
     </build>
 
 </instant-run>
