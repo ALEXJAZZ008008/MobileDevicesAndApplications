@@ -1,7 +1,9 @@
 package mobile.labs.acw;
 
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.os.AsyncTask;
+
 import java.net.URL;
 import java.util.ArrayList;
 
@@ -37,7 +39,14 @@ public class GameTasks extends AsyncTask<PuzzleObject, Void, PuzzleObject>
         }
         else
         {
-            StartCanvas();
+            try
+            {
+                Thread.sleep(1000);
+            }
+            catch (Exception e)
+            {
+                e.printStackTrace();
+            }
 
             return null;
         }
@@ -65,11 +74,6 @@ public class GameTasks extends AsyncTask<PuzzleObject, Void, PuzzleObject>
         WaitForImages(length);
 
         jsonArrays.clear();
-    }
-
-    private void StartCanvas()
-    {
-        WaitForImagesBoolean();
     }
 
     private void GoToJSON(String key, String[] arguments, String url)
@@ -129,21 +133,6 @@ public class GameTasks extends AsyncTask<PuzzleObject, Void, PuzzleObject>
         }
     }
 
-    private void WaitForImagesBoolean()
-    {
-        while (!gameActivity.imageArrayBoolean)
-        {
-            try
-            {
-                Thread.sleep(1000);
-            }
-            catch (Exception e)
-            {
-                e.printStackTrace();
-            }
-        }
-    }
-
     protected void onPostExecute(PuzzleObject puzzleObject)
     {
         if(puzzleObject != null)
@@ -152,8 +141,15 @@ public class GameTasks extends AsyncTask<PuzzleObject, Void, PuzzleObject>
         }
         else
         {
-            gameActivity.canvas = new Canvas(gameActivity);
-            gameActivity.relativeLayout.addView(gameActivity.canvas);
+            if(!gameActivity.imageArrayBoolean)
+            {
+                gameActivity.canvas = new Canvas(gameActivity, gameActivity.puzzle, gameActivity.imageArray, gameActivity.relativeLayout);
+                gameActivity.relativeLayout.addView(gameActivity.canvas);
+            }
+            else
+            {
+                gameActivity.GoToTasks(new PuzzleObject[] { });
+            }
         }
     }
 }

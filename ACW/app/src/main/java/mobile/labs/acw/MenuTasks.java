@@ -9,14 +9,18 @@ public class MenuTasks extends AsyncTask<String, Void, String>
 {
     private MenuActivity menuActivity;
 
+    private ArrayList<PuzzleListItemObject> puzzleList;
+
     private ArrayList<ArrayList<String>> jsonArrays;
     private ArrayList<ImageObject> imageArray;
 
     private String parentURL, imagesURL, indexURL, pictureSetsURL, puzzlesURL, jsonExtension;
 
-    public MenuTasks(Context context)
+    public MenuTasks(Context context, ArrayList<PuzzleListItemObject> inPuzzleList)
     {
         menuActivity = (MenuActivity)context;
+
+        puzzleList = inPuzzleList;
 
         jsonArrays = new ArrayList<>();
         imageArray = new ArrayList<>();
@@ -40,7 +44,7 @@ public class MenuTasks extends AsyncTask<String, Void, String>
 
             case "GetPuzzle":
 
-                CheckGetPuzzle(args);
+                GetPuzzle(args[1]);
                 break;
 
             case "GetPuzzleImages":
@@ -60,37 +64,27 @@ public class MenuTasks extends AsyncTask<String, Void, String>
 
         for(int i = 0; i < jsonArrays.get(0).size(); i++)
         {
-            menuActivity.puzzleList.add(new PuzzleListItemObject(menuActivity, jsonArrays.get(0).get(i).split(jsonExtension)[0]));
+            puzzleList.add(new PuzzleListItemObject(menuActivity, jsonArrays.get(0).get(i).split(jsonExtension)[0]));
         }
 
         jsonArrays.clear();
     }
 
-    private void CheckGetPuzzle(String[] args)
-    {
-        if(!Boolean.valueOf(args[1]))
-        {
-            menuActivity.puzzleListBoolean = true;
-
-            GetPuzzle(args[2]);
-        }
-    }
-
     private void GetPuzzle(String arg)
     {
-        PuzzleListItemObject puzzleListItem = menuActivity.puzzleList.get(Integer.valueOf(arg));
+        PuzzleListItemObject puzzleListItem = puzzleList.get(Integer.valueOf(arg));
 
         GoToJSON("Puzzle", new String[] { "Id", "PictureSet", "Rows", "Layout" }, parentURL + puzzlesURL + puzzleListItem.GetTitle() + jsonExtension);
 
         WaitForJSON();
 
-        PuzzleObject puzzleObject = menuActivity.puzzleList.get(Integer.valueOf(arg)).GetPuzzle();
+        PuzzleObject puzzleObject = puzzleList.get(Integer.valueOf(arg)).GetPuzzle();
 
         ArrayList<String> layoutList = new ArrayList<>();
 
         puzzleObject.SetPictureSet(jsonArrays.get(1).get(0).split(jsonExtension)[0]);
 
-        menuActivity.GoToTasks(new String[] { "GetPuzzleImages", arg });
+        GoToTasks(new String[] { "GetPuzzleImages", arg });
 
         puzzleObject.SetId(jsonArrays.get(0).get(0));
         puzzleObject.SetRows(jsonArrays.get(2).get(0));
@@ -107,7 +101,7 @@ public class MenuTasks extends AsyncTask<String, Void, String>
 
     private void GetPuzzleImages(String arg)
     {
-        PuzzleListItemObject puzzleListItem = menuActivity.puzzleList.get(Integer.valueOf(arg));
+        PuzzleListItemObject puzzleListItem = puzzleList.get(Integer.valueOf(arg));
         PuzzleObject puzzleObject = puzzleListItem.GetPuzzle();
         String pictureSet = puzzleObject.GetPictureSet();
 
@@ -159,6 +153,11 @@ public class MenuTasks extends AsyncTask<String, Void, String>
                 e.printStackTrace();
             }
         }
+    }
+
+    private void GoToTasks(String[] taskArgs)
+    {
+        new MenuTasks(menuActivity, puzzleList).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, taskArgs);
     }
 
     private void GoToImages(int i, String fileName, String itemName, String url)

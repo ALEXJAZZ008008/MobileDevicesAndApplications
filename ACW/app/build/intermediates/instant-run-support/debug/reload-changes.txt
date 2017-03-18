@@ -1,2 +1,2 @@
-CHANGED,E:\Year 3\ACW\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\mobile\labs\acw\GameTasks$override.class
 CHANGED,E:\Year 3\ACW\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\android\tools\fd\runtime\AppPatchesLoaderImpl.class
+CHANGED,E:\Year 3\ACW\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\mobile\labs\acw\Canvas$override.class

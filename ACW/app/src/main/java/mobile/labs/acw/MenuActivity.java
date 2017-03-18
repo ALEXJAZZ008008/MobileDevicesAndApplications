@@ -12,10 +12,10 @@ import java.util.ArrayList;
 
 public class MenuActivity extends Activity
 {
-    public ArrayList<PuzzleListItemObject> puzzleList;
+    private ArrayList<PuzzleListItemObject> puzzleList;
     public Boolean puzzleListBoolean;
 
-    public ListView listView;
+    private ListView listView;
     public CustomAdapter customAdapter;
 
     @Override
@@ -53,7 +53,9 @@ public class MenuActivity extends Activity
                 {
                     if (!puzzleListBoolean)
                     {
-                        GoToTasks(new String[]{"GetPuzzle", String.valueOf(puzzleListBoolean), String.valueOf(position)});
+                        puzzleListBoolean = true;
+
+                        GoToTasks(new String[]{"GetPuzzle", String.valueOf(position)});
 
                         Toast.makeText(view.getContext(), "Downloading puzzle", Toast.LENGTH_SHORT).show();
                     }
@@ -79,8 +81,8 @@ public class MenuActivity extends Activity
         GoToTasks(new String[] { "StartList" });
     }
 
-    public void GoToTasks(String[] taskArgs)
+    private void GoToTasks(String[] taskArgs)
     {
-        new MenuTasks(this).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, taskArgs);
+        new MenuTasks(this, puzzleList).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, taskArgs);
     }
 }
