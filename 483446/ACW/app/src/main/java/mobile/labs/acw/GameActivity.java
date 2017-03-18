@@ -10,8 +10,8 @@ import java.util.ArrayList;
 
 public class GameActivity extends Activity
 {
-    private PuzzleObject puzzle;
-    private ArrayList<ImageObject> imageArray;
+    public PuzzleObject puzzle;
+    public ArrayList<ImageObject> imageArray;
     public Boolean imageArrayBoolean;
 
     public RelativeLayout relativeLayout;
@@ -33,6 +33,7 @@ public class GameActivity extends Activity
     private void Initialise()
     {
         puzzle = getIntent().getParcelableExtra("puzzle");
+
         imageArray = new ArrayList<>();
         imageArrayBoolean = false;
 
