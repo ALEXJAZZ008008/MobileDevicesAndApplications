@@ -2,30 +2,30 @@ package mobile.labs.acw;
 
 public class TwoDimensionalVector
 {
-    private float x, y;
+    private Integer x, y;
 
-    public TwoDimensionalVector(float inX, float inY)
+    public TwoDimensionalVector(Integer inX, Integer inY)
     {
         SetX(inX);
         SetY(inY);
     }
 
-    public void SetX(float newX)
+    public void SetX(Integer newX)
     {
         x = newX;
     }
 
-    public float GetX()
+    public Integer GetX()
     {
         return x;
     }
 
-    public void SetY(float newY)
+    public void SetY(Integer newY)
     {
         y = newY;
     }
 
-    public float GetY()
+    public Integer GetY()
     {
         return y;
     }

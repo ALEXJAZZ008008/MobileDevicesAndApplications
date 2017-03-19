@@ -12,25 +12,15 @@
 
     <application
         android:allowBackup="true"
-        android:fullBackupContent="@xml/backup" >
-        android:icon="@mipmap/ic_launcher"
+        android:fullBackupContent="@xml/backup"
+        android:icon="@drawable/icon"
         android:label="@string/app_name"
-        android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        >
+        android:theme="@style/AppTheme" >
         <activity android:name="mobile.labs.acw.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                <action android:name="android.intent.action.VIEW" />
 
-                <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.LAUNCHER" />
-                <category android:name="android.intent.category.BROWSABLE" />
-
-                <data
-                    android:host="acw.labs.mobile"
-                    android:pathPrefix="/main"
-                    android:scheme="http" />
             </intent-filter>
         </activity>
         <activity android:name="mobile.labs.acw.MenuActivity" >
@@ -41,6 +31,15 @@
         <activity android:name="mobile.labs.acw.GameActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.GAME" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="acw.labs.mobile"
+                    android:pathPrefix="/main"
+                    android:scheme="http" />
             </intent-filter>
         </activity>
     </application>

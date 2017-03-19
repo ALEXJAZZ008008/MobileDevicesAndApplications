@@ -5,15 +5,14 @@ import android.graphics.Bitmap;
 public class Square
 {
     private Bitmap image;
-    private int imagePosition;
-    private TwoDimensionalVector position, size;
+    private Integer imagePosition;
+    private TwoDimensionalVector position;
 
-    public Square(Bitmap inImage, int inImagePosition, TwoDimensionalVector inPosition, TwoDimensionalVector inSize)
+    public Square(Bitmap inImage, Integer inImagePosition, TwoDimensionalVector inPosition)
     {
         SetImage(inImage);
         SetImagePosition(inImagePosition);
         SetPosition(inPosition);
-        SetSize(inSize);
     }
 
     public void SetImage(Bitmap newImage)
@@ -26,12 +25,12 @@ public class Square
         return image;
     }
 
-    public void SetImagePosition(int newImagePosition)
+    public void SetImagePosition(Integer newImagePosition)
     {
         imagePosition = newImagePosition;
     }
 
-    public int GetImagePosition()
+    public Integer GetImagePosition()
     {
         return imagePosition;
     }
@@ -44,15 +43,5 @@ public class Square
     public TwoDimensionalVector GetPosition()
     {
         return position;
-    }
-
-    public void SetSize(TwoDimensionalVector newSize)
-    {
-        size = newSize;
-    }
-
-    public TwoDimensionalVector GetSize()
-    {
-        return size;
     }
 }

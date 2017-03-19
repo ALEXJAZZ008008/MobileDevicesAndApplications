@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ACW</string>
+    <string name="app_name">Android Pair Matching Application</string>
     <string name="android_pair_matching_application">Android Pair Matching Application</string>
     <string name="state">state</string>
     <string name="title">title</string>

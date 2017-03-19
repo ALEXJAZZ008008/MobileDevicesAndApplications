@@ -14,7 +14,7 @@ public class CustomAdapter extends ArrayAdapter<PuzzleListItemObject>
 {
     private Context context;
 
-    private int lastPosition = -1;
+    private Integer lastPosition = -1;
 
     public CustomAdapter(Context context, ArrayList<PuzzleListItemObject> data)
     {

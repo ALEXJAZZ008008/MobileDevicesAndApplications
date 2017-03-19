@@ -70,7 +70,7 @@ public class MenuActivity extends Activity
                 }
             }
 
-            private void GoToGameActivity(View view,int position)
+            private void GoToGameActivity(View view, Integer position)
             {
                 Intent intent = new Intent(view.getContext(), GameActivity.class);
                 intent.putExtra("puzzle", puzzleList.get(position).GetPuzzle());

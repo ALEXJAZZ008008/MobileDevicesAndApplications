@@ -1,9 +1,7 @@
 package mobile.labs.acw;
 
 import android.content.Context;
-import android.graphics.Bitmap;
 import android.os.AsyncTask;
-
 import java.net.URL;
 import java.util.ArrayList;
 
@@ -14,14 +12,18 @@ public class GameTasks extends AsyncTask<PuzzleObject, Void, PuzzleObject>
     private ArrayList<ArrayList<String>> jsonArrays;
     private ArrayList<ImageObject> imageArray;
 
+    private Integer length;
+
     private String parentURL, imagesURL, pictureSetsURL, jsonExtension;
 
-    public GameTasks(Context context, ArrayList<ImageObject> inImageArray)
+    public GameTasks(Context context, ArrayList<ImageObject> inImageArray, Integer inLength)
     {
         gameActivity = (GameActivity) context;
 
         jsonArrays = new ArrayList<>();
         imageArray = inImageArray;
+
+        length = inLength;
 
         parentURL = "http://www.hull.ac.uk/php/349628/08027/acw/";
         imagesURL = "images/";
@@ -39,14 +41,7 @@ public class GameTasks extends AsyncTask<PuzzleObject, Void, PuzzleObject>
         }
         else
         {
-            try
-            {
-                Thread.sleep(1000);
-            }
-            catch (Exception e)
-            {
-                e.printStackTrace();
-            }
+            CheckPuzzleImages();
 
             return null;
         }
@@ -60,20 +55,29 @@ public class GameTasks extends AsyncTask<PuzzleObject, Void, PuzzleObject>
 
         WaitForJSON();
 
-        int length = jsonArrays.get(0).size();
+        ArrayList<String> currentArray = jsonArrays.get(0);
+        length = currentArray.size();
 
-        for(int i = 0; i < length; i++)
+        for(Integer i = 0; i < length; i++)
         {
-            String itemName = jsonArrays.get(0).get(i);
+            String itemName = currentArray.get(i);
 
             imageArray.add(new ImageObject());
 
             GoToImage(i, pictureSet, itemName, parentURL + imagesURL + itemName);
         }
 
-        WaitForImages(length);
+        WaitForImages(length, imageArray);
 
         jsonArrays.clear();
+    }
+
+    private void CheckPuzzleImages()
+    {
+        if(length != 0)
+        {
+            WaitForImages(length, imageArray);
+        }
     }
 
     private void GoToJSON(String key, String[] arguments, String url)
@@ -103,7 +107,7 @@ public class GameTasks extends AsyncTask<PuzzleObject, Void, PuzzleObject>
         }
     }
 
-    private void GoToImage(int i, String fileName, String itemName, String url)
+    private void GoToImage(Integer i, String fileName, String itemName, String url)
     {
         try
         {
@@ -115,9 +119,9 @@ public class GameTasks extends AsyncTask<PuzzleObject, Void, PuzzleObject>
         }
     }
 
-    private void WaitForImages(int length)
+    private void WaitForImages(Integer length, ArrayList<ImageObject> imageArray)
     {
-        for(int i = 0; i < length; i++)
+        for(Integer i = 0; i < length; i++)
         {
             while (!imageArray.get(i).GetBitmapBoolean())
             {
@@ -137,14 +141,14 @@ public class GameTasks extends AsyncTask<PuzzleObject, Void, PuzzleObject>
     {
         if(puzzleObject != null)
         {
-            gameActivity.imageArrayBoolean = true;
+            gameActivity.length = length;
         }
         else
         {
-            if(!gameActivity.imageArrayBoolean)
+            if(length != 0)
             {
-                gameActivity.canvas = new Canvas(gameActivity, gameActivity.puzzle, gameActivity.imageArray, gameActivity.relativeLayout);
-                gameActivity.relativeLayout.addView(gameActivity.canvas);
+                gameActivity.game = new Game(gameActivity, gameActivity.puzzle, gameActivity.imageArray, gameActivity.relativeLayout);
+                gameActivity.relativeLayout.addView(gameActivity.game);
             }
             else
             {
