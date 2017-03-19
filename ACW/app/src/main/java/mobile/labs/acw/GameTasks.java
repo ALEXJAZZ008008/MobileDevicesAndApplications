@@ -2,6 +2,9 @@ package mobile.labs.acw;
 
 import android.content.Context;
 import android.os.AsyncTask;
+import android.view.MotionEvent;
+import android.view.View;
+
 import java.net.URL;
 import java.util.ArrayList;
 
@@ -149,6 +152,15 @@ public class GameTasks extends AsyncTask<PuzzleObject, Void, PuzzleObject>
             {
                 gameActivity.game = new Game(gameActivity, gameActivity.puzzle, gameActivity.imageArray, gameActivity.relativeLayout);
                 gameActivity.relativeLayout.addView(gameActivity.game);
+
+                gameActivity.relativeLayout.setOnTouchListener(new View.OnTouchListener()
+                {
+                    @Override
+                    public boolean onTouch(View view, MotionEvent motionEvent)
+                    {
+                        return gameActivity.game.onTouch(view, motionEvent);
+                    }
+                });
             }
             else
             {
