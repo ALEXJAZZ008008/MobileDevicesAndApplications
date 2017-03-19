@@ -18,25 +18,41 @@
         android:gravity="end"
         >
         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/scoreTitle"
+            android:textSize="20sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:paddingTop="5dp"
+            android:paddingLeft="20dp"
+            android:paddingStart="20dp"
+            android:paddingRight="0dp"
+            android:paddingEnd="0dp"
+            android:paddingBottom="5dp"
+            />
+
+        <TextView
             android:id="@+id/score"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="end"
+            android:text="@string/score"
             android:textSize="20sp"
-            android:textColor="@color/colorPrimary"
-            android:paddingTop="20dp"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
-            android:paddingBottom="20dp"
+            android:textColor="@color/colorAccent"
+            android:paddingTop="5dp"
+            android:paddingLeft="0dp"
+            android:paddingStart="0dp"
+            android:paddingRight="10dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="5dp"
             />
     </LinearLayout>
 
     <RelativeLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
-        android:id="@+id/canvas"
+        android:id="@+id/game"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         tools:context="mobile.labs.acw.GameActivity"
         />
 </LinearLayout>

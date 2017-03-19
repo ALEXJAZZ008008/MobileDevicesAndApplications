@@ -3,6 +3,7 @@ package mobile.labs.acw;
 import android.app.Activity;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.view.SurfaceHolder;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -11,13 +12,16 @@ import java.util.ArrayList;
 public class GameActivity extends Activity
 {
     public PuzzleObject puzzle;
+
     public ArrayList<ImageObject> imageArray;
-    public Boolean imageArrayBoolean;
+    public Integer length;
 
+    public Game game;
     public RelativeLayout relativeLayout;
-    public Canvas canvas;
 
-    private int score;
+    public SurfaceHolder surfaceHolder;
+
+    private Integer score;
     private TextView textView;
 
     @Override
@@ -30,12 +34,20 @@ public class GameActivity extends Activity
         Initialise();
     }
 
+    @Override
+    protected void onPause()
+    {
+        game.surfaceDestroyed(surfaceHolder);
+
+        super.onPause();
+    }
+
     private void Initialise()
     {
         puzzle = getIntent().getParcelableExtra("puzzle");
 
         imageArray = new ArrayList<>();
-        imageArrayBoolean = false;
+        length = 0;
 
         score = 0;
         textView = (TextView)findViewById(R.id.score);
@@ -44,19 +56,19 @@ public class GameActivity extends Activity
 
         GoToTasks(new PuzzleObject[] { puzzle });
 
-        relativeLayout = (RelativeLayout) findViewById(R.id.canvas);
+        relativeLayout = (RelativeLayout) findViewById(R.id.game);
 
         GoToTasks(new PuzzleObject[] { });
     }
 
     private void SetScoreTextView()
     {
-        String scoreText = getResources().getString(R.string.scoreTitle) + String.valueOf(score);
+        String scoreText = String.valueOf(score);
         textView.setText(scoreText);
     }
 
     public void GoToTasks(PuzzleObject[] puzzle)
     {
-        new GameTasks(this, imageArray).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, puzzle);
+        new GameTasks(this, imageArray, length).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, puzzle);
     }
 }

@@ -62,9 +62,11 @@ public class MenuTasks extends AsyncTask<String, Void, String>
 
         WaitForJSON();
 
-        for(int i = 0; i < jsonArrays.get(0).size(); i++)
+        ArrayList<String> currentArray = jsonArrays.get(0);
+
+        for(Integer i = 0; i < currentArray.size(); i++)
         {
-            puzzleList.add(new PuzzleListItemObject(menuActivity, jsonArrays.get(0).get(i).split(jsonExtension)[0]));
+            puzzleList.add(new PuzzleListItemObject(menuActivity, currentArray.get(i).split(jsonExtension)[0]));
         }
 
         jsonArrays.clear();
@@ -89,9 +91,11 @@ public class MenuTasks extends AsyncTask<String, Void, String>
         puzzleObject.SetId(jsonArrays.get(0).get(0));
         puzzleObject.SetRows(jsonArrays.get(2).get(0));
 
-        for(int i = 0; i < jsonArrays.get(3).size(); i++)
+        ArrayList<String> currentArray = jsonArrays.get(3);
+
+        for(Integer i = 0; i < currentArray.size(); i++)
         {
-            layoutList.add(jsonArrays.get(3).get(i));
+            layoutList.add(currentArray.get(i));
         }
 
         jsonArrays.clear();
@@ -109,11 +113,12 @@ public class MenuTasks extends AsyncTask<String, Void, String>
 
         WaitForJSON();
 
-        int length = jsonArrays.get(0).size();
+        ArrayList<String> currentArray = jsonArrays.get(0);
+        Integer length = currentArray.size();
 
-        for(int i = 0; i < length; i++)
+        for(Integer i = 0; i < length; i++)
         {
-            String itemName = jsonArrays.get(0).get(i);
+            String itemName = currentArray.get(i);
 
             imageArray.add(new ImageObject());
 
@@ -160,7 +165,7 @@ public class MenuTasks extends AsyncTask<String, Void, String>
         new MenuTasks(menuActivity, puzzleList).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, taskArgs);
     }
 
-    private void GoToImages(int i, String fileName, String itemName, String url)
+    private void GoToImages(Integer i, String fileName, String itemName, String url)
     {
         try
         {
@@ -172,9 +177,9 @@ public class MenuTasks extends AsyncTask<String, Void, String>
         }
     }
 
-    private void WaitForImages(int length)
+    private void WaitForImages(Integer length)
     {
-        for(int i = 0; i < length; i++)
+        for(Integer i = 0; i < length; i++)
         {
             while (!imageArray.get(i).GetBitmapBoolean())
             {

@@ -143,9 +143,9 @@ public class JSON extends AsyncTask<URL, Void, ArrayList<ArrayList<String>>>
 
         try
         {
-            for (int j = 0; j < jsonArray.length(); j++)
+            for (Integer i = 0; i < jsonArray.length(); i++)
             {
-                resultList.add(jsonArray.get(j).toString());
+                resultList.add(jsonArray.get(i).toString());
 
                 if (isCancelled())
                 {
@@ -172,7 +172,7 @@ public class JSON extends AsyncTask<URL, Void, ArrayList<ArrayList<String>>>
 
     protected void onPostExecute(ArrayList<ArrayList<String>> resultLists)
     {
-        for(int i = 0; i < resultLists.size(); i++)
+        for(Integer i = 0; i < resultLists.size(); i++)
         {
             jsonArrays.add(resultLists.get(i));
         }
