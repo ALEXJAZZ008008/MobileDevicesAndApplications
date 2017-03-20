@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 public class GameTasks extends AsyncTask<PuzzleObject, Void, PuzzleObject>
 {
-    private GameActivity gameActivity;
+    private ClickGameActivity clickGameActivity;
 
     private ArrayList<ArrayList<String>> jsonArrays;
     private ArrayList<ImageObject> imageArray;
@@ -21,7 +21,7 @@ public class GameTasks extends AsyncTask<PuzzleObject, Void, PuzzleObject>
 
     public GameTasks(Context context, ArrayList<ImageObject> inImageArray, Integer inLength)
     {
-        gameActivity = (GameActivity) context;
+        clickGameActivity = (ClickGameActivity) context;
 
         jsonArrays = new ArrayList<>();
         imageArray = inImageArray;
@@ -114,7 +114,7 @@ public class GameTasks extends AsyncTask<PuzzleObject, Void, PuzzleObject>
     {
         try
         {
-            new GameImages(gameActivity, imageArray.get(i), fileName, itemName).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, new URL(url));
+            new GameImages(clickGameActivity, imageArray.get(i), fileName, itemName).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, new URL(url));
         }
         catch(Exception e)
         {
@@ -144,27 +144,27 @@ public class GameTasks extends AsyncTask<PuzzleObject, Void, PuzzleObject>
     {
         if(puzzleObject != null)
         {
-            gameActivity.length = length;
+            clickGameActivity.length = length;
         }
         else
         {
             if(length != 0)
             {
-                gameActivity.game = new Game(gameActivity, gameActivity.puzzle, gameActivity.imageArray, gameActivity.relativeLayout);
-                gameActivity.relativeLayout.addView(gameActivity.game);
+                clickGameActivity.clickGame = new ClickGame(clickGameActivity, clickGameActivity.puzzle, clickGameActivity.imageArray, clickGameActivity.relativeLayout);
+                clickGameActivity.relativeLayout.addView(clickGameActivity.clickGame);
 
-                gameActivity.relativeLayout.setOnTouchListener(new View.OnTouchListener()
+                clickGameActivity.relativeLayout.setOnTouchListener(new View.OnTouchListener()
                 {
                     @Override
                     public boolean onTouch(View view, MotionEvent motionEvent)
                     {
-                        return gameActivity.game.onTouch(view, motionEvent);
+                        return clickGameActivity.clickGame.onTouch(view, motionEvent);
                     }
                 });
             }
             else
             {
-                gameActivity.GoToTasks(new PuzzleObject[] { });
+                clickGameActivity.GoToTasks(new PuzzleObject[] { });
             }
         }
     }

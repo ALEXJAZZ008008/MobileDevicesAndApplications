@@ -11,14 +11,14 @@ import java.net.URL;
 
 public class GameImages extends AsyncTask<URL, Void, Bitmap>
 {
-    private GameActivity gameActivity;
+    private ClickGameActivity clickGameActivity;
 
     private ImageObject imageObject;
     private String fileName, itemName;
 
     public GameImages(Context context, ImageObject inImage, String inFileName, String inItemName)
     {
-        gameActivity = (GameActivity) context;
+        clickGameActivity = (ClickGameActivity) context;
 
         imageObject = inImage;
 
@@ -30,7 +30,7 @@ public class GameImages extends AsyncTask<URL, Void, Bitmap>
     {
         Bitmap bitmap = null;
 
-        ContextWrapper contextWrapper = new ContextWrapper(gameActivity);
+        ContextWrapper contextWrapper = new ContextWrapper(clickGameActivity);
         File file = contextWrapper.getDir(fileName, Context.MODE_PRIVATE);
         File item = new File(file, itemName);
 

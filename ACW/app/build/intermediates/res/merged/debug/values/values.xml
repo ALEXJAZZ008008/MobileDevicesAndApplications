@@ -231,9 +231,12 @@
     <string name="abc_toolbar_collapse_description">Collapse</string>
     <string name="android_pair_matching_application">Android Pair Matching Application</string>
     <string name="app_name">Android Pair Matching Application</string>
+    <string name="click_mode">Click Mode</string>
     <string name="download">Download:\u0020</string>
+    <string name="drag_mode">Drag Mode</string>
     <string name="initialScore">0</string>
     <string name="nullTitle">Null\u0020</string>
+    <string name="percent">%</string>
     <string name="play">Play:\u0020</string>
     <string name="score">score</string>
     <string name="scoreTitle">Score:\u0020</string>

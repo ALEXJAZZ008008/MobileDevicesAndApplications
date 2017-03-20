@@ -28,7 +28,7 @@
                 <action android:name="android.intent.action.MENU" />
             </intent-filter>
         </activity>
-        <activity android:name="mobile.labs.acw.GameActivity" >
+        <activity android:name="mobile.labs.acw.ClickGameActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.GAME" />
                 <action android:name="android.intent.action.VIEW" />
