@@ -60,6 +60,20 @@
         android:paddingTop="5dp"
         android:paddingLeft="0dp"
         android:paddingStart="0dp"
+        android:paddingRight="0dp"
+        android:paddingEnd="0dp"
+        android:paddingBottom="5dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/percent"
+        android:textSize="20sp"
+        android:textColor="@color/colorAccent"
+        android:paddingTop="5dp"
+        android:paddingLeft="0dp"
+        android:paddingStart="0dp"
         android:paddingRight="10dp"
         android:paddingEnd="10dp"
         android:paddingBottom="5dp"

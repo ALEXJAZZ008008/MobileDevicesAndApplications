@@ -128,6 +128,10 @@
         "source": "E:\\Year 3\\ACW\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\layout\\abc_list_menu_item_radio.xml"
     },
     {
+        "merged": "E:\\Year 3\\ACW\\app\\build\\intermediates\\res\\merged\\debug\\layout\\dialog_fragment_template.xml",
+        "source": "E:\\Year 3\\ACW\\app\\src\\main\\res\\layout\\dialog_fragment_template.xml"
+    },
+    {
         "merged": "E:\\Year 3\\ACW\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_action.xml",
         "source": "E:\\Year 3\\ACW\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\layout\\notification_media_action.xml"
     },

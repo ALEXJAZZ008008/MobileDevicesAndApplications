@@ -1,6 +1,7 @@
 package mobile.labs.acw;
 
 import android.app.Activity;
+import android.app.FragmentManager;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -17,6 +18,8 @@ public class MenuActivity extends Activity
 
     private ListView listView;
     public CustomAdapter customAdapter;
+
+    static final int GAME_ACTIVITY_REQUEST = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -66,19 +69,51 @@ public class MenuActivity extends Activity
                 }
                 else
                 {
-                    GoToGameActivity(view, position);
+                    ShowGameTypeChoiceDialog(view, position);
                 }
             }
 
-            private void GoToGameActivity(View view, Integer position)
+            private void ShowGameTypeChoiceDialog(View view, Integer position)
             {
-                Intent intent = new Intent(view.getContext(), GameActivity.class);
+                FragmentManager fragmentManager = getFragmentManager();
+                GameTypeChoice editNameDialogFragment = GameTypeChoice.newInstance("Choose Game Type", view, position);
+                editNameDialogFragment.show(fragmentManager, "dialog_fragment_game_type_choice");
+            }
+
+            private void GoToClickGameActivity(View view, Integer position)
+            {
+                Intent intent = new Intent(view.getContext(), ClickGameActivity.class);
                 intent.putExtra("puzzle", puzzleList.get(position).GetPuzzle());
-                startActivity(intent);
+                intent.putExtra("position", position);
+                startActivityForResult(intent, GAME_ACTIVITY_REQUEST);
             }
         });
 
         GoToTasks(new String[] { "StartList" });
+    }
+
+    @Override
+    protected  void onActivityResult(int requestCode, int resultCode, Intent data)
+    {
+        if(resultCode == RESULT_OK && requestCode == GAME_ACTIVITY_REQUEST)
+        {
+            if(data.hasExtra("score") && data.hasExtra("position"))
+            {
+                Integer score = data.getIntExtra("score", -1);
+                Integer position = data.getIntExtra("position", -1);
+
+                PuzzleListItemObject puzzleListItem = puzzleList.get(position);
+
+                if(Integer.valueOf(puzzleListItem.GetScore()) < score)
+                {
+                    puzzleListItem.SetScore(String.valueOf(score));
+                }
+
+                puzzleList.set(position, puzzleListItem);
+
+                customAdapter.notifyDataSetChanged();
+            }
+        }
     }
 
     private void GoToTasks(String[] taskArgs)

@@ -9,4 +9,7 @@
     <string name="scoreTitle">Score:\u0020</string>
     <string name="score">score</string>
     <string name="initialScore">0</string>
+    <string name="percent">%</string>
+    <string name="click_mode">Click Mode</string>
+    <string name="drag_mode">Drag Mode</string>
 </resources>

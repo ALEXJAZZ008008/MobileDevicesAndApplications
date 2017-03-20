@@ -75,10 +75,10 @@ action#android.intent.action.MENU
 ADDED from E:\Year 3\ACW\app\src\main\AndroidManifest.xml:37:17-39:23
 	android:name
 		ADDED from E:\Year 3\ACW\app\src\main\AndroidManifest.xml:38:21-62
-activity#mobile.labs.acw.GameActivity
+activity#mobile.labs.acw.ClickGameActivity
 ADDED from E:\Year 3\ACW\app\src\main\AndroidManifest.xml:43:9-69:20
 	android:name
-		ADDED from E:\Year 3\ACW\app\src\main\AndroidManifest.xml:44:13-41
+		ADDED from E:\Year 3\ACW\app\src\main\AndroidManifest.xml:44:13-46
 intent-filter#android.intent.action.GAME+android.intent.action.VIEW+android.intent.category.BROWSABLE+android.intent.category.DEFAULT
 ADDED from E:\Year 3\ACW\app\src\main\AndroidManifest.xml:46:13-68:29
 action#android.intent.action.GAME
