@@ -2,11 +2,123 @@
 <items version="2" >
 
     <item
+        jar="E:\Year 3\ACW\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        revision="24.0.2"
+        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
+        <dex dex="E:\Year 3\ACW\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_7641ee99f8f5cd51b5dc2ccfb88fba666d0dbf9f.jar" />
+    </item>
+    <item
+        jar="E:\Year 3\ACW\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        revision="24.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="E:\Year 3\ACW\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-24.2.1_dc08deccf2612bd1918c14feeee7b7ff3e43022d.jar" />
+    </item>
+    <item
+        jar="E:\Year 3\ACW\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        revision="24.0.2"
+        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
+        <dex dex="E:\Year 3\ACW\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_2e4f5c2ed9f8cabdfa2e74efd730cfb4d7142f83.jar" />
+    </item>
+    <item
+        jar="E:\Year 3\ACW\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        revision="24.0.2"
+        sha1="e562a6ba9695173a7f724098d89c1bd40edab1e0">
+        <dex dex="E:\Year 3\ACW\app\build\intermediates\pre-dexed\debug\instant-run_f36fcfe3879b59101849ac51ec49da136035f7c6.jar" />
+    </item>
+    <item
+        jar="E:\Year 3\ACW\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        revision="24.0.2"
+        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
+        <dex dex="E:\Year 3\ACW\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-utils-24.2.1_01979be1f84214ea2a908682185e0baa9adb0bb2.jar" />
+    </item>
+    <item
+        jar="E:\Year 3\ACW\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        revision="24.0.2"
+        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
+        <dex dex="E:\Year 3\ACW\app\build\intermediates\pre-dexed\debug\com.android.support-support-fragment-24.2.1_6da156baf1d66111203a01126de8a8e972e198bd.jar" />
+    </item>
+    <item
         jar="E:\Year 3\ACW\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         revision="24.0.2"
-        sha1="065faee99edff523375cc2b4167d527cd76ff936">
+        sha1="b40ab3cb30b2f9e24e2643fe6e52b3282546676c">
         <dex dex="E:\Year 3\ACW\app\build\intermediates\pre-dexed\debug\instant-run-bootstrap_453c97b068849cda3eb993fc85075ef61793c427.jar" />
+    </item>
+    <item
+        jar="E:\Year 3\ACW\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        revision="24.0.2"
+        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
+        <dex dex="E:\Year 3\ACW\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-24.2.1_57c4819f3cb10ea3b6e1f6d097305741353899c7.jar" />
+    </item>
+    <item
+        jar="E:\Year 3\ACW\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        revision="24.0.2"
+        sha1="867dad63c33388ff8c7644b236579355036d075f">
+        <dex dex="E:\Year 3\ACW\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_44efb0ceba2e4ddc6ef59c82030b2cdb8fddbcd7.jar" />
+    </item>
+    <item
+        jar="E:\Year 3\ACW\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        revision="24.0.2"
+        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
+        <dex dex="E:\Year 3\ACW\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-24.2.1_69eebe639608682d6a19efda52c577905d53e503.jar" />
+    </item>
+    <item
+        jar="E:\Year 3\ACW\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        revision="24.0.2"
+        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
+        <dex dex="E:\Year 3\ACW\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-24.2.1_6311b8348516f356e49c52a44f0223fe944da0fd.jar" />
+    </item>
+    <item
+        jar="E:\Year 3\ACW\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        revision="24.0.2"
+        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
+        <dex dex="E:\Year 3\ACW\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-ui-24.2.1_1b525307b0a9f1befe3821c042e0d4168868a5fc.jar" />
+    </item>
+    <item
+        jar="E:\Year 3\ACW\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        revision="24.0.2"
+        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
+        <dex dex="E:\Year 3\ACW\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_c9a316de9809b8844ed5176d85e703abd61fb89e.jar" />
+    </item>
+    <item
+        jar="C:\ProgramData\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\24.2.1\support-annotations-24.2.1.jar"
+        jumboMode="true"
+        revision="24.0.2"
+        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
+        <dex dex="E:\Year 3\ACW\app\build\intermediates\pre-dexed\debug\support-annotations-24.2.1_e8ef0be15cee78671879626edc120aa84c8ba0bc.jar" />
+    </item>
+    <item
+        jar="E:\Year 3\ACW\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        revision="24.0.2"
+        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
+        <dex dex="E:\Year 3\ACW\app\build\intermediates\pre-dexed\debug\com.android.support-support-compat-24.2.1_393a71b4c9b5e09ae0cbf54e0abb0f82239e68f7.jar" />
+    </item>
+    <item
+        jar="E:\Year 3\ACW\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        revision="24.0.2"
+        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
+        <dex dex="E:\Year 3\ACW\app\build\intermediates\pre-dexed\debug\com.android.support-support-media-compat-24.2.1_62552e3f3e625809c2425f8e4d31dfd9b1e87c92.jar" />
+    </item>
+    <item
+        jar="E:\Year 3\ACW\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        revision="24.0.2"
+        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
+        <dex dex="E:\Year 3\ACW\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_1a5d737443aa919249cee39406d635d40d76b06e.jar" />
     </item>
 
 </items>

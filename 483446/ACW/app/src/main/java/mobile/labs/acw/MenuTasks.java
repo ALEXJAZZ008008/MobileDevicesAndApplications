@@ -201,14 +201,14 @@ public class MenuTasks extends AsyncTask<String, Void, String>
         {
             case "StartList":
 
-                menuActivity.customAdapter.notifyDataSetChanged();
+                menuActivity.SetAndUpdateLists();
                 break;
 
             case "GetPuzzleImages":
 
                 menuActivity.puzzleListBoolean = false;
 
-                menuActivity.customAdapter.notifyDataSetChanged();
+                menuActivity.SetAndUpdateLists();
                 break;
 
             default:

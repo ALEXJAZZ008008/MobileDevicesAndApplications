@@ -36,8 +36,16 @@
         "source": "E:\\Year 3\\ACW\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\layout\\notification_template_big_media.xml"
     },
     {
+        "merged": "E:\\Year 3\\ACW\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_download_list.xml",
+        "source": "E:\\Year 3\\ACW\\app\\src\\main\\res\\layout\\fragment_download_list.xml"
+    },
+    {
         "merged": "E:\\Year 3\\ACW\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_menu.xml",
         "source": "E:\\Year 3\\ACW\\app\\src\\main\\res\\layout\\activity_menu.xml"
+    },
+    {
+        "merged": "E:\\Year 3\\ACW\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_play_list.xml",
+        "source": "E:\\Year 3\\ACW\\app\\src\\main\\res\\layout\\fragment_play_list.xml"
     },
     {
         "merged": "E:\\Year 3\\ACW\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_time.xml",
@@ -128,10 +136,6 @@
         "source": "E:\\Year 3\\ACW\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\layout\\abc_list_menu_item_radio.xml"
     },
     {
-        "merged": "E:\\Year 3\\ACW\\app\\build\\intermediates\\res\\merged\\debug\\layout\\dialog_fragment_template.xml",
-        "source": "E:\\Year 3\\ACW\\app\\src\\main\\res\\layout\\dialog_fragment_template.xml"
-    },
-    {
         "merged": "E:\\Year 3\\ACW\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_action.xml",
         "source": "E:\\Year 3\\ACW\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\layout\\notification_media_action.xml"
     },
@@ -158,6 +162,10 @@
     {
         "merged": "E:\\Year 3\\ACW\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_layout.xml",
         "source": "E:\\Year 3\\ACW\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\layout\\abc_action_menu_layout.xml"
+    },
+    {
+        "merged": "E:\\Year 3\\ACW\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_game_choice.xml",
+        "source": "E:\\Year 3\\ACW\\app\\src\\main\\res\\layout\\fragment_game_choice.xml"
     },
     {
         "merged": "E:\\Year 3\\ACW\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view_list_item.xml",

@@ -12,4 +12,7 @@
     <string name="percent">%</string>
     <string name="click_mode">Click Mode</string>
     <string name="drag_mode">Drag Mode</string>
+    <string name="play_list">Play List</string>
+    <string name="download_list">Download List</string>
+    <string name="Choose_Game_Type">Choose Game Type</string>
 </resources>
