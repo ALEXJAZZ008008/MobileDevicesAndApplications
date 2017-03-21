@@ -22,7 +22,7 @@ public class ClickGameActivity extends Activity
 
     public SurfaceHolder surfaceHolder;
 
-    public Integer score, clicks, scoreClicks;
+    public Integer score, attempts, correctAttempts;
     private TextView textView;
 
     @Override
@@ -51,8 +51,8 @@ public class ClickGameActivity extends Activity
         length = 0;
 
         score = 0;
-        clicks = 0;
-        scoreClicks = 0;
+        attempts = 0;
+        correctAttempts = 0;
         textView = (TextView)findViewById(R.id.score);
 
         SetScoreTextView();
@@ -72,7 +72,7 @@ public class ClickGameActivity extends Activity
 
     public void GoToTasks(PuzzleObject[] puzzle)
     {
-        new GameTasks(this, imageArray, length).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, puzzle);
+        new ClickGameTasks(this, imageArray, length).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, puzzle);
     }
 
     public void OnGameFinished()

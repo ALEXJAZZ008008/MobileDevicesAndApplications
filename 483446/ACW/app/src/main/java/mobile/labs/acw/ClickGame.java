@@ -369,16 +369,16 @@ public class ClickGame extends SurfaceView implements SurfaceHolder.Callback
 
     private void UpdateScoreClicks()
     {
-        clickGameActivity.scoreClicks++;
+        clickGameActivity.correctAttempts++;
 
         UpdateScore();
     }
 
     private void UpdateScore()
     {
-        clickGameActivity.clicks++;
+        clickGameActivity.attempts++;
 
-        Float scoreRatio = Float.valueOf(clickGameActivity.scoreClicks) / Float.valueOf(clickGameActivity.clicks);
+        Float scoreRatio = Float.valueOf(clickGameActivity.correctAttempts) / Float.valueOf(clickGameActivity.attempts);
 
         clickGameActivity.score = Math.round(scoreRatio * 100);
 
