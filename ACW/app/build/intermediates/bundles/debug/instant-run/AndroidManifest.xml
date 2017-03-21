@@ -31,7 +31,21 @@
         </activity>
         <activity android:name="mobile.labs.acw.ClickGameActivity" >
             <intent-filter>
-                <action android:name="android.intent.action.GAME" />
+                <action android:name="android.intent.action.CLICK" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="acw.labs.mobile"
+                    android:pathPrefix="/main"
+                    android:scheme="http" />
+            </intent-filter>
+        </activity>
+        <activity android:name="mobile.labs.acw.DragGameActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.DRAG" />
                 <action android:name="android.intent.action.VIEW" />
 
                 <category android:name="android.intent.category.DEFAULT" />

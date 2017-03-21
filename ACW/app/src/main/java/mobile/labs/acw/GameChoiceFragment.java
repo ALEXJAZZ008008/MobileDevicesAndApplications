@@ -11,18 +11,10 @@ import android.widget.Button;
 public class GameChoiceFragment extends DialogFragment
 {
     private MenuActivity menuActivity;
-
     private View view;
 
     private static View outView;
     private static Integer outPosition;
-
-    private Button clickButton, dragButton;
-
-    public GameChoiceFragment()
-    {
-
-    }
 
     public static GameChoiceFragment newInstance(String title, View inView, Integer inPosition)
     {
@@ -62,8 +54,8 @@ public class GameChoiceFragment extends DialogFragment
     {
         menuActivity = (MenuActivity)getActivity();
 
-        clickButton = (Button)view.findViewById(R.id.clickButton);
-        dragButton = (Button)view.findViewById(R.id.dragButton);
+        Button clickButton = (Button)view.findViewById(R.id.clickButton);
+        Button dragButton = (Button)view.findViewById(R.id.dragButton);
 
         clickButton.setOnClickListener(new View.OnClickListener()
         {
@@ -81,6 +73,8 @@ public class GameChoiceFragment extends DialogFragment
             @Override
             public void onClick(View view)
             {
+                menuActivity.GoToDragGameActivity(outView, outPosition);
+
                 dismiss();
             }
         });

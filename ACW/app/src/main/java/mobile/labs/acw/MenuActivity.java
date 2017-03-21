@@ -133,6 +133,14 @@ public class MenuActivity extends Activity
         startActivityForResult(intent, GAME_ACTIVITY_REQUEST);
     }
 
+    public void GoToDragGameActivity(View view, Integer position)
+    {
+        Intent intent = new Intent(view.getContext(), DragGameActivity.class);
+        intent.putExtra("puzzle", playPuzzleList.get(position).GetPuzzle());
+        intent.putExtra("position", position);
+        startActivityForResult(intent, GAME_ACTIVITY_REQUEST);
+    }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data)
     {
