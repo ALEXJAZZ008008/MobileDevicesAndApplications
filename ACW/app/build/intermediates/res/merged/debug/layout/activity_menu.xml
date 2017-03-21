@@ -17,17 +17,35 @@
         android:textSize="20sp"
         android:textColor="@color/colorPrimary"
         android:textStyle="bold"
-        android:paddingTop="40dp"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp"
-        android:paddingBottom="20dp"
+        android:paddingTop="20dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
         />
 
-    <ListView
-        android:id="@+id/list"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:divider="@null"
-        android:dividerHeight="0dp"
-        />
+    <LinearLayout
+        android:id="@+id/fragments"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="mobile.labs.acw.MenuActivity"
+        android:orientation="vertical"
+        >
+        <fragment
+            class="mobile.labs.acw.PlayListFragment"
+            android:id="@+id/play_list_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="1"
+            />
+
+        <fragment
+            class="mobile.labs.acw.DownloadListFragment"
+            android:id="@+id/download_list_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="1"
+            />
+    </LinearLayout>
 </LinearLayout>

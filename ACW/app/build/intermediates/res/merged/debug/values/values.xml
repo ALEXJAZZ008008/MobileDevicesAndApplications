@@ -198,6 +198,7 @@
     <integer name="abc_config_activityShortDur">150</integer>
     <integer name="cancel_button_image_alpha">127</integer>
     <integer name="status_bar_notification_info_maxnum">999</integer>
+    <string name="Choose_Game_Type">Choose Game Type</string>
     <string name="abc_action_bar_home_description">Navigate home</string>
     <string name="abc_action_bar_home_description_format">%1$s, %2$s</string>
     <string name="abc_action_bar_home_subtitle_description_format">%1$s, %2$s, %3$s</string>
@@ -233,11 +234,13 @@
     <string name="app_name">Android Pair Matching Application</string>
     <string name="click_mode">Click Mode</string>
     <string name="download">Download:\u0020</string>
+    <string name="download_list">Download List</string>
     <string name="drag_mode">Drag Mode</string>
     <string name="initialScore">0</string>
     <string name="nullTitle">Null\u0020</string>
     <string name="percent">%</string>
     <string name="play">Play:\u0020</string>
+    <string name="play_list">Play List</string>
     <string name="score">score</string>
     <string name="scoreTitle">Score:\u0020</string>
     <string name="search_menu_title">Search</string>

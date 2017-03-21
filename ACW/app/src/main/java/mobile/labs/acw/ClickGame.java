@@ -173,19 +173,6 @@ public class ClickGame extends SurfaceView implements SurfaceHolder.Callback
                 ChangeAllImages();
             }
 
-            private void ChangeAllImages()
-            {
-                for(int i = 0; i < squares.size(); i++)
-                {
-                    ArrayList<Square> currentRow = squares.get(i);
-
-                    for(int j = 0; j < currentRow.size(); j++)
-                    {
-                        currentRow.get(j).SetImage(cardBack);
-                    }
-                }
-            }
-
             private void ThreadLoop()
             {
                 while (!Thread.currentThread().isInterrupted())
@@ -193,31 +180,44 @@ public class ClickGame extends SurfaceView implements SurfaceHolder.Callback
                     DrawOnCanvas();
                 }
             }
-
-            private void DrawOnCanvas()
-            {
-                Canvas canvas = clickGameActivity.surfaceHolder.lockCanvas();
-
-                canvas.drawColor(Color.parseColor("#000000"));
-
-                for(int i = 0; i < squares.size(); i++)
-                {
-                    ArrayList<Square> currentRow = squares.get(i);
-
-                    for(int j = 0; j < currentRow.size(); j++)
-                    {
-                        Square currentSquare = currentRow.get(j);
-                        TwoDimensionalVector currentPosition = currentSquare.GetPosition();
-
-                        canvas.drawBitmap(currentSquare.GetImage(), currentPosition.GetX(), currentPosition.GetY(), paint);
-                    }
-                }
-
-                clickGameActivity.surfaceHolder.unlockCanvasAndPost(canvas);
-            }
         });
 
         drawThread.start();
+    }
+
+    private void ChangeAllImages()
+    {
+        for(int i = 0; i < squares.size(); i++)
+        {
+            ArrayList<Square> currentRow = squares.get(i);
+
+            for(int j = 0; j < currentRow.size(); j++)
+            {
+                currentRow.get(j).SetImage(cardBack);
+            }
+        }
+    }
+
+    private void DrawOnCanvas()
+    {
+        Canvas canvas = clickGameActivity.surfaceHolder.lockCanvas();
+
+        canvas.drawColor(Color.parseColor("#000000"));
+
+        for(int i = 0; i < squares.size(); i++)
+        {
+            ArrayList<Square> currentRow = squares.get(i);
+
+            for(int j = 0; j < currentRow.size(); j++)
+            {
+                Square currentSquare = currentRow.get(j);
+                TwoDimensionalVector currentPosition = currentSquare.GetPosition();
+
+                canvas.drawBitmap(currentSquare.GetImage(), currentPosition.GetX(), currentPosition.GetY(), paint);
+            }
+        }
+
+        clickGameActivity.surfaceHolder.unlockCanvasAndPost(canvas);
     }
 
     @Override
@@ -357,14 +357,14 @@ public class ClickGame extends SurfaceView implements SurfaceHolder.Callback
                 ResetSquareImage(previouslyHighlightedSquare);
                 ResetSquareImage(currentSquare);
             }
-
-            private void ResetSquareImage(Square square)
-            {
-                square.SetImage(cardBack);
-            }
         });
 
         updateThread.start();
+    }
+
+    private void ResetSquareImage(Square square)
+    {
+        square.SetImage(cardBack);
     }
 
     private void UpdateScoreClicks()
