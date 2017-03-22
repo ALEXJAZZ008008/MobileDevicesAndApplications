@@ -29,18 +29,6 @@ public class PlayListFragment extends Fragment
         return view;
     }
 
-    @Override
-    public void onAttach(Context context)
-    {
-        super.onAttach(context);
-    }
-
-    @Override
-    public void onDetach()
-    {
-        super.onDetach();
-    }
-
     private void Initialise()
     {
         menuActivity = (MenuActivity)getActivity();

@@ -87,7 +87,7 @@ public class DragGameTasks extends AsyncTask<PuzzleObject, Void, PuzzleObject>
     {
         try
         {
-            new JSON(jsonArrays, key, arguments).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, new URL(url));
+            new DragGameJSON(dragGameActivity, jsonArrays, key, arguments).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, new URL(url));
         }
         catch(Exception e)
         {
