@@ -10,6 +10,8 @@ import java.util.ArrayList;
 
 public class MenuActivity extends Activity
 {
+    private ObjectToSharedPreferences objectToSharedPreferences;
+
     private ArrayList<PuzzleListItemObject> puzzleList;
     public ArrayList<PuzzleListItemObject> downloadPuzzleList, playPuzzleList;
     public Boolean puzzleListBoolean;
@@ -17,6 +19,7 @@ public class MenuActivity extends Activity
     public ListView downloadListView, playListView;
     public CustomAdapter downloadCustomAdapter, playCustomAdapter;
 
+    private static final String PREFERENCES = "menuPreferences";
     private static final int GAME_ACTIVITY_REQUEST = 1;
 
     @Override
@@ -31,8 +34,31 @@ public class MenuActivity extends Activity
         StartList();
     }
 
+    @Override
+    protected void onResume()
+    {
+        super.onResume();
+
+        ArrayList<PuzzleListItemObject> temporaryPuzzleList = (ArrayList<PuzzleListItemObject>)objectToSharedPreferences.ToObject(PREFERENCES, "puzzleList");
+
+        if(temporaryPuzzleList != null)
+        {
+            puzzleList = temporaryPuzzleList;
+        }
+    }
+
+    @Override
+    protected void onPause()
+    {
+        super.onPause();
+
+        objectToSharedPreferences.ToSharedPreferences(PREFERENCES, puzzleList, "puzzleList");
+    }
+
     private void Initialise()
     {
+        objectToSharedPreferences = new ObjectToSharedPreferences(this);
+
         puzzleList = new ArrayList<>();
 
         puzzleListBoolean = false;

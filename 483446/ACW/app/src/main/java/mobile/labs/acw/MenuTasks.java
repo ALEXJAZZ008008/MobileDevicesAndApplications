@@ -137,7 +137,7 @@ public class MenuTasks extends AsyncTask<String, Void, String>
     {
         try
         {
-            new JSON(jsonArrays, key, arguments).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, new URL(url));
+            new MenuJSON(menuActivity, jsonArrays, key, arguments).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, new URL(url));
         }
         catch(Exception e)
         {
