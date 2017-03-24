@@ -25,6 +25,11 @@ public class ClickGameActivity extends Activity
     public Integer score, attempts, correctAttempts;
     private TextView textView;
 
+    public ArrayList<ArrayList<SquareObject>> squares;
+    public TwoDimensionalVectorObject highlightedSquare;
+    public Integer currentMatches;
+    public Boolean firstBoolean;
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -36,8 +41,20 @@ public class ClickGameActivity extends Activity
     }
 
     @Override
+    protected void onResume()
+    {
+        super.onResume();
+
+        GetPreferences();
+
+        SetScoreTextView();
+    }
+
+    @Override
     protected void onPause()
     {
+        SavePreferences();
+
         clickGame.surfaceDestroyed(surfaceHolder);
 
         super.onPause();
@@ -50,12 +67,9 @@ public class ClickGameActivity extends Activity
         imageArray = new ArrayList<>();
         length = 0;
 
-        score = 0;
-        attempts = 0;
-        correctAttempts = 0;
-        textView = (TextView)findViewById(R.id.score);
+        ResetPreferencesValues();
 
-        SetScoreTextView();
+        textView = (TextView)findViewById(R.id.score);
 
         GoToTasks(new PuzzleObject[] { puzzle });
 
@@ -64,15 +78,60 @@ public class ClickGameActivity extends Activity
         GoToTasks(new PuzzleObject[] { });
     }
 
+    public void GoToTasks(PuzzleObject[] puzzle)
+    {
+        new ClickGameTasks(this, imageArray, length).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, puzzle);
+    }
+
+    private void ResetPreferencesValues()
+    {
+        score = 0;
+        attempts = 0;
+        correctAttempts = 0;
+        squares = new ArrayList<>();
+        highlightedSquare = new TwoDimensionalVectorObject(-1, -1);
+        currentMatches = 0;
+        firstBoolean = false;
+    }
+
+    private void GetPreferences()
+    {
+        score = Preferences.ReadInteger(this, "score", score);
+        attempts = Preferences.ReadInteger(this, "attempts", attempts);
+        correctAttempts = Preferences.ReadInteger(this, "correctAttempts", correctAttempts);
+
+        highlightedSquare.SetX(Preferences.ReadInteger(this, "highlightedSquareX", highlightedSquare.GetX()));
+        highlightedSquare.SetY(Preferences.ReadInteger(this, "highlightedSquareY", highlightedSquare.GetY()));
+
+        firstBoolean = Preferences.ReadBoolean(this, "firstBoolean", firstBoolean);
+        currentMatches = Preferences.ReadInteger(this, "currentMatches", currentMatches);
+    }
+
     public void SetScoreTextView()
     {
         String scoreText = String.valueOf(score);
         textView.setText(scoreText);
     }
 
-    public void GoToTasks(PuzzleObject[] puzzle)
+    private void SavePreferences()
     {
-        new ClickGameTasks(this, imageArray, length).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, puzzle);
+        Preferences.WriteInteger(this, "score", score);
+        Preferences.WriteInteger(this, "attempts", attempts);
+        Preferences.WriteInteger(this, "correctAttempts", correctAttempts);
+
+        for(Integer i = 0; i < squares.size(); i++)
+        {
+            for(Integer j = 0; j < squares.get(i).size(); j++)
+            {
+                Preferences.WriteInteger(this, "square" + String.valueOf(i) + String.valueOf(j), squares.get(i).get(j).GetImageState());
+            }
+        }
+
+        Preferences.WriteInteger(this, "highlightedSquareX", highlightedSquare.GetX());
+        Preferences.WriteInteger(this, "highlightedSquareY", highlightedSquare.GetY());
+
+        Preferences.WriteBoolean(this, "firstBoolean", firstBoolean);
+        Preferences.WriteInteger(this, "currentMatches", currentMatches);
     }
 
     public void OnGameFinished()
@@ -80,6 +139,9 @@ public class ClickGameActivity extends Activity
         Intent intent = new Intent();
         intent.putExtra("score", score);
         intent.putExtra("position", getIntent().getIntExtra("position", -1));
+
+        ResetPreferencesValues();
+
         setResult(RESULT_OK, intent);
 
         finish();

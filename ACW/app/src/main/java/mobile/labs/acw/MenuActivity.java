@@ -7,19 +7,17 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ListView;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class MenuActivity extends Activity
 {
-    private ObjectToSharedPreferences objectToSharedPreferences;
-
     private ArrayList<PuzzleListItemObject> puzzleList;
     public ArrayList<PuzzleListItemObject> downloadPuzzleList, playPuzzleList;
-    public Boolean puzzleListBoolean;
+    public Boolean listStartedBoolean, puzzleListBoolean;
 
     public ListView downloadListView, playListView;
     public CustomAdapter downloadCustomAdapter, playCustomAdapter;
 
-    private static final String PREFERENCES = "menuPreferences";
     private static final int GAME_ACTIVITY_REQUEST = 1;
 
     @Override
@@ -39,27 +37,27 @@ public class MenuActivity extends Activity
     {
         super.onResume();
 
-        ArrayList<PuzzleListItemObject> temporaryPuzzleList = (ArrayList<PuzzleListItemObject>)objectToSharedPreferences.ToObject(PREFERENCES, "puzzleList");
+        ResetGamePreferences();
 
-        if(temporaryPuzzleList != null)
+        if(listStartedBoolean)
         {
-            puzzleList = temporaryPuzzleList;
+            SetAndUpdateLists();
         }
     }
 
     @Override
     protected void onPause()
     {
-        super.onPause();
+        SavePreferences();
 
-        objectToSharedPreferences.ToSharedPreferences(PREFERENCES, puzzleList, "puzzleList");
+        super.onPause();
     }
 
     private void Initialise()
     {
-        objectToSharedPreferences = new ObjectToSharedPreferences(this);
-
         puzzleList = new ArrayList<>();
+
+        listStartedBoolean = false;
 
         puzzleListBoolean = false;
     }
@@ -87,6 +85,8 @@ public class MenuActivity extends Activity
         {
             PuzzleListItemObject puzzleListItem = puzzleList.get(i);
 
+            GetPreferences(puzzleListItem);
+
             if(puzzleListItem.GetState().equals(getResources().getString(R.string.download)))
             {
                 downloadPuzzleList.add(puzzleListItem);
@@ -106,6 +106,77 @@ public class MenuActivity extends Activity
     {
         downloadPuzzleList.clear();
         playPuzzleList.clear();
+    }
+
+    private void GetPreferences(PuzzleListItemObject puzzleListItem)
+    {
+        PuzzleObject puzzleListItemPuzzle = puzzleListItem.GetPuzzle();
+        String puzzleListItemTitle = puzzleListItem.GetTitle();
+
+        ArrayList<String> puzzleListPreferences = Preferences.GetAllInstancesOfKey(this, puzzleListItemTitle);
+
+        for (Integer j = 0; j < puzzleListPreferences.size(); j++)
+        {
+            String key = puzzleListPreferences.get(j);
+
+            if (key.equals(puzzleListItemTitle))
+            {
+                puzzleListItemPuzzle.SetId(Preferences.ReadString(this, key, puzzleListItemPuzzle.GetId()));
+            }
+        }
+
+        String puzzleListItemPuzzleId = puzzleListItem.GetPuzzle().GetId();
+
+        if(puzzleListItemPuzzleId != null)
+        {
+            puzzleListPreferences = Preferences.GetAllInstancesOfKey(this, puzzleListItemPuzzleId);
+
+            for (Integer j = 0; j < puzzleListPreferences.size(); j++)
+            {
+                String key = puzzleListPreferences.get(j);
+
+                if (key.equals(puzzleListItemPuzzleId + "state"))
+                {
+                    puzzleListItem.SetState(Preferences.ReadString(this, key, puzzleListItem.GetState()));
+                }
+
+                if (key.equals(puzzleListItemPuzzleId + "score"))
+                {
+                    puzzleListItem.SetScore(Preferences.ReadString(this, key, puzzleListItem.GetScore()));
+                }
+
+                if (key.equals(puzzleListItemPuzzleId + "PictureSet"))
+                {
+                    puzzleListItemPuzzle.SetPictureSet(Preferences.ReadString(this, key, puzzleListItemPuzzle.GetPictureSet()));
+                }
+
+                if (key.equals(puzzleListItemPuzzleId + "Rows"))
+                {
+                    puzzleListItemPuzzle.SetRows(Preferences.ReadString(this, key, puzzleListItemPuzzle.GetRows()));
+                }
+            }
+
+            puzzleListItemPuzzle.SetLayout(GetLayout(puzzleListItemPuzzleId));
+        }
+    }
+
+    private ArrayList<String> GetLayout(String puzzleListItemPuzzleId)
+    {
+        String keyRegularExpression = puzzleListItemPuzzleId + "Layout";
+        ArrayList<String> puzzleListPreferences = Preferences.GetAllInstancesOfKey(this, keyRegularExpression);
+
+        Integer length = puzzleListPreferences.size();
+
+        String[] puzzleListItemPuzzleLayout = new String[length];
+
+        for (Integer j = 0; j < length; j++)
+        {
+            String key = puzzleListPreferences.get(j);
+
+            puzzleListItemPuzzleLayout[Integer.valueOf(key.split(keyRegularExpression)[1])] = Preferences.ReadString(this, key, "-1");
+        }
+
+        return new ArrayList<>(Arrays.asList(puzzleListItemPuzzleLayout));
     }
 
     private void OrderPlayPuzzleList()
@@ -167,6 +238,60 @@ public class MenuActivity extends Activity
         startActivityForResult(intent, GAME_ACTIVITY_REQUEST);
     }
 
+    private void ResetGamePreferences()
+    {
+        Preferences.RemoveKey(this, "score");
+        Preferences.RemoveKey(this, "attempts");
+        Preferences.RemoveKey(this, "correctAttempts");
+
+        ArrayList<String> squarePreferences = Preferences.GetAllInstancesOfKey(this, "square");
+
+        for(Integer i = 0; i < squarePreferences.size(); i++)
+        {
+            Preferences.RemoveKey(this, squarePreferences.get(i));
+        }
+
+        Preferences.RemoveKey(this, "highlightedSquareX");
+        Preferences.RemoveKey(this, "highlightedSquareY");
+
+        Preferences.RemoveKey(this, "firstBoolean");
+        Preferences.RemoveKey(this, "currentMatches");
+    }
+
+    private void SavePreferences()
+    {
+        for(Integer i = 0; i < puzzleList.size(); i++)
+        {
+            PuzzleListItemObject puzzleListItem = puzzleList.get(i);
+            PuzzleObject puzzleListItemPuzzle = puzzleListItem.GetPuzzle();
+
+            if(puzzleListItemPuzzle != null)
+            {
+                SavePuzzleListItemPreferences(puzzleListItem, puzzleListItemPuzzle);
+            }
+        }
+    }
+
+    private void SavePuzzleListItemPreferences(PuzzleListItemObject puzzleListItem, PuzzleObject puzzleListItemPuzzle)
+    {
+        String puzzleListItemPuzzleId = puzzleListItemPuzzle.GetId();
+
+        Preferences.WriteString(this, puzzleListItem.GetTitle(), puzzleListItemPuzzleId);
+
+        Preferences.WriteString(this, puzzleListItemPuzzleId + "state", puzzleListItem.GetState());
+        Preferences.WriteString(this, puzzleListItemPuzzleId + "score", puzzleListItem.GetScore());
+
+        Preferences.WriteString(this, puzzleListItemPuzzleId + "PictureSet", puzzleListItemPuzzle.GetPictureSet());
+        Preferences.WriteString(this, puzzleListItemPuzzleId + "Rows", puzzleListItemPuzzle.GetRows());
+
+        ArrayList<String> puzzleListItemPuzzleLayout = puzzleListItemPuzzle.GetLayout();
+
+        for(Integer j = 0; j < puzzleListItemPuzzleLayout.size(); j++)
+        {
+            Preferences.WriteString(this, puzzleListItemPuzzleId + "Layout" + String.valueOf(j), puzzleListItemPuzzleLayout.get(j));
+        }
+    }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data)
     {
@@ -182,6 +307,8 @@ public class MenuActivity extends Activity
                 if(Integer.valueOf(puzzleListItem.GetScore()) < score)
                 {
                     puzzleListItem.SetScore(String.valueOf(score));
+
+                    Preferences.WriteString(this, puzzleListItem.GetPuzzle().GetId() + "score", puzzleListItem.GetScore());
                 }
 
                 playPuzzleList.set(position, puzzleListItem);

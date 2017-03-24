@@ -9,7 +9,6 @@ import android.graphics.Paint;
 import android.view.MotionEvent;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
-import android.view.View;
 import android.widget.RelativeLayout;
 
 import java.util.ArrayList;
@@ -18,16 +17,15 @@ public class ClickGame extends SurfaceView implements SurfaceHolder.Callback
 {
     private ClickGameActivity clickGameActivity;
 
+    private TwoDimensionalVectorObject canvasSize;
+
     private PuzzleObject puzzle;
     private ArrayList<Bitmap> imageArray;
     private Bitmap cardBack, cardBackHighlighted;
-    private Square highlightedSquare;
 
-    private Integer maximumMatches, currentMatches;
+    private Integer maximumMatches;
 
-    private TwoDimensionalVector canvasSize;
-
-    private ArrayList<ArrayList<Square>> squares;
+    private Integer highlightImage, cardImage, faceImage;
 
     private Paint paint;
     private Thread drawThread, updateThread;
@@ -47,7 +45,7 @@ public class ClickGame extends SurfaceView implements SurfaceHolder.Callback
 
         imageArray = GetBitmapImageArray(inImageArray);
 
-        canvasSize = new TwoDimensionalVector(inRelativeLayout.getWidth(), inRelativeLayout.getHeight());
+        canvasSize = new TwoDimensionalVectorObject(inRelativeLayout.getWidth(), inRelativeLayout.getHeight());
 
         Initialise();
     }
@@ -69,45 +67,34 @@ public class ClickGame extends SurfaceView implements SurfaceHolder.Callback
         Integer rows = Integer.valueOf(puzzle.GetRows());
         Integer columns = puzzle.GetLayout().size() / rows;
 
-        TwoDimensionalVector size = new TwoDimensionalVector((canvasSize.GetX() / columns), (canvasSize.GetY() / rows));
+        TwoDimensionalVectorObject size = new TwoDimensionalVectorObject((canvasSize.GetX() / columns), (canvasSize.GetY() / rows));
 
         SetScaledImageArray(size);
 
         cardBack = ScaledBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.card), size);
         cardBackHighlighted = ScaledBitmap(BitmapFactory.decodeResource(this.getResources(), R.drawable.inverted_card), size);
 
-        squares = new ArrayList<>();
+        if(Preferences.GetAllInstancesOfKey(clickGameActivity, "square").size() > 0)
+        {
+            GetExistingSquares(rows, columns, size);
+        }
+        else
+        {
+            GetSquares(rows, columns, size);
+        }
 
-        GetSquares(rows, columns, size);
+        maximumMatches = (clickGameActivity.squares.get(0).size() * clickGameActivity.squares.size()) / 2;
 
-        maximumMatches = (squares.get(0).size() * squares.size()) / 2;
-        currentMatches = 0;
+        highlightImage = -1;
+        cardImage = 0;
+        faceImage = 1;
 
         paint = new Paint();
         clickGameActivity.surfaceHolder = getHolder();
         clickGameActivity.surfaceHolder.addCallback(this);
     }
 
-    private void GetSquares(Integer rows, Integer columns, TwoDimensionalVector size)
-    {
-        ArrayList<Integer> layout = GetLayout(puzzle.GetLayout());
-
-        for(Integer i = 0; i < rows; i++)
-        {
-            squares.add(new ArrayList<Square>());
-
-            for(Integer j = 0; j < columns; j++)
-            {
-                Integer layoutInteger = layout.get((i * columns) + j) - 1;
-
-                TwoDimensionalVector position = new TwoDimensionalVector((size.GetX() * j), (size.GetY() * i));
-
-                squares.get(i).add(new Square(imageArray.get(layoutInteger), layoutInteger, position));
-            }
-        }
-    }
-
-    private void SetScaledImageArray(TwoDimensionalVector size)
+    private void SetScaledImageArray(TwoDimensionalVectorObject size)
     {
         Bitmap image;
 
@@ -121,9 +108,69 @@ public class ClickGame extends SurfaceView implements SurfaceHolder.Callback
         }
     }
 
-    private Bitmap ScaledBitmap(Bitmap image, TwoDimensionalVector size)
+    private Bitmap ScaledBitmap(Bitmap image, TwoDimensionalVectorObject size)
     {
         return Bitmap.createScaledBitmap(image, size.GetX(), size.GetY(), false);
+    }
+
+    private void GetExistingSquares(Integer rows, Integer columns, TwoDimensionalVectorObject size)
+    {
+        ArrayList<Integer> layout = GetLayout(puzzle.GetLayout());
+
+        for(Integer i = 0; i < rows; i++)
+        {
+            clickGameActivity.squares.add(new ArrayList<SquareObject>());
+
+            for(Integer j = 0; j < columns; j++)
+            {
+                Integer layoutInteger = layout.get((i * columns) + j) - 1;
+
+                TwoDimensionalVectorObject position = new TwoDimensionalVectorObject((size.GetX() * j), (size.GetY() * i));
+
+                Integer imageState = Preferences.ReadInteger(clickGameActivity, "square" + String.valueOf(i) + String.valueOf(j), -2);
+
+                switch(imageState)
+                {
+                    case -1:
+
+                        clickGameActivity.squares.get(i).add(new SquareObject(cardBackHighlighted, imageState, layoutInteger, position));
+                        break;
+
+                    case 0:
+
+                        clickGameActivity.squares.get(i).add(new SquareObject(cardBack, imageState, layoutInteger, position));
+                        break;
+
+                    case 1:
+
+                        clickGameActivity.squares.get(i).add(new SquareObject(imageArray.get(layoutInteger), imageState, layoutInteger, position));
+                        break;
+
+                    default:
+
+                        break;
+                }
+            }
+        }
+    }
+
+    private void GetSquares(Integer rows, Integer columns, TwoDimensionalVectorObject size)
+    {
+        ArrayList<Integer> layout = GetLayout(puzzle.GetLayout());
+
+        for(Integer i = 0; i < rows; i++)
+        {
+            clickGameActivity.squares.add(new ArrayList<SquareObject>());
+
+            for(Integer j = 0; j < columns; j++)
+            {
+                Integer layoutInteger = layout.get((i * columns) + j) - 1;
+
+                TwoDimensionalVectorObject position = new TwoDimensionalVectorObject((size.GetX() * j), (size.GetY() * i));
+
+                clickGameActivity.squares.get(i).add(new SquareObject(imageArray.get(layoutInteger), faceImage, layoutInteger, position));
+            }
+        }
     }
 
     private ArrayList<Integer> GetLayout(ArrayList<String> layout)
@@ -152,7 +199,12 @@ public class ClickGame extends SurfaceView implements SurfaceHolder.Callback
             @Override
             public void run()
             {
-                ThreadInitialise();
+                if(!clickGameActivity.firstBoolean)
+                {
+                    ThreadInitialise();
+
+                    clickGameActivity.firstBoolean = true;
+                }
 
                 ThreadLoop();
             }
@@ -165,7 +217,7 @@ public class ClickGame extends SurfaceView implements SurfaceHolder.Callback
                 {
                     Thread.sleep(1000);
                 }
-                catch(Exception e)
+                catch (Exception e)
                 {
                     e.printStackTrace();
                 }
@@ -187,13 +239,13 @@ public class ClickGame extends SurfaceView implements SurfaceHolder.Callback
 
     private void ChangeAllImages()
     {
-        for(int i = 0; i < squares.size(); i++)
+        for(int i = 0; i < clickGameActivity.squares.size(); i++)
         {
-            ArrayList<Square> currentRow = squares.get(i);
+            ArrayList<SquareObject> currentRow = clickGameActivity.squares.get(i);
 
             for(int j = 0; j < currentRow.size(); j++)
             {
-                currentRow.get(j).SetImage(cardBack);
+                SetCardImageToCard(currentRow.get(j));
             }
         }
     }
@@ -204,16 +256,16 @@ public class ClickGame extends SurfaceView implements SurfaceHolder.Callback
 
         canvas.drawColor(Color.parseColor("#000000"));
 
-        for(int i = 0; i < squares.size(); i++)
+        for(int i = 0; i < clickGameActivity.squares.size(); i++)
         {
-            ArrayList<Square> currentRow = squares.get(i);
+            ArrayList<SquareObject> currentRow = clickGameActivity.squares.get(i);
 
             for(int j = 0; j < currentRow.size(); j++)
             {
-                Square currentSquare = currentRow.get(j);
-                TwoDimensionalVector currentPosition = currentSquare.GetPosition();
+                SquareObject currentSquareObject = currentRow.get(j);
+                TwoDimensionalVectorObject currentPosition = currentSquareObject.GetPosition();
 
-                canvas.drawBitmap(currentSquare.GetImage(), currentPosition.GetX(), currentPosition.GetY(), paint);
+                canvas.drawBitmap(currentSquareObject.GetImage(), currentPosition.GetX(), currentPosition.GetY(), paint);
             }
         }
 
@@ -234,63 +286,62 @@ public class ClickGame extends SurfaceView implements SurfaceHolder.Callback
         }
     }
 
-    public boolean onTouch(View view, MotionEvent motionEvent)
+    public boolean onTouch(MotionEvent motionEvent)
     {
         Float x = motionEvent.getX();
         Float y = motionEvent.getY();
 
-        if(motionEvent.getAction() == MotionEvent.ACTION_DOWN)
+        return motionEvent.getAction() == MotionEvent.ACTION_DOWN && ActionDownEvent(x, y);
+    }
+
+    private Boolean ActionDownEvent(Float x, Float y)
+    {
+        for(int i = 0; i < clickGameActivity.squares.size(); i++)
         {
-            for(int i = 0; i < squares.size(); i++)
+            ArrayList<SquareObject> currentRow = clickGameActivity.squares.get(i);
+
+            for(int j = 0; j < currentRow.size(); j++)
             {
-                ArrayList<Square> currentRow = squares.get(i);
-
-                for(int j = 0; j < currentRow.size(); j++)
+                if(CheckEachSquare(x, y, i, j, currentRow))
                 {
-                    Square currentSquare = currentRow.get(j);
-                    Bitmap currentSquareImage = currentSquare.GetImage();
-                    TwoDimensionalVector minimumPosition = currentSquare.GetPosition();
-                    Integer minimumX = minimumPosition.GetX();
-                    Integer minimumY = minimumPosition.GetY();
-                    Integer maximumX = minimumX + currentSquareImage.getWidth();
-                    Integer maximumY = minimumY + currentSquareImage.getHeight();
+                    return true;
+                }
+            }
+        }
 
-                    if((x >= minimumX && x <= maximumX) && (y >= minimumY && y <= maximumY))
+        return false;
+    }
+
+    private Boolean CheckEachSquare(Float x, Float y, Integer i, Integer j, ArrayList<SquareObject> currentRow)
+    {
+        SquareObject currentSquare = currentRow.get(j);
+        Bitmap currentSquareImage = currentSquare.GetImage();
+        TwoDimensionalVectorObject minimumPosition = currentSquare.GetPosition();
+        Integer minimumX = minimumPosition.GetX();
+        Integer minimumY = minimumPosition.GetY();
+        Integer maximumX = minimumX + currentSquareImage.getWidth();
+        Integer maximumY = minimumY + currentSquareImage.getHeight();
+
+        if((x >= minimumX && x <= maximumX) && (y >= minimumY && y <= maximumY))
+        {
+            Integer row = clickGameActivity.highlightedSquare.GetX();
+            Integer column = clickGameActivity.highlightedSquare.GetY();
+
+            if((row == -1 || column == -1) && currentSquareImage == cardBack)
+            {
+                return FirstSelection(i, j, currentSquare);
+            }
+            else
+            {
+                if(currentSquareImage == cardBackHighlighted)
+                {
+                    return ResetSelection(currentSquare);
+                }
+                else
+                {
+                    if (currentSquareImage == cardBack)
                     {
-                        if(highlightedSquare == null && currentSquareImage == cardBack)
-                        {
-                            currentSquare.SetImage(cardBackHighlighted);
-
-                            highlightedSquare = currentSquare;
-
-                            return true;
-                        }
-                        else
-                        {
-                            if(currentSquare == highlightedSquare)
-                            {
-                                currentSquare.SetImage(cardBack);
-
-                                highlightedSquare = null;
-                            }
-                            else
-                            {
-                                if (currentSquareImage == cardBack)
-                                {
-                                    if(CheckMatch(currentSquare))
-                                    {
-                                        currentMatches++;
-
-                                        if(currentMatches.equals(maximumMatches))
-                                        {
-                                            clickGameActivity.OnGameFinished();
-                                        }
-
-                                        return true;
-                                    }
-                                }
-                            }
-                        }
+                        return SecondSelection(currentSquare, row, column);
                     }
                 }
             }
@@ -299,16 +350,60 @@ public class ClickGame extends SurfaceView implements SurfaceHolder.Callback
         return false;
     }
 
-    private Boolean CheckMatch(final Square currentSquare)
+    private Boolean FirstSelection(Integer i, Integer j, SquareObject currentSquare)
+    {
+        SetCardImageToHighlight(currentSquare);
+
+        clickGameActivity.highlightedSquare.SetX(i);
+        clickGameActivity.highlightedSquare.SetY(j);
+
+        return true;
+    }
+
+    private Boolean ResetSelection(SquareObject currentSquare)
+    {
+        SetCardImageToCard(currentSquare);
+
+        ResetHighlightedSquare();
+
+        return true;
+    }
+
+    private Boolean SecondSelection(SquareObject currentSquare, Integer row, Integer column)
+    {
+        SquareObject highlightedSquare = clickGameActivity.squares.get(row).get(column);
+
+        if(CheckAndUpdateMatch(currentSquare, highlightedSquare))
+        {
+            clickGameActivity.currentMatches++;
+
+            if(clickGameActivity.currentMatches.equals(maximumMatches))
+            {
+                clickGameActivity.OnGameFinished();
+            }
+
+            return true;
+        }
+
+        return false;
+    }
+
+    private void ResetHighlightedSquare()
+    {
+        clickGameActivity.highlightedSquare.SetX(-1);
+        clickGameActivity.highlightedSquare.SetY(-1);
+    }
+
+    private Boolean CheckAndUpdateMatch(SquareObject currentSquareObject, SquareObject highlightedSquare)
     {
         Integer highlightSquareImagePosition = highlightedSquare.GetImagePosition();
-        Integer currentSquareImagePosition = currentSquare.GetImagePosition();
+        Integer currentSquareImagePosition = currentSquareObject.GetImagePosition();
 
-        SetSquaresToLayoutImages(currentSquare, highlightSquareImagePosition, currentSquareImagePosition);
+        SetSquaresToLayoutImages(currentSquareObject, currentSquareImagePosition, highlightedSquare, highlightSquareImagePosition);
 
         if(highlightSquareImagePosition.equals(currentSquareImagePosition))
         {
-            UpdateScoreClicks();
+            UpdateScoreAttempts();
 
             return Return(true);
         }
@@ -316,34 +411,34 @@ public class ClickGame extends SurfaceView implements SurfaceHolder.Callback
         {
             UpdateScore();
 
-            ToResetSquaresImages(highlightedSquare, currentSquare);
+            ToResetSquaresImages(highlightedSquare, currentSquareObject);
 
             return Return(false);
         }
     }
 
-    private void SetSquaresToLayoutImages(Square currentSquare, Integer highlightSquareImagePosition, Integer currentSquareImagePosition)
+    private void SetSquaresToLayoutImages(SquareObject currentSquareObject, Integer currentSquareImagePosition, SquareObject highlightedSquare, Integer highlightSquareImagePosition)
     {
         SetSquareToLayoutImage(highlightedSquare, highlightSquareImagePosition);
-        SetSquareToLayoutImage(currentSquare, currentSquareImagePosition);
+        SetSquareToLayoutImage(currentSquareObject, currentSquareImagePosition);
     }
 
-    private void SetSquareToLayoutImage(Square square, Integer position)
+    private void SetSquareToLayoutImage(SquareObject squareObject, Integer position)
     {
-        square.SetImage(imageArray.get(position));
+        SetCardImageToFace(squareObject, position);
     }
 
-    private void ToResetSquaresImages(final Square previouslyHighlightedSquare, final Square currentSquare)
+    private void ToResetSquaresImages(final SquareObject highlightedSquare, final SquareObject currentSquareObject)
     {
         updateThread = new Thread(new Runnable()
         {
             @Override
             public void run()
             {
-                ResetSquaresImages(previouslyHighlightedSquare, currentSquare);
+                ResetSquaresImages(highlightedSquare, currentSquareObject);
             }
 
-            private void ResetSquaresImages(Square previouslyHighlightedSquare, Square currentSquare)
+            private void ResetSquaresImages(SquareObject previouslyHighlightedSquareObject, SquareObject currentSquareObject)
             {
                 try
                 {
@@ -354,20 +449,38 @@ public class ClickGame extends SurfaceView implements SurfaceHolder.Callback
                     e.printStackTrace();
                 }
 
-                ResetSquareImage(previouslyHighlightedSquare);
-                ResetSquareImage(currentSquare);
+                ResetSquareImage(previouslyHighlightedSquareObject);
+                ResetSquareImage(currentSquareObject);
             }
         });
 
         updateThread.start();
     }
 
-    private void ResetSquareImage(Square square)
+    private void ResetSquareImage(SquareObject squareObject)
     {
-        square.SetImage(cardBack);
+        SetCardImageToCard(squareObject);
     }
 
-    private void UpdateScoreClicks()
+    private void SetCardImageToHighlight(SquareObject squareObject)
+    {
+        squareObject.SetImage(cardBackHighlighted);
+        squareObject.SetImageState(highlightImage);
+    }
+
+    private void SetCardImageToCard(SquareObject squareObject)
+    {
+        squareObject.SetImage(cardBack);
+        squareObject.SetImageState(cardImage);
+    }
+
+    private void SetCardImageToFace(SquareObject squareObject, Integer position)
+    {
+        squareObject.SetImage(imageArray.get(position));
+        squareObject.SetImageState(faceImage);
+    }
+
+    private void UpdateScoreAttempts()
     {
         clickGameActivity.correctAttempts++;
 
@@ -387,7 +500,7 @@ public class ClickGame extends SurfaceView implements SurfaceHolder.Callback
 
     private Boolean Return(Boolean returnBool)
     {
-        highlightedSquare = null;
+        ResetHighlightedSquare();
 
         return returnBool;
     }

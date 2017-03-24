@@ -101,6 +101,20 @@ public class MenuTasks extends AsyncTask<String, Void, String>
         jsonArrays.clear();
 
         puzzleObject.SetLayout(layoutList);
+
+        String Id = puzzleObject.GetId();
+
+        Preferences.WriteString(menuActivity, puzzleListItem.GetTitle(), Id);
+
+        Preferences.WriteString(menuActivity, Id + "PictureSet", puzzleObject.GetPictureSet());
+        Preferences.WriteString(menuActivity, Id + "Rows", puzzleObject.GetRows());
+
+        ArrayList<String> puzzleListItemPuzzleLayout = puzzleObject.GetLayout();
+
+        for(Integer j = 0; j < puzzleListItemPuzzleLayout.size(); j++)
+        {
+            Preferences.WriteString(menuActivity, Id + "Layout" + String.valueOf(j), puzzleListItemPuzzleLayout.get(j));
+        }
     }
 
     private void GetPuzzleImages(String arg)
@@ -131,6 +145,10 @@ public class MenuTasks extends AsyncTask<String, Void, String>
         imageArray.clear();
 
         puzzleListItem.SetState(menuActivity.getResources().getString(R.string.play));
+
+        String puzzleListItemPuzzleId = puzzleListItem.GetPuzzle().GetId();
+
+        Preferences.WriteString(menuActivity, puzzleListItemPuzzleId + "state", puzzleListItem.GetState());
     }
 
     private void GoToJSON(String key, String[] arguments, String url)
@@ -200,6 +218,8 @@ public class MenuTasks extends AsyncTask<String, Void, String>
         switch(arg)
         {
             case "StartList":
+
+                menuActivity.listStartedBoolean = true;
 
                 menuActivity.SetAndUpdateLists();
                 break;
