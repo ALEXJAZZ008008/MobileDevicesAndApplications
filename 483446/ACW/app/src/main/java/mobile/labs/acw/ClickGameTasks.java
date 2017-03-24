@@ -158,7 +158,7 @@ public class ClickGameTasks extends AsyncTask<PuzzleObject, Void, PuzzleObject>
                     @Override
                     public boolean onTouch(View view, MotionEvent motionEvent)
                     {
-                        return clickGameActivity.clickGame.onTouch(view, motionEvent);
+                        return clickGameActivity.clickGame.onTouch(motionEvent);
                     }
                 });
             }
