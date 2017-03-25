@@ -25,12 +25,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="mobile.labs.acw.MenuActivity" >
+        <activity android:name="mobile.labs.acw.Menu.MenuActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MENU" />
             </intent-filter>
         </activity>
-        <activity android:name="mobile.labs.acw.ClickGameActivity" >
+        <activity android:name="mobile.labs.acw.ClickGame.ClickGameActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.CLICK" />
                 <action android:name="android.intent.action.VIEW" />
@@ -44,7 +44,7 @@
                     android:scheme="http" />
             </intent-filter>
         </activity>
-        <activity android:name="mobile.labs.acw.DragGameActivity" >
+        <activity android:name="mobile.labs.acw.DragGame.DragGameActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.DRAG" />
                 <action android:name="android.intent.action.VIEW" />

@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import mobile.labs.acw.Menu.MenuActivity;
+import mobile.labs.acw.Utilities.InternetCheck;
 
 public class MainActivity extends Activity
 {

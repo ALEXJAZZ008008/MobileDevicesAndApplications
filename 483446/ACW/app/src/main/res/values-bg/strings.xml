@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">null</string>
+    <string name="Choose_Game_Type">null</string>
+    <string name="android_pair_matching_application">null</string>
+    <string name="click_mode">null</string>
+    <string name="download">null</string>
+    <string name="download_list">null</string>
+    <string name="drag_mode">null</string>
+    <string name="initialScore">null</string>
+    <string name="nullTitle">null</string>
+    <string name="percent">null</string>
+    <string name="play">null</string>
+    <string name="play_list">null</string>
+    <string name="score">null</string>
+    <string name="scoreTitle">null</string>
+    <string name="state">null</string>
+    <string name="title">null</string>
+</resources>

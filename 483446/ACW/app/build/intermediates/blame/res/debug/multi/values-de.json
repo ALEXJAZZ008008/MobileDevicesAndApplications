@@ -1,17 +1,36 @@
 [
     {
-        "outputFile": "E:\\Year 3\\ACW\\app\\build\\intermediates\\res\\merged\\debug\\values-de\\values-de.xml",
+        "outputFile": "C:\\ACW\\app\\build\\intermediates\\res\\merged\\debug\\values-de\\values-de.xml",
         "map": [
             {
                 "to": {
                     "startLine": 2,
                     "startColumn": 4,
                     "startOffset": 55,
-                    "endColumn": 104,
-                    "endOffset": 155
+                    "endColumn": 65,
+                    "endOffset": 116
                 },
                 "from": {
-                    "file": "E:\\Year 3\\ACW\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-de\\values-de.xml",
+                    "file": "C:\\ACW\\app\\src\\main\\res\\values-de\\strings.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 126,
+                        "endColumn": 65,
+                        "endOffset": 187
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 121,
+                    "endColumn": 104,
+                    "endOffset": 221
+                },
+                "from": {
+                    "file": "C:\\ACW\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-de\\values-de.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -23,14 +42,14 @@
             },
             {
                 "to": {
-                    "startLine": 3,
+                    "startLine": 4,
                     "startColumn": 4,
-                    "startOffset": 160,
+                    "startOffset": 226,
                     "endColumn": 107,
-                    "endOffset": 263
+                    "endOffset": 329
                 },
                 "from": {
-                    "file": "E:\\Year 3\\ACW\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-de\\values-de.xml",
+                    "file": "C:\\ACW\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-de\\values-de.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -42,14 +61,14 @@
             },
             {
                 "to": {
-                    "startLine": 4,
+                    "startLine": 5,
                     "startColumn": 4,
-                    "startOffset": 268,
+                    "startOffset": 334,
                     "endColumn": 122,
-                    "endOffset": 386
+                    "endOffset": 452
                 },
                 "from": {
-                    "file": "E:\\Year 3\\ACW\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-de\\values-de.xml",
+                    "file": "C:\\ACW\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-de\\values-de.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -61,14 +80,14 @@
             },
             {
                 "to": {
-                    "startLine": 5,
+                    "startLine": 6,
                     "startColumn": 4,
-                    "startOffset": 391,
+                    "startOffset": 457,
                     "endColumn": 97,
-                    "endOffset": 484
+                    "endOffset": 550
                 },
                 "from": {
-                    "file": "E:\\Year 3\\ACW\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-de\\values-de.xml",
+                    "file": "C:\\ACW\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-de\\values-de.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
@@ -80,14 +99,14 @@
             },
             {
                 "to": {
-                    "startLine": 6,
+                    "startLine": 7,
                     "startColumn": 4,
-                    "startOffset": 489,
+                    "startOffset": 555,
                     "endColumn": 111,
-                    "endOffset": 596
+                    "endOffset": 662
                 },
                 "from": {
-                    "file": "E:\\Year 3\\ACW\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-de\\values-de.xml",
+                    "file": "C:\\ACW\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-de\\values-de.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
@@ -99,14 +118,14 @@
             },
             {
                 "to": {
-                    "startLine": 7,
+                    "startLine": 8,
                     "startColumn": 4,
-                    "startOffset": 601,
+                    "startOffset": 667,
                     "endColumn": 85,
-                    "endOffset": 682
+                    "endOffset": 748
                 },
                 "from": {
-                    "file": "E:\\Year 3\\ACW\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-de\\values-de.xml",
+                    "file": "C:\\ACW\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-de\\values-de.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
@@ -118,14 +137,14 @@
             },
             {
                 "to": {
-                    "startLine": 8,
+                    "startLine": 9,
                     "startColumn": 4,
-                    "startOffset": 687,
+                    "startOffset": 753,
                     "endColumn": 104,
-                    "endOffset": 787
+                    "endOffset": 853
                 },
                 "from": {
-                    "file": "E:\\Year 3\\ACW\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-de\\values-de.xml",
+                    "file": "C:\\ACW\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-de\\values-de.xml",
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
@@ -137,14 +156,14 @@
             },
             {
                 "to": {
-                    "startLine": 9,
+                    "startLine": 10,
                     "startColumn": 4,
-                    "startOffset": 792,
+                    "startOffset": 858,
                     "endColumn": 114,
-                    "endOffset": 902
+                    "endOffset": 968
                 },
                 "from": {
-                    "file": "E:\\Year 3\\ACW\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-de\\values-de.xml",
+                    "file": "C:\\ACW\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-de\\values-de.xml",
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,
@@ -156,14 +175,14 @@
             },
             {
                 "to": {
-                    "startLine": 10,
+                    "startLine": 11,
                     "startColumn": 4,
-                    "startOffset": 907,
+                    "startOffset": 973,
                     "endColumn": 76,
-                    "endOffset": 979
+                    "endOffset": 1045
                 },
                 "from": {
-                    "file": "E:\\Year 3\\ACW\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-de\\values-de.xml",
+                    "file": "C:\\ACW\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-de\\values-de.xml",
                     "position": {
                         "startLine": 10,
                         "startColumn": 4,
@@ -175,14 +194,14 @@
             },
             {
                 "to": {
-                    "startLine": 11,
+                    "startLine": 12,
                     "startColumn": 4,
-                    "startOffset": 984,
+                    "startOffset": 1050,
                     "endColumn": 75,
-                    "endOffset": 1055
+                    "endOffset": 1121
                 },
                 "from": {
-                    "file": "E:\\Year 3\\ACW\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-de\\values-de.xml",
+                    "file": "C:\\ACW\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-de\\values-de.xml",
                     "position": {
                         "startLine": 11,
                         "startColumn": 4,
@@ -194,14 +213,14 @@
             },
             {
                 "to": {
-                    "startLine": 12,
+                    "startLine": 13,
                     "startColumn": 4,
-                    "startOffset": 1060,
+                    "startOffset": 1126,
                     "endColumn": 81,
-                    "endOffset": 1137
+                    "endOffset": 1203
                 },
                 "from": {
-                    "file": "E:\\Year 3\\ACW\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-de\\values-de.xml",
+                    "file": "C:\\ACW\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-de\\values-de.xml",
                     "position": {
                         "startLine": 12,
                         "startColumn": 4,
@@ -213,14 +232,14 @@
             },
             {
                 "to": {
-                    "startLine": 13,
+                    "startLine": 14,
                     "startColumn": 4,
-                    "startOffset": 1142,
+                    "startOffset": 1208,
                     "endColumn": 110,
-                    "endOffset": 1248
+                    "endOffset": 1314
                 },
                 "from": {
-                    "file": "E:\\Year 3\\ACW\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-de\\values-de.xml",
+                    "file": "C:\\ACW\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-de\\values-de.xml",
                     "position": {
                         "startLine": 13,
                         "startColumn": 4,
@@ -232,14 +251,14 @@
             },
             {
                 "to": {
-                    "startLine": 14,
+                    "startLine": 15,
                     "startColumn": 4,
-                    "startOffset": 1253,
+                    "startOffset": 1319,
                     "endColumn": 102,
-                    "endOffset": 1351
+                    "endOffset": 1417
                 },
                 "from": {
-                    "file": "E:\\Year 3\\ACW\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-de\\values-de.xml",
+                    "file": "C:\\ACW\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-de\\values-de.xml",
                     "position": {
                         "startLine": 14,
                         "startColumn": 4,
@@ -251,14 +270,14 @@
             },
             {
                 "to": {
-                    "startLine": 15,
+                    "startLine": 16,
                     "startColumn": 4,
-                    "startOffset": 1356,
+                    "startOffset": 1422,
                     "endColumn": 98,
-                    "endOffset": 1450
+                    "endOffset": 1516
                 },
                 "from": {
-                    "file": "E:\\Year 3\\ACW\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-de\\values-de.xml",
+                    "file": "C:\\ACW\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-de\\values-de.xml",
                     "position": {
                         "startLine": 15,
                         "startColumn": 4,
@@ -270,14 +289,14 @@
             },
             {
                 "to": {
-                    "startLine": 16,
+                    "startLine": 17,
                     "startColumn": 4,
-                    "startOffset": 1455,
+                    "startOffset": 1521,
                     "endColumn": 110,
-                    "endOffset": 1561
+                    "endOffset": 1627
                 },
                 "from": {
-                    "file": "E:\\Year 3\\ACW\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-de\\values-de.xml",
+                    "file": "C:\\ACW\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-de\\values-de.xml",
                     "position": {
                         "startLine": 16,
                         "startColumn": 4,
@@ -289,14 +308,14 @@
             },
             {
                 "to": {
-                    "startLine": 17,
+                    "startLine": 18,
                     "startColumn": 4,
-                    "startOffset": 1566,
+                    "startOffset": 1632,
                     "endColumn": 101,
-                    "endOffset": 1663
+                    "endOffset": 1729
                 },
                 "from": {
-                    "file": "E:\\Year 3\\ACW\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-de\\values-de.xml",
+                    "file": "C:\\ACW\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-de\\values-de.xml",
                     "position": {
                         "startLine": 17,
                         "startColumn": 4,
@@ -308,14 +327,14 @@
             },
             {
                 "to": {
-                    "startLine": 18,
+                    "startLine": 19,
                     "startColumn": 4,
-                    "startOffset": 1668,
+                    "startOffset": 1734,
                     "endColumn": 106,
-                    "endOffset": 1770
+                    "endOffset": 1836
                 },
                 "from": {
-                    "file": "E:\\Year 3\\ACW\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-de\\values-de.xml",
+                    "file": "C:\\ACW\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-de\\values-de.xml",
                     "position": {
                         "startLine": 18,
                         "startColumn": 4,
@@ -327,14 +346,14 @@
             },
             {
                 "to": {
-                    "startLine": 19,
+                    "startLine": 20,
                     "startColumn": 4,
-                    "startOffset": 1775,
+                    "startOffset": 1841,
                     "endColumn": 121,
-                    "endOffset": 1892
+                    "endOffset": 1958
                 },
                 "from": {
-                    "file": "E:\\Year 3\\ACW\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-de\\values-de.xml",
+                    "file": "C:\\ACW\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-de\\values-de.xml",
                     "position": {
                         "startLine": 19,
                         "startColumn": 4,
@@ -346,14 +365,14 @@
             },
             {
                 "to": {
-                    "startLine": 20,
+                    "startLine": 21,
                     "startColumn": 4,
-                    "startOffset": 1897,
+                    "startOffset": 1963,
                     "endColumn": 101,
-                    "endOffset": 1994
+                    "endOffset": 2060
                 },
                 "from": {
-                    "file": "E:\\Year 3\\ACW\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-de\\values-de.xml",
+                    "file": "C:\\ACW\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-de\\values-de.xml",
                     "position": {
                         "startLine": 20,
                         "startColumn": 4,
@@ -365,14 +384,261 @@
             },
             {
                 "to": {
-                    "startLine": 21,
+                    "startLine": 22,
                     "startColumn": 4,
-                    "startOffset": 1999,
-                    "endColumn": 81,
-                    "endOffset": 2076
+                    "startOffset": 2065,
+                    "endColumn": 92,
+                    "endOffset": 2153
                 },
                 "from": {
-                    "file": "E:\\Year 3\\ACW\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-de\\values-de.xml",
+                    "file": "C:\\ACW\\app\\src\\main\\res\\values-de\\strings.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 193,
+                        "endColumn": 92,
+                        "endOffset": 281
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 23,
+                    "startColumn": 4,
+                    "startOffset": 2158,
+                    "endColumn": 67,
+                    "endOffset": 2221
+                },
+                "from": {
+                    "file": "C:\\ACW\\app\\src\\main\\res\\values-de\\strings.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 57,
+                        "endColumn": 67,
+                        "endOffset": 120
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 24,
+                    "startColumn": 4,
+                    "startOffset": 2226,
+                    "endColumn": 61,
+                    "endOffset": 2283
+                },
+                "from": {
+                    "file": "C:\\ACW\\app\\src\\main\\res\\values-de\\strings.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 287,
+                        "endColumn": 61,
+                        "endOffset": 344
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 25,
+                    "startColumn": 4,
+                    "startOffset": 2288,
+                    "endColumn": 57,
+                    "endOffset": 2341
+                },
+                "from": {
+                    "file": "C:\\ACW\\app\\src\\main\\res\\values-de\\strings.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 350,
+                        "endColumn": 57,
+                        "endOffset": 403
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 26,
+                    "startColumn": 4,
+                    "startOffset": 2346,
+                    "endColumn": 61,
+                    "endOffset": 2403
+                },
+                "from": {
+                    "file": "C:\\ACW\\app\\src\\main\\res\\values-de\\strings.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 409,
+                        "endColumn": 61,
+                        "endOffset": 466
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 27,
+                    "startColumn": 4,
+                    "startOffset": 2408,
+                    "endColumn": 48,
+                    "endOffset": 2452
+                },
+                "from": {
+                    "file": "C:\\ACW\\app\\src\\main\\res\\values-de\\strings.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 472,
+                        "endColumn": 48,
+                        "endOffset": 516
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 28,
+                    "startColumn": 4,
+                    "startOffset": 2457,
+                    "endColumn": 42,
+                    "endOffset": 2495
+                },
+                "from": {
+                    "file": "C:\\ACW\\app\\src\\main\\res\\values-de\\strings.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 522,
+                        "endColumn": 42,
+                        "endOffset": 560
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 29,
+                    "startColumn": 4,
+                    "startOffset": 2500,
+                    "endColumn": 48,
+                    "endOffset": 2544
+                },
+                "from": {
+                    "file": "C:\\ACW\\app\\src\\main\\res\\values-de\\strings.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 605,
+                        "endColumn": 48,
+                        "endOffset": 649
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 30,
+                    "startColumn": 4,
+                    "startOffset": 2549,
+                    "endColumn": 37,
+                    "endOffset": 2582
+                },
+                "from": {
+                    "file": "C:\\ACW\\app\\src\\main\\res\\values-de\\strings.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 566,
+                        "endColumn": 37,
+                        "endOffset": 599
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 31,
+                    "startColumn": 4,
+                    "startOffset": 2587,
+                    "endColumn": 47,
+                    "endOffset": 2630
+                },
+                "from": {
+                    "file": "C:\\ACW\\app\\src\\main\\res\\values-de\\strings.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 655,
+                        "endColumn": 47,
+                        "endOffset": 698
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 32,
+                    "startColumn": 4,
+                    "startOffset": 2635,
+                    "endColumn": 53,
+                    "endOffset": 2684
+                },
+                "from": {
+                    "file": "C:\\ACW\\app\\src\\main\\res\\values-de\\strings.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 704,
+                        "endColumn": 53,
+                        "endOffset": 753
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 33,
+                    "startColumn": 4,
+                    "startOffset": 2689,
+                    "endColumn": 42,
+                    "endOffset": 2727
+                },
+                "from": {
+                    "file": "C:\\ACW\\app\\src\\main\\res\\values-de\\strings.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 759,
+                        "endColumn": 42,
+                        "endOffset": 797
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 34,
+                    "startColumn": 4,
+                    "startOffset": 2732,
+                    "endColumn": 54,
+                    "endOffset": 2782
+                },
+                "from": {
+                    "file": "C:\\ACW\\app\\src\\main\\res\\values-de\\strings.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 803,
+                        "endColumn": 54,
+                        "endOffset": 853
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 35,
+                    "startColumn": 4,
+                    "startOffset": 2787,
+                    "endColumn": 81,
+                    "endOffset": 2864
+                },
+                "from": {
+                    "file": "C:\\ACW\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-de\\values-de.xml",
                     "position": {
                         "startLine": 21,
                         "startColumn": 4,
@@ -384,20 +650,58 @@
             },
             {
                 "to": {
-                    "startLine": 22,
+                    "startLine": 36,
                     "startColumn": 4,
-                    "startOffset": 2081,
-                    "endColumn": 100,
-                    "endOffset": 2177
+                    "startOffset": 2869,
+                    "endColumn": 44,
+                    "endOffset": 2909
                 },
                 "from": {
-                    "file": "E:\\Year 3\\ACW\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-de\\values-de.xml",
+                    "file": "C:\\ACW\\app\\src\\main\\res\\values-de\\strings.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 859,
+                        "endColumn": 44,
+                        "endOffset": 899
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 37,
+                    "startColumn": 4,
+                    "startOffset": 2914,
+                    "endColumn": 100,
+                    "endOffset": 3010
+                },
+                "from": {
+                    "file": "C:\\ACW\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-de\\values-de.xml",
                     "position": {
                         "startLine": 22,
                         "startColumn": 4,
                         "startOffset": 2081,
                         "endColumn": 100,
                         "endOffset": 2177
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 38,
+                    "startColumn": 4,
+                    "startOffset": 3015,
+                    "endColumn": 39,
+                    "endOffset": 3050
+                },
+                "from": {
+                    "file": "C:\\ACW\\app\\src\\main\\res\\values-de\\strings.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 4,
+                        "startOffset": 905,
+                        "endColumn": 39,
+                        "endOffset": 940
                     }
                 }
             }

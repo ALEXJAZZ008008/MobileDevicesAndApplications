@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ClickGameActivity"
+    tools:context=".ClickGame.ClickGameActivity"
     android:orientation="vertical"
     >
     <LinearLayout
@@ -13,7 +13,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:context=".ClickGameActivity"
+        tools:context=".ClickGame.ClickGameActivity"
         android:orientation="horizontal"
         android:gravity="end"
         >
@@ -67,6 +67,6 @@
         android:id="@+id/game"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ClickGameActivity"
+        tools:context=".ClickGame.ClickGameActivity"
         />
 </LinearLayout>

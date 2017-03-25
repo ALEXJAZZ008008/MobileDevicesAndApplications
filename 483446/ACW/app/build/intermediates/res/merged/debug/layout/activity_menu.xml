@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="mobile.labs.acw.MenuActivity"
+    tools:context=".Menu.MenuActivity"
     android:orientation="vertical"
     android:gravity="center_horizontal"
     >
@@ -29,11 +29,11 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="mobile.labs.acw.MenuActivity"
+        tools:context=".Menu.MenuActivity"
         android:orientation="vertical"
         >
         <fragment
-            class="mobile.labs.acw.PlayListFragment"
+            class="mobile.labs.acw.Fragments.PlayListFragment"
             android:id="@+id/play_list_fragment"
             android:layout_width="match_parent"
             android:layout_height="0px"
@@ -41,7 +41,7 @@
             />
 
         <fragment
-            class="mobile.labs.acw.DownloadListFragment"
+            class="mobile.labs.acw.Fragments.DownloadListFragment"
             android:id="@+id/download_list_fragment"
             android:layout_width="match_parent"
             android:layout_height="0px"
