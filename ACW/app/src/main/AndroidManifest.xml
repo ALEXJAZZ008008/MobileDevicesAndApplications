@@ -36,7 +36,7 @@
         </activity>
 
         <activity
-            android:name=".MenuActivity"
+            android:name=".Menu.MenuActivity"
             >
             <intent-filter>
                 <action
@@ -46,7 +46,7 @@
         </activity>
 
         <activity
-            android:name=".ClickGameActivity"
+            android:name=".ClickGame.ClickGameActivity"
             >
             <intent-filter>
                 <action
@@ -74,7 +74,7 @@
         </activity>
 
         <activity
-            android:name=".DragGameActivity"
+            android:name=".DragGame.DragGameActivity"
             >
             <intent-filter>
                 <action

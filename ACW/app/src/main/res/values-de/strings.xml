@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Android Paar Passend Anwendung</string>
+    <string name="Choose_Game_Type">Wählen Sie Spielart </string>
+    <string name="android_pair_matching_application">Android Paar Passend Anwendung</string>
+    <string name="click_mode">Klicken Sie auf Modus </string>
+    <string name="download">Herunterladen:\u0020</string>
+    <string name="download_list">Herunterladen Liste</string>
+    <string name="drag_mode">Zieh-Modus</string>
+    <string name="initialScore">0</string>
+    <string name="percent">%</string>
+    <string name="nullTitle">Null\u0020</string>
+    <string name="play">Spielen:\u0020</string>
+    <string name="play_list">Wiedergabeliste</string>
+    <string name="score">ergebnis</string>
+    <string name="scoreTitle">Ergebnis:\u0020</string>
+    <string name="state">bundesland</string>
+    <string name="title">titel</string>
+</resources>

@@ -1,23 +1,308 @@
 [
     {
-        "outputFile": "E:\\Year 3\\ACW\\app\\build\\intermediates\\res\\merged\\debug\\values-sq\\values-sq.xml",
+        "outputFile": "C:\\ACW\\app\\build\\intermediates\\res\\merged\\debug\\values-sq\\values-sq.xml",
         "map": [
             {
                 "to": {
                     "startLine": 2,
                     "startColumn": 4,
                     "startOffset": 55,
-                    "endColumn": 40,
-                    "endOffset": 91
+                    "endColumn": 65,
+                    "endOffset": 116
                 },
                 "from": {
-                    "file": "E:\\Year 3\\ACW\\app\\src\\main\\res\\values-sq\\strings.xml",
+                    "file": "C:\\ACW\\app\\src\\main\\res\\values-sq\\strings.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 129,
+                        "endColumn": 65,
+                        "endOffset": 190
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 121,
+                    "endColumn": 95,
+                    "endOffset": 212
+                },
+                "from": {
+                    "file": "C:\\ACW\\app\\src\\main\\res\\values-sq\\strings.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 196,
+                        "endColumn": 95,
+                        "endOffset": 287
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 217,
+                    "endColumn": 70,
+                    "endOffset": 283
+                },
+                "from": {
+                    "file": "C:\\ACW\\app\\src\\main\\res\\values-sq\\strings.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
                         "startOffset": 57,
+                        "endColumn": 70,
+                        "endOffset": 123
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 288,
+                    "endColumn": 51,
+                    "endOffset": 335
+                },
+                "from": {
+                    "file": "C:\\ACW\\app\\src\\main\\res\\values-sq\\strings.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 293,
+                        "endColumn": 51,
+                        "endOffset": 340
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 340,
+                    "endColumn": 51,
+                    "endOffset": 387
+                },
+                "from": {
+                    "file": "C:\\ACW\\app\\src\\main\\res\\values-sq\\strings.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 346,
+                        "endColumn": 51,
+                        "endOffset": 393
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 392,
+                    "endColumn": 55,
+                    "endOffset": 443
+                },
+                "from": {
+                    "file": "C:\\ACW\\app\\src\\main\\res\\values-sq\\strings.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 399,
+                        "endColumn": 55,
+                        "endOffset": 450
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 448,
+                    "endColumn": 52,
+                    "endOffset": 496
+                },
+                "from": {
+                    "file": "C:\\ACW\\app\\src\\main\\res\\values-sq\\strings.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 456,
+                        "endColumn": 52,
+                        "endOffset": 504
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 9,
+                    "startColumn": 4,
+                    "startOffset": 501,
+                    "endColumn": 42,
+                    "endOffset": 539
+                },
+                "from": {
+                    "file": "C:\\ACW\\app\\src\\main\\res\\values-sq\\strings.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 510,
+                        "endColumn": 42,
+                        "endOffset": 548
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 10,
+                    "startColumn": 4,
+                    "startOffset": 544,
+                    "endColumn": 56,
+                    "endOffset": 596
+                },
+                "from": {
+                    "file": "C:\\ACW\\app\\src\\main\\res\\values-sq\\strings.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 554,
+                        "endColumn": 56,
+                        "endOffset": 606
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 11,
+                    "startColumn": 4,
+                    "startOffset": 601,
+                    "endColumn": 37,
+                    "endOffset": 634
+                },
+                "from": {
+                    "file": "C:\\ACW\\app\\src\\main\\res\\values-sq\\strings.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 612,
+                        "endColumn": 37,
+                        "endOffset": 645
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 12,
+                    "startColumn": 4,
+                    "startOffset": 639,
+                    "endColumn": 44,
+                    "endOffset": 679
+                },
+                "from": {
+                    "file": "C:\\ACW\\app\\src\\main\\res\\values-sq\\strings.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 651,
+                        "endColumn": 44,
+                        "endOffset": 691
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 13,
+                    "startColumn": 4,
+                    "startOffset": 684,
+                    "endColumn": 48,
+                    "endOffset": 728
+                },
+                "from": {
+                    "file": "C:\\ACW\\app\\src\\main\\res\\values-sq\\strings.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 697,
+                        "endColumn": 48,
+                        "endOffset": 741
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 14,
+                    "startColumn": 4,
+                    "startOffset": 733,
+                    "endColumn": 42,
+                    "endOffset": 771
+                },
+                "from": {
+                    "file": "C:\\ACW\\app\\src\\main\\res\\values-sq\\strings.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 747,
+                        "endColumn": 42,
+                        "endOffset": 785
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 15,
+                    "startColumn": 4,
+                    "startOffset": 776,
+                    "endColumn": 54,
+                    "endOffset": 826
+                },
+                "from": {
+                    "file": "C:\\ACW\\app\\src\\main\\res\\values-sq\\strings.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 791,
+                        "endColumn": 54,
+                        "endOffset": 841
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 16,
+                    "startColumn": 4,
+                    "startOffset": 831,
+                    "endColumn": 39,
+                    "endOffset": 866
+                },
+                "from": {
+                    "file": "C:\\ACW\\app\\src\\main\\res\\values-sq\\strings.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 847,
+                        "endColumn": 39,
+                        "endOffset": 882
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 17,
+                    "startColumn": 4,
+                    "startOffset": 871,
+                    "endColumn": 40,
+                    "endOffset": 907
+                },
+                "from": {
+                    "file": "C:\\ACW\\app\\src\\main\\res\\values-sq\\strings.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 4,
+                        "startOffset": 888,
                         "endColumn": 40,
-                        "endOffset": 93
+                        "endOffset": 924
                     }
                 }
             }
