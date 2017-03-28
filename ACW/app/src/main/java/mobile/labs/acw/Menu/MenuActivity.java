@@ -5,9 +5,12 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Spinner;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import mobile.labs.acw.ClickGame.ClickGameActivity;
 import mobile.labs.acw.Utilities.CustomAdapter;
 import mobile.labs.acw.DragGame.DragGameActivity;
@@ -19,11 +22,15 @@ import mobile.labs.acw.R;
 public class MenuActivity extends Activity
 {
     private ArrayList<PuzzleListItemObject> puzzleList;
-    public ArrayList<PuzzleListItemObject> downloadPuzzleList, playPuzzleList;
+    public ArrayList<PuzzleListItemObject> downloadPuzzleList, playPuzzleList, filteredPlayPuzzleList;
+    public ArrayList<String> spinnerList;
     public Boolean listStartedBoolean, puzzleListBoolean;
 
     public ListView downloadListView, playListView;
     public CustomAdapter downloadCustomAdapter, playCustomAdapter;
+    public Spinner spinner;
+    public ArrayAdapter<String> arrayAdapter;
+    public Integer spinnerChoice;
 
     private static final int GAME_ACTIVITY_REQUEST = 1;
 
@@ -67,6 +74,8 @@ public class MenuActivity extends Activity
         listStartedBoolean = false;
 
         puzzleListBoolean = false;
+
+        spinnerChoice = -1;
     }
 
     private void StartList()
@@ -112,18 +121,33 @@ public class MenuActivity extends Activity
                 }
 
                 playPuzzleList.add(puzzleListItem);
+
+                String layoutSize = String.valueOf(puzzleListItem.GetPuzzle().GetLayout().size());
+
+                if(!spinnerList.contains(layoutSize))
+                {
+                    spinnerList.add(layoutSize);
+                }
             }
         }
 
         OrderPlayPuzzleList();
+        OrderSpinnerList();
 
         NotifyChanges();
+    }
+
+    private void OrderSpinnerList()
+    {
+        Collections.sort(spinnerList);
     }
 
     private void ClearLists()
     {
         downloadPuzzleList.clear();
+
         playPuzzleList.clear();
+        filteredPlayPuzzleList.clear();
     }
 
     private void GetPreferences(PuzzleListItemObject puzzleListItem)
@@ -232,18 +256,36 @@ public class MenuActivity extends Activity
                 }
             }
         }
+
+        AddPlayPuzzleListItemsToFilteredList();
+    }
+
+    private void AddPlayPuzzleListItemsToFilteredList()
+    {
+        for(Integer i = 0; i < playPuzzleList.size(); i++)
+        {
+            PuzzleListItemObject puzzleListItem = playPuzzleList.get(i);
+            String layoutSize = String.valueOf(puzzleListItem.GetPuzzle().GetLayout().size());
+
+            if (spinnerChoice == -1 || Integer.valueOf(layoutSize).equals(spinnerChoice))
+            {
+                filteredPlayPuzzleList.add(puzzleListItem);
+            }
+        }
     }
 
     private void NotifyChanges()
     {
         downloadCustomAdapter.notifyDataSetChanged();
         playCustomAdapter.notifyDataSetChanged();
+
+        arrayAdapter.notifyDataSetChanged();
     }
 
     public void GoToClickGameActivity(View view, Integer position)
     {
         Intent intent = new Intent(view.getContext(), ClickGameActivity.class);
-        intent.putExtra("puzzle", playPuzzleList.get(position).GetPuzzle());
+        intent.putExtra("puzzle", filteredPlayPuzzleList.get(position).GetPuzzle());
         intent.putExtra("position", position);
         startActivityForResult(intent, GAME_ACTIVITY_REQUEST);
     }
@@ -251,7 +293,7 @@ public class MenuActivity extends Activity
     public void GoToDragGameActivity(View view, Integer position)
     {
         Intent intent = new Intent(view.getContext(), DragGameActivity.class);
-        intent.putExtra("puzzle", playPuzzleList.get(position).GetPuzzle());
+        intent.putExtra("puzzle", filteredPlayPuzzleList.get(position).GetPuzzle());
         intent.putExtra("position", position);
         startActivityForResult(intent, GAME_ACTIVITY_REQUEST);
     }
