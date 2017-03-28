@@ -548,6 +548,11 @@ public class ClickGame extends SurfaceView implements SurfaceHolder.Callback
 
         clickGameActivity.score = Math.round(scoreRatio * 100);
 
+        if(clickGameActivity.score > 75)
+        {
+            clickGameActivity.score = 75;
+        }
+
         clickGameActivity.SetScoreTextView();
     }
 

@@ -244,6 +244,7 @@
     <string name="score">score</string>
     <string name="scoreTitle">Score:\u0020</string>
     <string name="search_menu_title">Search</string>
+    <string name="size">"Size: "</string>
     <string name="state">state</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="title">title</string>
