@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">الروبوت زوج مطابقة التطبيق</string>
+    <string name="Choose_Game_Type">اختر نوع اللعبة</string>
+    <string name="all">الكل</string>
+    <string name="android_pair_matching_application">الروبوت زوج مطابقة التطبيق</string>
+    <string name="click_mode">انقر فوق الوضع</string>
+    <string name="dialog_fragment">الحوار جزء نوع اللعبة الاختيار</string>
+    <string name="download">تحميل</string>
+    <string name="download_list">تحميل القائمة</string>
+    <string name="download_puzzle">تحميل لغز</string>
+    <string name="downloading_puzzle">حاليا تحميل لغز</string>
+    <string name="drag_mode">وضع السحب</string>
+    <string name="error">الصورة لا توجد وشبكة خطأ</string>
+    <string name="initialScore">0</string>
+    <string name="internet">لا يوجد اتصال إنترنت</string>
+    <string name="nullTitle">لا شيء</string>
+    <string name="percent">%</string>
+    <string name="play">لعب</string>
+    <string name="play_list">قائمة التشغيل</string>
+    <string name="reset">إعادة تعيين</string>
+    <string name="score">أحرز هدفاً</string>
+    <string name="scoreTitle">أحرز هدفاً</string>
+    <string name="size">بحجم</string>
+    <string name="state">حالة</string>
+    <string name="title">عنوان</string>
+</resources>

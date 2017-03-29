@@ -15,5 +15,12 @@
     <string name="play_list">Play List</string>
     <string name="download_list">Download List</string>
     <string name="Choose_Game_Type">Choose Game Type</string>
-    <string name="size">"Size: "</string>
+    <string name="size">Size:\u0020</string>
+    <string name="all">All</string>
+    <string name="reset">Reset</string>
+    <string name="internet">No Internet Connection</string>
+    <string name="download_puzzle">Downloading Puzzle</string>
+    <string name="downloading_puzzle">Currently Downloading Puzzle</string>
+    <string name="dialog_fragment">dialog_fragment_game_type_choice</string>
+    <string name="error">Image Does Not Exist And Network Error</string>
 </resources>

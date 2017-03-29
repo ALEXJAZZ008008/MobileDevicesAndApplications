@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Menu.MenuActivity"
+    tools:context=".menu.menu_activity"
     android:orientation="vertical"
     android:gravity="center_horizontal"
     >
@@ -17,10 +17,10 @@
         android:textSize="20sp"
         android:textColor="@color/colorPrimary"
         android:textStyle="bold"
-        android:paddingTop="20dp"
+        android:paddingTop="10dp"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
-        android:paddingBottom="10dp"
+        android:paddingBottom="0dp"
         />
 
     <LinearLayout
@@ -29,11 +29,11 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".Menu.MenuActivity"
+        tools:context=".menu.menu_activity"
         android:orientation="vertical"
         >
         <fragment
-            class="mobile.labs.acw.Fragments.PlayListFragment"
+            class="mobile.labs.acw.fragments.play_list_fragment"
             android:id="@+id/play_list_fragment"
             android:layout_width="match_parent"
             android:layout_height="0px"
@@ -41,7 +41,7 @@
             />
 
         <fragment
-            class="mobile.labs.acw.Fragments.DownloadListFragment"
+            class="mobile.labs.acw.fragments.download_list_fragment"
             android:id="@+id/download_list_fragment"
             android:layout_width="match_parent"
             android:layout_height="0px"

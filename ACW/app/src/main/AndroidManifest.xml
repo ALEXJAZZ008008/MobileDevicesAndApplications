@@ -22,7 +22,7 @@
         android:theme="@style/AppTheme"
         >
         <activity
-            android:name=".MainActivity"
+            android:name=".main_activity"
             >
             <intent-filter>
                 <action
@@ -36,7 +36,7 @@
         </activity>
 
         <activity
-            android:name=".Menu.MenuActivity"
+            android:name=".menu.menu_activity"
             >
             <intent-filter>
                 <action
@@ -46,7 +46,7 @@
         </activity>
 
         <activity
-            android:name=".ClickGame.ClickGameActivity"
+            android:name=".click_game.click_game_activity"
             >
             <intent-filter>
                 <action
@@ -74,7 +74,7 @@
         </activity>
 
         <activity
-            android:name=".DragGame.DragGameActivity"
+            android:name=".drag_game.drag_game_activity"
             >
             <intent-filter>
                 <action
