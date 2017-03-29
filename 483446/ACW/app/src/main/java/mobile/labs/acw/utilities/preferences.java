@@ -11,7 +11,7 @@ public class preferences
 
     public static void WriteBoolean(Context context, String key, Boolean value)
     {
-        GetEditor(context).putBoolean(key, value).commit();
+        GetEditor(context).putBoolean(key, value).apply();
     }
 
     public static Boolean ReadBoolean(Context context, String key, Boolean value)
@@ -21,7 +21,7 @@ public class preferences
 
     public static void WriteInteger(Context context, String key, Integer value)
     {
-        GetEditor(context).putInt(key, value).commit();
+        GetEditor(context).putInt(key, value).apply();
     }
 
     public static Integer ReadInteger(Context context, String key, Integer value)
@@ -31,7 +31,7 @@ public class preferences
 
     public static void WriteString(Context context, String key, String value)
     {
-        GetEditor(context).putString(key, value).commit();
+        GetEditor(context).putString(key, value).apply();
     }
 
     public static String ReadString(Context context, String key, String value)
@@ -57,7 +57,7 @@ public class preferences
 
     public static void RemoveKey(Context context, String key)
     {
-        GetEditor(context).remove(key).commit();
+        GetEditor(context).remove(key).apply();
     }
 
     public static SharedPreferences.Editor GetEditor(Context context)

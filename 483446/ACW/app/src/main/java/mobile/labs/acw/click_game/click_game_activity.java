@@ -29,8 +29,11 @@ public class click_game_activity extends Activity
 
     public SurfaceHolder surfaceHolder;
 
+    public Thread initialiseThread, drawThread, updateThread;
+
     public Integer score, attempts, correctAttempts;
     private TextView textView;
+    private Button resetButton;
 
     public ArrayList<ArrayList<square_object>> squares;
     public two_dimensional_vector_object highlightedSquare;
@@ -60,9 +63,17 @@ public class click_game_activity extends Activity
     @Override
     protected void onPause()
     {
-        SavePreferences();
+        if(firstBoolean)
+        {
+            SavePreferences();
 
-        clickGame.surfaceDestroyed(surfaceHolder);
+            if(surfaceHolder != null)
+            {
+                clickGame.surfaceDestroyed(surfaceHolder);
+            }
+        }
+
+        KillThreads();
 
         super.onPause();
     }
@@ -76,9 +87,8 @@ public class click_game_activity extends Activity
 
         ResetPreferencesValues();
 
-        StartButton();
-
         textView = (TextView)findViewById(R.id.score);
+        resetButton = (Button)this.findViewById(R.id.resetButton);
 
         GoToTasks(new puzzle_object[] { puzzle });
 
@@ -98,10 +108,8 @@ public class click_game_activity extends Activity
         firstBoolean = false;
     }
 
-    private void StartButton()
+    public void StartButton()
     {
-        Button resetButton = (Button)this.findViewById(R.id.resetButton);
-
         resetButton.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -186,6 +194,24 @@ public class click_game_activity extends Activity
 
         preferences.WriteBoolean(this, puzzleId + "Click" + "firstBoolean", firstBoolean);
         preferences.WriteInteger(this, puzzleId + "Click" + "currentMatches", currentMatches);
+    }
+
+    public void KillThreads()
+    {
+        if(initialiseThread != null)
+        {
+            initialiseThread.interrupt();
+        }
+
+        if(drawThread != null)
+        {
+            drawThread.interrupt();
+        }
+
+        if(updateThread != null)
+        {
+            updateThread.interrupt();
+        }
     }
 
     public void OnGameFinished()
