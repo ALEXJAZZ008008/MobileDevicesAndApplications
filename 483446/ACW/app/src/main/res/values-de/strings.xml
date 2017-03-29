@@ -16,4 +16,12 @@
     <string name="scoreTitle">Ergebnis:\u0020</string>
     <string name="state">bundesland</string>
     <string name="title">titel</string>
+    <string name="size">Größe:\u0020</string>
+    <string name="all">Alle</string>
+    <string name="reset">Zurücksetzen</string>
+    <string name="dialog_fragment">dialog_fragment_spiel_art_wahl</string>
+    <string name="download_puzzle">Puzzle herunterladen</string>
+    <string name="downloading_puzzle">Derzeit Puzzle herunterladen</string>
+    <string name="error">Bild existiert nicht und Netzfehler</string>
+    <string name="internet">Keine Internetverbindung</string>
 </resources>
