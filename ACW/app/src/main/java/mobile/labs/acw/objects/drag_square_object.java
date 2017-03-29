@@ -10,22 +10,22 @@ public class drag_square_object
         position = inPosition;
     }
 
-    public void setSquare(two_dimensional_vector_object newSquare)
+    public void SetSquare(two_dimensional_vector_object newSquare)
     {
         square = newSquare;
     }
 
-    public two_dimensional_vector_object getSquare()
+    public two_dimensional_vector_object GetSquare()
     {
         return square;
     }
 
-    public void setPosition(two_dimensional_vector_object newPosition)
+    public void SetPosition(two_dimensional_vector_object newPosition)
     {
         position = newPosition;
     }
 
-    public two_dimensional_vector_object getPosition()
+    public two_dimensional_vector_object GetPosition()
     {
         return position;
     }

@@ -35,7 +35,6 @@ public class drag_game extends SurfaceView implements SurfaceHolder.Callback
     private Integer maximumMatches;
 
     private Paint paint;
-    private Thread drawThread, updateThread;
 
     private Integer offsetAmount;
 
@@ -196,12 +195,12 @@ public class drag_game extends SurfaceView implements SurfaceHolder.Callback
             }
         }
 
-        Integer moveRow = dragGameActivity.moveSquare.getSquare().GetX();
-        Integer moveColumn = dragGameActivity.moveSquare.getSquare().GetY();
+        Integer moveRow = dragGameActivity.moveSquare.GetSquare().GetX();
+        Integer moveColumn = dragGameActivity.moveSquare.GetSquare().GetY();
 
         if(moveRow != -1 && moveColumn != -1)
         {
-            dragGameActivity.moveSquare.setPosition(dragGameActivity.squares.get(moveRow).get(moveColumn).GetPosition());
+            dragGameActivity.moveSquare.SetPosition(dragGameActivity.squares.get(moveRow).get(moveColumn).GetPosition());
         }
     }
 
@@ -245,7 +244,18 @@ public class drag_game extends SurfaceView implements SurfaceHolder.Callback
     @Override
     public void surfaceCreated(SurfaceHolder surfaceHolder)
     {
-        drawThread = new Thread(new Runnable()
+        InitialiseThread();
+    }
+
+    @Override
+    public void surfaceDestroyed(SurfaceHolder surfaceHolder)
+    {
+        dragGameActivity.KillThreads();
+    }
+
+    private void InitialiseThread()
+    {
+        dragGameActivity.initialiseThread = new Thread(new Runnable()
         {
             @Override
             public void run()
@@ -257,7 +267,7 @@ public class drag_game extends SurfaceView implements SurfaceHolder.Callback
                     dragGameActivity.firstBoolean = true;
                 }
 
-                ThreadLoop();
+                DrawThread();
             }
 
             private void ThreadInitialise()
@@ -277,31 +287,34 @@ public class drag_game extends SurfaceView implements SurfaceHolder.Callback
 
                 dragGameActivity.StartButton();
             }
+        });
+
+        dragGameActivity.initialiseThread.start();
+    }
+
+    private void DrawThread()
+    {
+        dragGameActivity.drawThread = new Thread(new Runnable()
+        {
+            @Override
+            public void run()
+            {
+                ThreadLoop();
+            }
 
             private void ThreadLoop()
             {
                 while (!Thread.currentThread().isInterrupted())
                 {
-                    DrawOnCanvas();
+                    if(dragGameActivity.surfaceHolder != null)
+                    {
+                        DrawOnCanvas();
+                    }
                 }
             }
         });
 
-        drawThread.start();
-    }
-
-    @Override
-    public void surfaceDestroyed(SurfaceHolder surfaceHolder)
-    {
-        if(drawThread != null)
-        {
-            drawThread.interrupt();
-        }
-
-        if(updateThread != null)
-        {
-            updateThread.interrupt();
-        }
+        dragGameActivity.drawThread.start();
     }
 
     private void ChangeAllImages()
@@ -319,70 +332,76 @@ public class drag_game extends SurfaceView implements SurfaceHolder.Callback
 
     private void DrawOnCanvas()
     {
-        Canvas canvas = dragGameActivity.surfaceHolder.lockCanvas();
-
-        canvas.drawColor(ContextCompat.getColor(dragGameActivity, R.color.colorBackground));
-
-
-        for(Integer i = 0; i < dragGameActivity.squares.size(); i++)
+        try
         {
-            ArrayList<square_object> currentRow = dragGameActivity.squares.get(i);
+            Canvas canvas = dragGameActivity.surfaceHolder.lockCanvas();
 
-            for(int j = 0; j < currentRow.size(); j++)
+            canvas.drawColor(ContextCompat.getColor(dragGameActivity, R.color.colorBackground));
+
+            for(Integer i = 0; i < dragGameActivity.squares.size(); i++)
             {
-                square_object currentSquareObject = currentRow.get(j);
-                two_dimensional_vector_object currentPosition = currentSquareObject.GetPosition();
-                Bitmap currentSquareObjectImage = currentSquareObject.GetImage();
-                Integer currentPositionX = currentPosition.GetX();
-                Integer currentPositionY = currentPosition.GetY();
+                ArrayList<square_object> currentRow = dragGameActivity.squares.get(i);
 
-                if(currentSquareObjectImage != cardBack && currentSquareObjectImage != cardBackHighlighted)
+                for(int j = 0; j < currentRow.size(); j++)
                 {
-                    if(canvasSize.GetX() < canvasSize.GetY())
+                    square_object currentSquareObject = currentRow.get(j);
+                    two_dimensional_vector_object currentPosition = currentSquareObject.GetPosition();
+                    Bitmap currentSquareObjectImage = currentSquareObject.GetImage();
+                    Integer currentPositionX = currentPosition.GetX();
+                    Integer currentPositionY = currentPosition.GetY();
+
+                    if(currentSquareObjectImage != cardBack && currentSquareObjectImage != cardBackHighlighted)
                     {
-                        currentPositionY += offsetAmount;
+                        if(canvasSize.GetX() < canvasSize.GetY())
+                        {
+                            currentPositionY += offsetAmount;
+                        }
+                        else
+                        {
+                            currentPositionX += offsetAmount;
+                        }
                     }
-                    else
+
+                    canvas.drawBitmap(currentSquareObject.GetImage(), currentPositionX, currentPositionY, paint);
+                }
+
+                if(movingSquare != null)
+                {
+                    Bitmap movingSquareImage = movingSquare.GetImage();
+
+                    if((movingSquareImage == cardBack || movingSquareImage == cardBackHighlighted))
                     {
-                        currentPositionX += offsetAmount;
+                        two_dimensional_vector_object movingSquarePosition = movingSquare.GetPosition();
+
+                        canvas.drawBitmap(movingSquare.GetImage(), movingSquarePosition.GetX(), movingSquarePosition.GetY(), paint);
                     }
                 }
 
-                canvas.drawBitmap(currentSquareObject.GetImage(), currentPositionX, currentPositionY, paint);
-            }
+                two_dimensional_vector_object moveSquareSquare = dragGameActivity.moveSquare.GetSquare();
+                Integer moveRow = moveSquareSquare.GetX();
+                Integer moveColumn = moveSquareSquare.GetY();
 
-            if(movingSquare != null)
-            {
-                Bitmap movingSquareImage = movingSquare.GetImage();
-
-                if((movingSquareImage == cardBack || movingSquareImage == cardBackHighlighted))
+                if((moveRow != -1 && moveColumn != -1))
                 {
-                    two_dimensional_vector_object movingSquarePosition = movingSquare.GetPosition();
+                    square_object moveSquare = dragGameActivity.squares.get(moveRow).get(moveColumn);
+                    Bitmap moveSquareImage = moveSquare.GetImage();
 
-                    canvas.drawBitmap(movingSquare.GetImage(), movingSquarePosition.GetX(), movingSquarePosition.GetY(), paint);
+                    if((moveSquareImage == cardBack || moveSquareImage == cardBackHighlighted))
+                    {
+                        two_dimensional_vector_object moveSquarePosition = moveSquare.GetPosition();
+
+                        canvas.drawBitmap(moveSquare.GetImage(), moveSquarePosition.GetX(), moveSquarePosition.GetY(), paint);
+
+                    }
                 }
             }
 
-            two_dimensional_vector_object moveSquareSquare = dragGameActivity.moveSquare.getSquare();
-            Integer moveRow = moveSquareSquare.GetX();
-            Integer moveColumn = moveSquareSquare.GetY();
-
-            if((moveRow != -1 && moveColumn != -1))
-            {
-                square_object moveSquare = dragGameActivity.squares.get(moveRow).get(moveColumn);
-                Bitmap moveSquareImage = moveSquare.GetImage();
-
-                if((moveSquareImage == cardBack || moveSquareImage == cardBackHighlighted))
-                {
-                    two_dimensional_vector_object moveSquarePosition = moveSquare.GetPosition();
-
-                    canvas.drawBitmap(moveSquare.GetImage(), moveSquarePosition.GetX(), moveSquarePosition.GetY(), paint);
-
-                }
-            }
+            dragGameActivity.surfaceHolder.unlockCanvasAndPost(canvas);
         }
-
-        dragGameActivity.surfaceHolder.unlockCanvasAndPost(canvas);
+        catch(Exception e)
+        {
+            dragGameActivity.KillThreads();
+        }
     }
 
     public boolean onTouch(MotionEvent motionEvent)
@@ -393,8 +412,8 @@ public class drag_game extends SurfaceView implements SurfaceHolder.Callback
         Integer highlightedRow = dragGameActivity.highlightedSquare.GetX();
         Integer highlightedColumn = dragGameActivity.highlightedSquare.GetY();
 
-        Integer moveRow = dragGameActivity.moveSquare.getSquare().GetX();
-        Integer moveColumn = dragGameActivity.moveSquare.getSquare().GetY();
+        Integer moveRow = dragGameActivity.moveSquare.GetSquare().GetX();
+        Integer moveColumn = dragGameActivity.moveSquare.GetSquare().GetY();
 
         if(motionEvent.getAction() == MotionEvent.ACTION_DOWN)
         {
@@ -426,7 +445,17 @@ public class drag_game extends SurfaceView implements SurfaceHolder.Callback
         {
             if(!selectionBoolean)
             {
-                ActionUpEvent(x, y, highlightedRow, highlightedColumn, moveRow, moveColumn);
+                if((moveRow != -1 && moveColumn != -1))
+                {
+                    ActionUpEvent(x, y, highlightedRow, highlightedColumn, moveRow, moveColumn);
+                }
+                else
+                {
+                    if(previousPosition.GetX() != -1 || previousPosition.GetY() != -1)
+                    {
+                        previousPosition = new two_dimensional_vector_object(-1, -1);
+                    }
+                }
 
                 return true;
             }
@@ -462,8 +491,8 @@ public class drag_game extends SurfaceView implements SurfaceHolder.Callback
 
         if((x >= minimumX && x <= maximumX) && (y >= minimumY && y <= maximumY))
         {
-            dragGameActivity.moveSquare.setSquare(new two_dimensional_vector_object(i, j));
-            dragGameActivity.moveSquare.setPosition(minimumPosition);
+            dragGameActivity.moveSquare.SetSquare(new two_dimensional_vector_object(i, j));
+            dragGameActivity.moveSquare.SetPosition(minimumPosition);
         }
     }
 
@@ -494,7 +523,7 @@ public class drag_game extends SurfaceView implements SurfaceHolder.Callback
     {
         square_object moveSquare = dragGameActivity.squares.get(moveRow).get(moveColumn);
         Bitmap moveSquareBitmap = moveSquare.GetImage();
-        two_dimensional_vector_object moveSquarePosition = dragGameActivity.moveSquare.getPosition();
+        two_dimensional_vector_object moveSquarePosition = dragGameActivity.moveSquare.GetPosition();
         Integer minimumX = moveSquarePosition.GetX();
         Integer minimumY = moveSquarePosition.GetY();
         Integer maximumX = minimumX + moveSquareBitmap.getWidth();
@@ -510,7 +539,7 @@ public class drag_game extends SurfaceView implements SurfaceHolder.Callback
         }
         else
         {
-            moveSquare.SetPosition(dragGameActivity.moveSquare.getPosition());
+            moveSquare.SetPosition(dragGameActivity.moveSquare.GetPosition());
 
             SelectionCheck(x, y, highlightedRow, highlightedColumn, length);
         }
@@ -575,15 +604,24 @@ public class drag_game extends SurfaceView implements SurfaceHolder.Callback
 
     private void SquareMoveThread(final square_object square, final two_dimensional_vector_object startPosition, final two_dimensional_vector_object endPosition, final two_dimensional_vector_object resetPosition)
     {
-        Thread moveThread = new Thread(new Runnable()
+        final Thread currentThread = new Thread(new Runnable()
         {
             @Override
             public void run()
             {
-                MoveSquare(square, startPosition, endPosition, resetPosition);
+                Bitmap squareImage = square.GetImage();
+
+                if(squareImage == cardBack || squareImage == cardBackHighlighted)
+                {
+                    MoveSquare(square, startPosition, endPosition);
+                }
+
+                square.SetPosition(resetPosition);
+
+                Reset(Thread.currentThread());
             }
 
-            private void MoveSquare(square_object square, two_dimensional_vector_object startPosition, two_dimensional_vector_object endPosition, two_dimensional_vector_object resetPosition)
+            private void MoveSquare(square_object square, two_dimensional_vector_object startPosition, two_dimensional_vector_object endPosition)
             {
                 two_dimensional_vector_object moveAmount = new two_dimensional_vector_object((endPosition.GetX() - startPosition.GetX()) / 30, (endPosition.GetY() - startPosition.GetY()) / 30);
 
@@ -602,22 +640,40 @@ public class drag_game extends SurfaceView implements SurfaceHolder.Callback
                         e.printStackTrace();
                     }
                 }
-
-                square.SetPosition(resetPosition);
-
-                if(movingSquare != null)
-                {
-                    movingSquare = null;
-                }
-
-                dragGameActivity.moveSquare = new drag_square_object(new two_dimensional_vector_object(-1, -1), new two_dimensional_vector_object(-1, -1));
-                previousPosition = new two_dimensional_vector_object(-1, -1);
-
-                selectionBoolean = false;
             }
         });
 
-        moveThread.start();
+        dragGameActivity.moveThreads.add(currentThread);
+
+        currentThread.start();
+    }
+
+    private void Reset(Thread currentThread)
+    {
+        if(movingSquare != null)
+        {
+            movingSquare = null;
+        }
+
+        two_dimensional_vector_object square = dragGameActivity.moveSquare.GetSquare();
+        two_dimensional_vector_object position = dragGameActivity.moveSquare.GetPosition();
+
+        if(square.GetX() != -1 || square.GetY() != -1 || position.GetX() != -1 || position.GetY() != -1)
+        {
+            dragGameActivity.moveSquare = new drag_square_object(new two_dimensional_vector_object(-1, -1), new two_dimensional_vector_object(-1, -1));
+        }
+
+        if(previousPosition.GetX() != -1 || previousPosition.GetY() != -1)
+        {
+            previousPosition = new two_dimensional_vector_object(-1, -1);
+        }
+
+        if(selectionBoolean)
+        {
+            selectionBoolean = false;
+        }
+
+        dragGameActivity.moveThreads.remove(currentThread);
     }
 
     private void SelectionCheck(Float x, Float y, Integer highlightedRow, Integer highlightedColumn, Integer length)
@@ -772,7 +828,7 @@ public class drag_game extends SurfaceView implements SurfaceHolder.Callback
 
     private void ToResetSquaresImages(final square_object highlightedSquare, final square_object currentSquareobject)
     {
-        updateThread = new Thread(new Runnable()
+        dragGameActivity.updateThread = new Thread(new Runnable()
         {
             @Override
             public void run()
@@ -798,7 +854,7 @@ public class drag_game extends SurfaceView implements SurfaceHolder.Callback
             }
         });
 
-        updateThread.start();
+        dragGameActivity.updateThread.start();
     }
 
     private void ResetSquareImage(square_object squareobject)

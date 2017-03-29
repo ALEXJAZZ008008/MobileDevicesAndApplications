@@ -34,7 +34,6 @@ public class click_game extends SurfaceView implements SurfaceHolder.Callback
     private Integer maximumMatches;
 
     private Paint paint;
-    private Thread drawThread, updateThread;
 
     private Integer offsetAmount;
 
@@ -228,9 +227,20 @@ public class click_game extends SurfaceView implements SurfaceHolder.Callback
     }
 
     @Override
-    public void surfaceCreated(SurfaceHolder surfaceHolderolder)
+    public void surfaceCreated(SurfaceHolder surfaceHolder)
     {
-        drawThread = new Thread(new Runnable()
+        InitialiseThread();
+    }
+
+    @Override
+    public void surfaceDestroyed(SurfaceHolder surfaceHolder)
+    {
+        clickGameActivity.KillThreads();
+    }
+
+    private void InitialiseThread()
+    {
+        clickGameActivity.initialiseThread = new Thread(new Runnable()
         {
             @Override
             public void run()
@@ -242,7 +252,7 @@ public class click_game extends SurfaceView implements SurfaceHolder.Callback
                     clickGameActivity.firstBoolean = true;
                 }
 
-                ThreadLoop();
+                DrawThread();
             }
 
             private void ThreadInitialise()
@@ -259,18 +269,37 @@ public class click_game extends SurfaceView implements SurfaceHolder.Callback
                 }
 
                 ChangeAllImages();
+
+                clickGameActivity.StartButton();
+            }
+        });
+
+        clickGameActivity.initialiseThread.start();
+    }
+
+    private void DrawThread()
+    {
+        clickGameActivity.drawThread = new Thread(new Runnable()
+        {
+            @Override
+            public void run()
+            {
+                ThreadLoop();
             }
 
             private void ThreadLoop()
             {
                 while (!Thread.currentThread().isInterrupted())
                 {
-                    DrawOnCanvas();
+                    if(clickGameActivity.surfaceHolder != null )
+                    {
+                        DrawOnCanvas();
+                    }
                 }
             }
         });
 
-        drawThread.start();
+        clickGameActivity.drawThread.start();
     }
 
     private void ChangeAllImages()
@@ -288,52 +317,45 @@ public class click_game extends SurfaceView implements SurfaceHolder.Callback
 
     private void DrawOnCanvas()
     {
-        Canvas canvas = clickGameActivity.surfaceHolder.lockCanvas();
-
-        canvas.drawColor(ContextCompat.getColor(clickGameActivity, R.color.colorBackground));
-
-        for(int i = 0; i < clickGameActivity.squares.size(); i++)
+        try
         {
-            ArrayList<square_object> currentRow = clickGameActivity.squares.get(i);
+            Canvas canvas = clickGameActivity.surfaceHolder.lockCanvas();
 
-            for(int j = 0; j < currentRow.size(); j++)
+            canvas.drawColor(ContextCompat.getColor(clickGameActivity, R.color.colorBackground));
+
+            for(int i = 0; i < clickGameActivity.squares.size(); i++)
             {
-                square_object currentSquareobject = currentRow.get(j);
-                two_dimensional_vector_object currentPosition = currentSquareobject.GetPosition();
-                Bitmap currentSquareObjectImage = currentSquareobject.GetImage();
-                Integer currentPositionX = currentPosition.GetX();
-                Integer currentPositionY = currentPosition.GetY();
+                ArrayList<square_object> currentRow = clickGameActivity.squares.get(i);
 
-                if(currentSquareObjectImage != cardBack && currentSquareObjectImage != cardBackHighlighted)
+                for(int j = 0; j < currentRow.size(); j++)
                 {
-                    if(canvasSize.GetX() < canvasSize.GetY())
+                    square_object currentSquareObject = currentRow.get(j);
+                    two_dimensional_vector_object currentPosition = currentSquareObject.GetPosition();
+                    Bitmap currentSquareObjectImage = currentSquareObject.GetImage();
+                    Integer currentPositionX = currentPosition.GetX();
+                    Integer currentPositionY = currentPosition.GetY();
+
+                    if(currentSquareObjectImage != cardBack && currentSquareObjectImage != cardBackHighlighted)
                     {
-                        currentPositionY += offsetAmount;
+                        if(canvasSize.GetX() < canvasSize.GetY())
+                        {
+                            currentPositionY += offsetAmount;
+                        }
+                        else
+                        {
+                            currentPositionX += offsetAmount;
+                        }
                     }
-                    else
-                    {
-                        currentPositionX += offsetAmount;
-                    }
+
+                    canvas.drawBitmap(currentSquareObject.GetImage(), currentPositionX, currentPositionY, paint);
                 }
-
-                canvas.drawBitmap(currentSquareobject.GetImage(), currentPositionX, currentPositionY, paint);
             }
+
+            clickGameActivity.surfaceHolder.unlockCanvasAndPost(canvas);
         }
-
-        clickGameActivity.surfaceHolder.unlockCanvasAndPost(canvas);
-    }
-
-    @Override
-    public void surfaceDestroyed(SurfaceHolder surfaceHolderolder)
-    {
-        if(drawThread != null)
+        catch(Exception e)
         {
-            drawThread.interrupt();
-        }
-
-        if(updateThread != null)
-        {
-            updateThread.interrupt();
+            clickGameActivity.KillThreads();
         }
     }
 
@@ -491,14 +513,14 @@ public class click_game extends SurfaceView implements SurfaceHolder.Callback
         SetCardImageToFace(squareobject, position);
     }
 
-    private void ToResetSquaresImages(final square_object highlightedSquare, final square_object currentSquareobject)
+    private void ToResetSquaresImages(final square_object highlightedSquare, final square_object currentSquareObject)
     {
-        updateThread = new Thread(new Runnable()
+        clickGameActivity.updateThread = new Thread(new Runnable()
         {
             @Override
             public void run()
             {
-                ResetSquaresImages(highlightedSquare, currentSquareobject);
+                ResetSquaresImages(highlightedSquare, currentSquareObject);
             }
 
             private void ResetSquaresImages(square_object previouslyHighlightedSquareobject, square_object currentSquareobject)
@@ -519,30 +541,30 @@ public class click_game extends SurfaceView implements SurfaceHolder.Callback
             }
         });
 
-        updateThread.start();
+        clickGameActivity.updateThread.start();
     }
 
-    private void ResetSquareImage(square_object squareobject)
+    private void ResetSquareImage(square_object squareObject)
     {
-        SetCardImageToCard(squareobject);
+        SetCardImageToCard(squareObject);
     }
 
-    private void SetCardImageToHighlight(square_object squareobject)
+    private void SetCardImageToHighlight(square_object squareObject)
     {
-        squareobject.SetImage(cardBackHighlighted);
-        squareobject.SetImageState(highlightImage);
+        squareObject.SetImage(cardBackHighlighted);
+        squareObject.SetImageState(highlightImage);
     }
 
-    private void SetCardImageToCard(square_object squareobject)
+    private void SetCardImageToCard(square_object squareObject)
     {
-        squareobject.SetImage(cardBack);
-        squareobject.SetImageState(cardImage);
+        squareObject.SetImage(cardBack);
+        squareObject.SetImageState(cardImage);
     }
 
-    private void SetCardImageToFace(square_object squareobject, Integer position)
+    private void SetCardImageToFace(square_object squareObject, Integer position)
     {
-        squareobject.SetImage(imageArray.get(position));
-        squareobject.SetImageState(faceImage);
+        squareObject.SetImage(imageArray.get(position));
+        squareObject.SetImageState(faceImage);
     }
 
     private void UpdateScoreAttempts()

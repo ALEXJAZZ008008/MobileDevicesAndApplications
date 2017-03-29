@@ -30,6 +30,9 @@ public class drag_game_activity extends Activity
 
     public SurfaceHolder surfaceHolder;
 
+    public Thread initialiseThread, drawThread, updateThread;
+    public ArrayList<Thread> moveThreads;
+
     public Integer score, attempts, correctAttempts;
     private TextView textView;
     private Button resetButton;
@@ -64,9 +67,17 @@ public class drag_game_activity extends Activity
     @Override
     protected void onPause()
     {
-        SavePreferences();
+        if(firstBoolean)
+        {
+            SavePreferences();
 
-        dragGame.surfaceDestroyed(surfaceHolder);
+            if(surfaceHolder != null)
+            {
+                dragGame.surfaceDestroyed(surfaceHolder);
+            }
+        }
+
+        KillThreads();
 
         super.onPause();
     }
@@ -80,8 +91,10 @@ public class drag_game_activity extends Activity
 
         ResetPreferencesValues();
 
-        resetButton = (Button)this.findViewById(R.id.resetButton);
         textView = (TextView)findViewById(R.id.score);
+        resetButton = (Button)this.findViewById(R.id.resetButton);
+
+        moveThreads = new ArrayList<>();
 
         GoToTasks(new puzzle_object[] { puzzle });
 
@@ -162,11 +175,11 @@ public class drag_game_activity extends Activity
         highlightedSquare.SetX(preferences.ReadInteger(this, puzzleId + "Drag" + "highlightedSquareX", highlightedSquare.GetX()));
         highlightedSquare.SetY(preferences.ReadInteger(this, puzzleId + "Drag" + "highlightedSquareY", highlightedSquare.GetY()));
 
-        moveSquare.getSquare().SetX(preferences.ReadInteger(this, puzzleId + "Drag" + "moveSquareSquareX", moveSquare.getSquare().GetX()));
-        moveSquare.getSquare().SetY(preferences.ReadInteger(this, puzzleId + "Drag" + "moveSquareSquareY", moveSquare.getSquare().GetY()));
+        moveSquare.GetSquare().SetX(preferences.ReadInteger(this, puzzleId + "Drag" + "moveSquareSquareX", moveSquare.GetSquare().GetX()));
+        moveSquare.GetSquare().SetY(preferences.ReadInteger(this, puzzleId + "Drag" + "moveSquareSquareY", moveSquare.GetSquare().GetY()));
 
-        moveSquare.getPosition().SetX(preferences.ReadInteger(this, puzzleId + "Drag" + "moveSquarePositionX", moveSquare.getPosition().GetX()));
-        moveSquare.getPosition().SetY(preferences.ReadInteger(this, puzzleId + "Drag" + "moveSquarePositionY", moveSquare.getPosition().GetY()));
+        moveSquare.GetPosition().SetX(preferences.ReadInteger(this, puzzleId + "Drag" + "moveSquarePositionX", moveSquare.GetPosition().GetX()));
+        moveSquare.GetPosition().SetY(preferences.ReadInteger(this, puzzleId + "Drag" + "moveSquarePositionY", moveSquare.GetPosition().GetY()));
 
         firstBoolean = preferences.ReadBoolean(this, puzzleId + "Drag" + "firstBoolean", firstBoolean);
         currentMatches = preferences.ReadInteger(this, puzzleId + "Drag" + "currentMatches", currentMatches);
@@ -198,11 +211,39 @@ public class drag_game_activity extends Activity
         preferences.WriteInteger(this, puzzleId + "Drag" + "highlightedSquareX", highlightedSquare.GetX());
         preferences.WriteInteger(this, puzzleId + "Drag" + "highlightedSquareY", highlightedSquare.GetY());
 
-        preferences.WriteInteger(this, puzzleId + "Drag" + "moveSquareSquareX", moveSquare.getSquare().GetX());
-        preferences.WriteInteger(this, puzzleId + "Drag" + "moveSquareSquareY", moveSquare.getSquare().GetY());
+        preferences.WriteInteger(this, puzzleId + "Drag" + "moveSquareSquareX", moveSquare.GetSquare().GetX());
+        preferences.WriteInteger(this, puzzleId + "Drag" + "moveSquareSquareY", moveSquare.GetSquare().GetY());
 
         preferences.WriteBoolean(this, puzzleId + "Drag" + "firstBoolean", firstBoolean);
         preferences.WriteInteger(this, puzzleId + "Drag" + "currentMatches", currentMatches);
+    }
+
+    public void KillThreads()
+    {
+        if(initialiseThread != null)
+        {
+            initialiseThread.interrupt();
+        }
+
+        if(drawThread != null)
+        {
+            drawThread.interrupt();
+        }
+
+        if(updateThread != null)
+        {
+            updateThread.interrupt();
+        }
+
+        for(Integer i = 0; i < moveThreads.size(); i++)
+        {
+            Thread currentThread = moveThreads.get(i);
+
+            if (currentThread != null)
+            {
+                currentThread.interrupt();
+            }
+        }
     }
 
     public void OnGameFinished()
