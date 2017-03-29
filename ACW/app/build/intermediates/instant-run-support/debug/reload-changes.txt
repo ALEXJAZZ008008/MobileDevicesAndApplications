@@ -1,4 +1,0 @@
-CHANGED,C:\ACW\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\mobile\labs\acw\drag_game\drag_game$4$override.class
-CHANGED,C:\ACW\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\mobile\labs\acw\drag_game\drag_game$override.class
-CHANGED,C:\ACW\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\mobile\labs\acw\drag_game\drag_game$3$override.class
-CHANGED,C:\ACW\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\android\tools\fd\runtime\AppPatchesLoaderImpl.class
