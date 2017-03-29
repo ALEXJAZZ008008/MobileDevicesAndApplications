@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Spinner;
+import android.widget.Toast;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -31,6 +33,9 @@ public class menu_activity extends Activity
     public Spinner spinner;
     public ArrayAdapter<String> arrayAdapter;
     public Integer spinnerChoice;
+
+    public Toast[] toast;
+    public Integer toastInteger;
 
     private static final int GAME_ACTIVITY_REQUEST = 1;
 
@@ -74,6 +79,17 @@ public class menu_activity extends Activity
         puzzleListBoolean = false;
 
         spinnerChoice = -1;
+
+        toast = new Toast[2];
+        toastInteger = 1;
+
+        toast[0] = Toast.makeText(this, "", Toast.LENGTH_LONG);
+        toast[0].show();
+        toast[0].cancel();
+
+        toast[1] = Toast.makeText(this, "", Toast.LENGTH_LONG);
+        toast[1].show();
+        toast[1].cancel();
     }
 
     private void StartList()

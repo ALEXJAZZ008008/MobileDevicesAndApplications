@@ -13,7 +13,7 @@
     <string name="drag_mode">Zvarrit Mënyrë</string>
     <string name="error">Imazh Bën Nuk Ekzistoj Dhe Rrjet Gabim</string>
     <string name="initialScore">0</string>
-    <string name="internet">Jo Internet Lidhje</string>
+    <string name="internet">Jo Internet Lidhje Ose I Dobët Internet Lidhje</string>
     <string name="nullTitle">I pavlefshëm\u0020</string>
     <string name="percent">%</string>
     <string name="play">Luaj:\u0020</string>

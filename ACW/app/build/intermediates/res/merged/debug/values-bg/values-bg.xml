@@ -32,12 +32,12 @@
     <string name="drag_mode">Плъзгащ режим</string>
     <string name="error">Изображение не съществуват и Грешка в мрежата</string>
     <string name="initialScore">0</string>
-    <string name="internet">Няма връзка с интернет</string>
+    <string name="internet">Няма връзка с интернет или лоша връзка с интернет</string>
     <string name="nullTitle">Нула\u0020</string>
     <string name="percent">%</string>
     <string name="play">Играй:\u0020</string>
     <string name="play_list">Списък със свалени игри</string>
-    <string name="reset">Нулиране</string>
+    <string name="reset">Започни отначало</string>
     <string name="score">Точки</string>
     <string name="scoreTitle">Точки:\u0020</string>
     <string msgid="146198913615257606" name="search_menu_title">"Търсене"</string>

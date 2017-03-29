@@ -52,7 +52,7 @@ MERGED from [com.android.support:support-compat:24.2.1] C:\ACW\app\build\interme
 	android:allowBackup
 		ADDED from C:\ACW\app\src\main\AndroidManifest.xml:18:9-35
 	android:icon
-		ADDED from C:\ACW\app\src\main\AndroidManifest.xml:20:9-38
+		ADDED from C:\ACW\app\src\main\AndroidManifest.xml:20:9-36
 	android:theme
 		ADDED from C:\ACW\app\src\main\AndroidManifest.xml:22:9-40
 activity#mobile.labs.acw.main_activity

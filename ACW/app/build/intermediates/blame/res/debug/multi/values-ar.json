@@ -615,8 +615,8 @@
                     "startLine": 34,
                     "startColumn": 4,
                     "startOffset": 2728,
-                    "endColumn": 57,
-                    "endOffset": 2781
+                    "endColumn": 82,
+                    "endOffset": 2806
                 },
                 "from": {
                     "file": "C:\\ACW\\app\\src\\main\\res\\values-ar\\strings.xml",
@@ -624,8 +624,8 @@
                         "startLine": 15,
                         "startColumn": 4,
                         "startOffset": 816,
-                        "endColumn": 57,
-                        "endOffset": 869
+                        "endColumn": 82,
+                        "endOffset": 894
                     }
                 }
             },
@@ -633,18 +633,18 @@
                 "to": {
                     "startLine": 35,
                     "startColumn": 4,
-                    "startOffset": 2786,
+                    "startOffset": 2811,
                     "endColumn": 44,
-                    "endOffset": 2826
+                    "endOffset": 2851
                 },
                 "from": {
                     "file": "C:\\ACW\\app\\src\\main\\res\\values-ar\\strings.xml",
                     "position": {
                         "startLine": 16,
                         "startColumn": 4,
-                        "startOffset": 875,
+                        "startOffset": 900,
                         "endColumn": 44,
-                        "endOffset": 915
+                        "endOffset": 940
                     }
                 }
             },
@@ -652,18 +652,18 @@
                 "to": {
                     "startLine": 36,
                     "startColumn": 4,
-                    "startOffset": 2831,
+                    "startOffset": 2856,
                     "endColumn": 37,
-                    "endOffset": 2864
+                    "endOffset": 2889
                 },
                 "from": {
                     "file": "C:\\ACW\\app\\src\\main\\res\\values-ar\\strings.xml",
                     "position": {
                         "startLine": 17,
                         "startColumn": 4,
-                        "startOffset": 921,
+                        "startOffset": 946,
                         "endColumn": 37,
-                        "endOffset": 954
+                        "endOffset": 979
                     }
                 }
             },
@@ -671,18 +671,18 @@
                 "to": {
                     "startLine": 37,
                     "startColumn": 4,
-                    "startOffset": 2869,
+                    "startOffset": 2894,
                     "endColumn": 36,
-                    "endOffset": 2901
+                    "endOffset": 2926
                 },
                 "from": {
                     "file": "C:\\ACW\\app\\src\\main\\res\\values-ar\\strings.xml",
                     "position": {
                         "startLine": 18,
                         "startColumn": 4,
-                        "startOffset": 960,
+                        "startOffset": 985,
                         "endColumn": 36,
-                        "endOffset": 992
+                        "endOffset": 1017
                     }
                 }
             },
@@ -690,18 +690,18 @@
                 "to": {
                     "startLine": 38,
                     "startColumn": 4,
-                    "startOffset": 2906,
+                    "startOffset": 2931,
                     "endColumn": 51,
-                    "endOffset": 2953
+                    "endOffset": 2978
                 },
                 "from": {
                     "file": "C:\\ACW\\app\\src\\main\\res\\values-ar\\strings.xml",
                     "position": {
                         "startLine": 19,
                         "startColumn": 4,
-                        "startOffset": 998,
+                        "startOffset": 1023,
                         "endColumn": 51,
-                        "endOffset": 1045
+                        "endOffset": 1070
                     }
                 }
             },
@@ -709,18 +709,18 @@
                 "to": {
                     "startLine": 39,
                     "startColumn": 4,
-                    "startOffset": 2958,
+                    "startOffset": 2983,
                     "endColumn": 45,
-                    "endOffset": 2999
+                    "endOffset": 3024
                 },
                 "from": {
                     "file": "C:\\ACW\\app\\src\\main\\res\\values-ar\\strings.xml",
                     "position": {
                         "startLine": 20,
                         "startColumn": 4,
-                        "startOffset": 1051,
+                        "startOffset": 1076,
                         "endColumn": 45,
-                        "endOffset": 1092
+                        "endOffset": 1117
                     }
                 }
             },
@@ -728,18 +728,18 @@
                 "to": {
                     "startLine": 40,
                     "startColumn": 4,
-                    "startOffset": 3004,
+                    "startOffset": 3029,
                     "endColumn": 44,
-                    "endOffset": 3044
+                    "endOffset": 3069
                 },
                 "from": {
                     "file": "C:\\ACW\\app\\src\\main\\res\\values-ar\\strings.xml",
                     "position": {
                         "startLine": 21,
                         "startColumn": 4,
-                        "startOffset": 1098,
+                        "startOffset": 1123,
                         "endColumn": 44,
-                        "endOffset": 1138
+                        "endOffset": 1163
                     }
                 }
             },
@@ -747,18 +747,18 @@
                 "to": {
                     "startLine": 41,
                     "startColumn": 4,
-                    "startOffset": 3049,
+                    "startOffset": 3074,
                     "endColumn": 49,
-                    "endOffset": 3094
+                    "endOffset": 3119
                 },
                 "from": {
                     "file": "C:\\ACW\\app\\src\\main\\res\\values-ar\\strings.xml",
                     "position": {
                         "startLine": 22,
                         "startColumn": 4,
-                        "startOffset": 1144,
+                        "startOffset": 1169,
                         "endColumn": 49,
-                        "endOffset": 1189
+                        "endOffset": 1214
                     }
                 }
             },
@@ -766,9 +766,9 @@
                 "to": {
                     "startLine": 42,
                     "startColumn": 4,
-                    "startOffset": 3099,
+                    "startOffset": 3124,
                     "endColumn": 80,
-                    "endOffset": 3175
+                    "endOffset": 3200
                 },
                 "from": {
                     "file": "C:\\ACW\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-ar\\values-ar.xml",
@@ -785,18 +785,18 @@
                 "to": {
                     "startLine": 43,
                     "startColumn": 4,
-                    "startOffset": 3180,
+                    "startOffset": 3205,
                     "endColumn": 37,
-                    "endOffset": 3213
+                    "endOffset": 3238
                 },
                 "from": {
                     "file": "C:\\ACW\\app\\src\\main\\res\\values-ar\\strings.xml",
                     "position": {
                         "startLine": 23,
                         "startColumn": 4,
-                        "startOffset": 1195,
+                        "startOffset": 1220,
                         "endColumn": 37,
-                        "endOffset": 1228
+                        "endOffset": 1253
                     }
                 }
             },
@@ -804,18 +804,18 @@
                 "to": {
                     "startLine": 44,
                     "startColumn": 4,
-                    "startOffset": 3218,
+                    "startOffset": 3243,
                     "endColumn": 38,
-                    "endOffset": 3252
+                    "endOffset": 3277
                 },
                 "from": {
                     "file": "C:\\ACW\\app\\src\\main\\res\\values-ar\\strings.xml",
                     "position": {
                         "startLine": 24,
                         "startColumn": 4,
-                        "startOffset": 1234,
+                        "startOffset": 1259,
                         "endColumn": 38,
-                        "endOffset": 1268
+                        "endOffset": 1293
                     }
                 }
             },
@@ -823,9 +823,9 @@
                 "to": {
                     "startLine": 45,
                     "startColumn": 4,
-                    "startOffset": 3257,
+                    "startOffset": 3282,
                     "endColumn": 100,
-                    "endOffset": 3353
+                    "endOffset": 3378
                 },
                 "from": {
                     "file": "C:\\ACW\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-ar\\values-ar.xml",
@@ -842,18 +842,18 @@
                 "to": {
                     "startLine": 46,
                     "startColumn": 4,
-                    "startOffset": 3358,
+                    "startOffset": 3383,
                     "endColumn": 39,
-                    "endOffset": 3393
+                    "endOffset": 3418
                 },
                 "from": {
                     "file": "C:\\ACW\\app\\src\\main\\res\\values-ar\\strings.xml",
                     "position": {
                         "startLine": 25,
                         "startColumn": 4,
-                        "startOffset": 1274,
+                        "startOffset": 1299,
                         "endColumn": 39,
-                        "endOffset": 1309
+                        "endOffset": 1334
                     }
                 }
             }

@@ -32,7 +32,7 @@
     <string name="drag_mode">Zieh-Modus</string>
     <string name="error">Bild existiert nicht und Netzfehler</string>
     <string name="initialScore">0</string>
-    <string name="internet">Keine Internetverbindung</string>
+    <string name="internet">Keine Internetverbindung oder schlechte Internetverbindung</string>
     <string name="nullTitle">Null\u0020</string>
     <string name="percent">%</string>
     <string name="play">Spielen:\u0020</string>

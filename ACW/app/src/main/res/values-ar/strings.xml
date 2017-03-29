@@ -13,7 +13,7 @@
     <string name="drag_mode">وضع السحب</string>
     <string name="error">الصورة لا توجد وشبكة خطأ</string>
     <string name="initialScore">0</string>
-    <string name="internet">لا يوجد اتصال إنترنت</string>
+    <string name="internet">لا يوجد اتصال إنترنت أو ضعف الاتصال بالإنترنت</string>
     <string name="nullTitle">لا شيء</string>
     <string name="percent">%</string>
     <string name="play">لعب</string>

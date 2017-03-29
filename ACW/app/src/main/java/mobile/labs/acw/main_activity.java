@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import mobile.labs.acw.menu.menu_activity;
-import mobile.labs.acw.utilities.internet_check;
+import mobile.labs.acw.utilities.main_internet_check;
 
 public class main_activity extends Activity
 {
@@ -23,7 +23,7 @@ public class main_activity extends Activity
     {
         try
         {
-            new internet_check(this).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+            new main_internet_check(this).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
         }
         catch(Exception e)
         {

@@ -615,8 +615,8 @@
                     "startLine": 34,
                     "startColumn": 4,
                     "startOffset": 2823,
-                    "endColumn": 61,
-                    "endOffset": 2880
+                    "endColumn": 95,
+                    "endOffset": 2914
                 },
                 "from": {
                     "file": "C:\\ACW\\app\\src\\main\\res\\values-de\\strings.xml",
@@ -624,8 +624,8 @@
                         "startLine": 25,
                         "startColumn": 4,
                         "startOffset": 1369,
-                        "endColumn": 61,
-                        "endOffset": 1426
+                        "endColumn": 95,
+                        "endOffset": 1460
                     }
                 }
             },
@@ -633,9 +633,9 @@
                 "to": {
                     "startLine": 35,
                     "startColumn": 4,
-                    "startOffset": 2885,
+                    "startOffset": 2919,
                     "endColumn": 48,
-                    "endOffset": 2929
+                    "endOffset": 2963
                 },
                 "from": {
                     "file": "C:\\ACW\\app\\src\\main\\res\\values-de\\strings.xml",
@@ -652,9 +652,9 @@
                 "to": {
                     "startLine": 36,
                     "startColumn": 4,
-                    "startOffset": 2934,
+                    "startOffset": 2968,
                     "endColumn": 37,
-                    "endOffset": 2967
+                    "endOffset": 3001
                 },
                 "from": {
                     "file": "C:\\ACW\\app\\src\\main\\res\\values-de\\strings.xml",
@@ -671,9 +671,9 @@
                 "to": {
                     "startLine": 37,
                     "startColumn": 4,
-                    "startOffset": 2972,
+                    "startOffset": 3006,
                     "endColumn": 47,
-                    "endOffset": 3015
+                    "endOffset": 3049
                 },
                 "from": {
                     "file": "C:\\ACW\\app\\src\\main\\res\\values-de\\strings.xml",
@@ -690,9 +690,9 @@
                 "to": {
                     "startLine": 38,
                     "startColumn": 4,
-                    "startOffset": 3020,
+                    "startOffset": 3054,
                     "endColumn": 53,
-                    "endOffset": 3069
+                    "endOffset": 3103
                 },
                 "from": {
                     "file": "C:\\ACW\\app\\src\\main\\res\\values-de\\strings.xml",
@@ -709,9 +709,9 @@
                 "to": {
                     "startLine": 39,
                     "startColumn": 4,
-                    "startOffset": 3074,
+                    "startOffset": 3108,
                     "endColumn": 46,
-                    "endOffset": 3116
+                    "endOffset": 3150
                 },
                 "from": {
                     "file": "C:\\ACW\\app\\src\\main\\res\\values-de\\strings.xml",
@@ -728,9 +728,9 @@
                 "to": {
                     "startLine": 40,
                     "startColumn": 4,
-                    "startOffset": 3121,
+                    "startOffset": 3155,
                     "endColumn": 42,
-                    "endOffset": 3159
+                    "endOffset": 3193
                 },
                 "from": {
                     "file": "C:\\ACW\\app\\src\\main\\res\\values-de\\strings.xml",
@@ -747,9 +747,9 @@
                 "to": {
                     "startLine": 41,
                     "startColumn": 4,
-                    "startOffset": 3164,
+                    "startOffset": 3198,
                     "endColumn": 54,
-                    "endOffset": 3214
+                    "endOffset": 3248
                 },
                 "from": {
                     "file": "C:\\ACW\\app\\src\\main\\res\\values-de\\strings.xml",
@@ -766,9 +766,9 @@
                 "to": {
                     "startLine": 42,
                     "startColumn": 4,
-                    "startOffset": 3219,
+                    "startOffset": 3253,
                     "endColumn": 81,
-                    "endOffset": 3296
+                    "endOffset": 3330
                 },
                 "from": {
                     "file": "C:\\ACW\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-de\\values-de.xml",
@@ -785,9 +785,9 @@
                 "to": {
                     "startLine": 43,
                     "startColumn": 4,
-                    "startOffset": 3301,
+                    "startOffset": 3335,
                     "endColumn": 45,
-                    "endOffset": 3342
+                    "endOffset": 3376
                 },
                 "from": {
                     "file": "C:\\ACW\\app\\src\\main\\res\\values-de\\strings.xml",
@@ -804,9 +804,9 @@
                 "to": {
                     "startLine": 44,
                     "startColumn": 4,
-                    "startOffset": 3347,
+                    "startOffset": 3381,
                     "endColumn": 44,
-                    "endOffset": 3387
+                    "endOffset": 3421
                 },
                 "from": {
                     "file": "C:\\ACW\\app\\src\\main\\res\\values-de\\strings.xml",
@@ -823,9 +823,9 @@
                 "to": {
                     "startLine": 45,
                     "startColumn": 4,
-                    "startOffset": 3392,
+                    "startOffset": 3426,
                     "endColumn": 100,
-                    "endOffset": 3488
+                    "endOffset": 3522
                 },
                 "from": {
                     "file": "C:\\ACW\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-de\\values-de.xml",
@@ -842,9 +842,9 @@
                 "to": {
                     "startLine": 46,
                     "startColumn": 4,
-                    "startOffset": 3493,
+                    "startOffset": 3527,
                     "endColumn": 39,
-                    "endOffset": 3528
+                    "endOffset": 3562
                 },
                 "from": {
                     "file": "C:\\ACW\\app\\src\\main\\res\\values-de\\strings.xml",
