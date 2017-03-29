@@ -28,6 +28,7 @@
     <color name="button_material_dark">#ff5a595b</color>
     <color name="button_material_light">#ffd6d7d7</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="colorBackground">#FFFFFF</color>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="dim_foreground_disabled_material_dark">#80bebebe</color>
@@ -174,8 +175,6 @@
     <dimen name="abc_text_size_subtitle_material_toolbar">16dp</dimen>
     <dimen name="abc_text_size_title_material">20sp</dimen>
     <dimen name="abc_text_size_title_material_toolbar">20dp</dimen>
-    <dimen name="activity_horizontal_margin">16dp</dimen>
-    <dimen name="activity_vertical_margin">16dp</dimen>
     <item format="float" name="disabled_alpha_material_dark" type="dimen">0.30</item>
     <item format="float" name="disabled_alpha_material_light" type="dimen">0.26</item>
     <item format="float" name="highlight_alpha_material_colored" type="dimen">0.26</item>
@@ -230,21 +229,28 @@
     <string name="abc_shareactionprovider_share_with">Share with</string>
     <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
+    <string name="all">All</string>
     <string name="android_pair_matching_application">Android Pair Matching Application</string>
     <string name="app_name">Android Pair Matching Application</string>
     <string name="click_mode">Click Mode</string>
+    <string name="dialog_fragment">dialog_fragment_game_type_choice</string>
     <string name="download">Download:\u0020</string>
     <string name="download_list">Download List</string>
+    <string name="download_puzzle">Downloading Puzzle</string>
+    <string name="downloading_puzzle">Currently Downloading Puzzle</string>
     <string name="drag_mode">Drag Mode</string>
+    <string name="error">Image Does Not Exist And Network Error</string>
     <string name="initialScore">0</string>
+    <string name="internet">No Internet Connection</string>
     <string name="nullTitle">Null\u0020</string>
     <string name="percent">%</string>
     <string name="play">Play:\u0020</string>
     <string name="play_list">Play List</string>
+    <string name="reset">Reset</string>
     <string name="score">score</string>
     <string name="scoreTitle">Score:\u0020</string>
     <string name="search_menu_title">Search</string>
-    <string name="size">"Size: "</string>
+    <string name="size">Size:\u0020</string>
     <string name="state">state</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="title">title</string>
