@@ -32,6 +32,7 @@ public class drag_game_activity extends Activity
 
     public Integer score, attempts, correctAttempts;
     private TextView textView;
+    private Button resetButton;
 
     public ArrayList<ArrayList<square_object>> squares;
     public ArrayList<Integer> layout;
@@ -79,8 +80,7 @@ public class drag_game_activity extends Activity
 
         ResetPreferencesValues();
 
-        StartButton();
-
+        resetButton = (Button)this.findViewById(R.id.resetButton);
         textView = (TextView)findViewById(R.id.score);
 
         GoToTasks(new puzzle_object[] { puzzle });
@@ -103,10 +103,8 @@ public class drag_game_activity extends Activity
         firstBoolean = false;
     }
 
-    private void StartButton()
+    public void StartButton()
     {
-        Button resetButton = (Button)this.findViewById(R.id.resetButton);
-
         resetButton.setOnClickListener(new View.OnClickListener()
         {
             @Override

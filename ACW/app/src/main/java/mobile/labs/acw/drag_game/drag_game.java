@@ -237,13 +237,13 @@ public class drag_game extends SurfaceView implements SurfaceHolder.Callback
     }
 
     @Override
-    public void surfaceChanged(SurfaceHolder surfaceHolderolder, int format, int width, int height)
+    public void surfaceChanged(SurfaceHolder surfaceHolder, int format, int width, int height)
     {
 
     }
 
     @Override
-    public void surfaceCreated(SurfaceHolder surfaceHolderolder)
+    public void surfaceCreated(SurfaceHolder surfaceHolder)
     {
         drawThread = new Thread(new Runnable()
         {
@@ -274,6 +274,8 @@ public class drag_game extends SurfaceView implements SurfaceHolder.Callback
                 }
 
                 ChangeAllImages();
+
+                dragGameActivity.StartButton();
             }
 
             private void ThreadLoop()
@@ -286,6 +288,20 @@ public class drag_game extends SurfaceView implements SurfaceHolder.Callback
         });
 
         drawThread.start();
+    }
+
+    @Override
+    public void surfaceDestroyed(SurfaceHolder surfaceHolder)
+    {
+        if(drawThread != null)
+        {
+            drawThread.interrupt();
+        }
+
+        if(updateThread != null)
+        {
+            updateThread.interrupt();
+        }
     }
 
     private void ChangeAllImages()
@@ -307,15 +323,16 @@ public class drag_game extends SurfaceView implements SurfaceHolder.Callback
 
         canvas.drawColor(ContextCompat.getColor(dragGameActivity, R.color.colorBackground));
 
+
         for(Integer i = 0; i < dragGameActivity.squares.size(); i++)
         {
             ArrayList<square_object> currentRow = dragGameActivity.squares.get(i);
 
             for(int j = 0; j < currentRow.size(); j++)
             {
-                square_object currentSquareobject = currentRow.get(j);
-                two_dimensional_vector_object currentPosition = currentSquareobject.GetPosition();
-                Bitmap currentSquareObjectImage = currentSquareobject.GetImage();
+                square_object currentSquareObject = currentRow.get(j);
+                two_dimensional_vector_object currentPosition = currentSquareObject.GetPosition();
+                Bitmap currentSquareObjectImage = currentSquareObject.GetImage();
                 Integer currentPositionX = currentPosition.GetX();
                 Integer currentPositionY = currentPosition.GetY();
 
@@ -331,7 +348,7 @@ public class drag_game extends SurfaceView implements SurfaceHolder.Callback
                     }
                 }
 
-                canvas.drawBitmap(currentSquareobject.GetImage(), currentPositionX, currentPositionY, paint);
+                canvas.drawBitmap(currentSquareObject.GetImage(), currentPositionX, currentPositionY, paint);
             }
 
             if(movingSquare != null)
@@ -366,20 +383,6 @@ public class drag_game extends SurfaceView implements SurfaceHolder.Callback
         }
 
         dragGameActivity.surfaceHolder.unlockCanvasAndPost(canvas);
-    }
-
-    @Override
-    public void surfaceDestroyed(SurfaceHolder surfaceHolderolder)
-    {
-        if(drawThread != null)
-        {
-            drawThread.interrupt();
-        }
-
-        if(updateThread != null)
-        {
-            updateThread.interrupt();
-        }
     }
 
     public boolean onTouch(MotionEvent motionEvent)
@@ -541,7 +544,7 @@ public class drag_game extends SurfaceView implements SurfaceHolder.Callback
         Integer maximumX = minimumX + currentSquareImage.getWidth();
         Integer maximumY = minimumY + currentSquareImage.getHeight();
 
-        if (currentSquare != moveSquare)
+        if (currentSquare != moveSquare && (currentSquareImage == cardBack || currentSquareImage == cardBackHighlighted))
         {
             if(CheckAdjacentConnection(i, j, moveRow, moveColumn))
             {
