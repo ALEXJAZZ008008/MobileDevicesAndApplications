@@ -267,6 +267,8 @@ public class drag_game extends SurfaceView implements SurfaceHolder.Callback
                     dragGameActivity.firstBoolean = true;
                 }
 
+                dragGameActivity.StartButton();
+
                 DrawThread();
             }
 
@@ -284,8 +286,6 @@ public class drag_game extends SurfaceView implements SurfaceHolder.Callback
                 }
 
                 ChangeAllImages();
-
-                dragGameActivity.StartButton();
             }
         });
 
@@ -449,12 +449,10 @@ public class drag_game extends SurfaceView implements SurfaceHolder.Callback
                 {
                     ActionUpEvent(x, y, highlightedRow, highlightedColumn, moveRow, moveColumn);
                 }
-                else
+
+                if(previousPosition.GetX() != -1 || previousPosition.GetY() != -1)
                 {
-                    if(previousPosition.GetX() != -1 || previousPosition.GetY() != -1)
-                    {
-                        previousPosition = new two_dimensional_vector_object(-1, -1);
-                    }
+                    previousPosition = new two_dimensional_vector_object(-1, -1);
                 }
 
                 return true;

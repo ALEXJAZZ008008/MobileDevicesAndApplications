@@ -20,7 +20,7 @@
     <string name="size">Madhësi:u0020</string>
     <string name="reset">Rivendos</string>
     <string name="dialog_fragment">dialog_fragment_lojë_lloj_zgjedhje</string>
-    <string name="internet">Jo Internet Lidhje</string>
+    <string name="internet">Jo Internet Lidhje Ose I Dobët Internet Lidhje</string>
     <string name="error">Imazh Bën Nuk Ekzistoj Dhe Rrjet Gabim</string>
     <string name="downloading_puzzle">Aktualisht Shkarkim Mister</string>
     <string name="download_puzzle">Shkarkim Mister</string>

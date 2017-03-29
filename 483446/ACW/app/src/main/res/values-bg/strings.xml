@@ -18,10 +18,10 @@
     <string name="title">заглавие</string>
     <string name="all">Всички </string>
     <string name="size">Размер:\u0020</string>
-    <string name="reset">Нулиране</string>
+    <string name="reset">Започни отначало</string>
     <string name="dialog_fragment">диалоговия_фрагмент_игра_Тип_избор</string>
     <string name="download_puzzle">Изтеглянето на пъзел</string>
     <string name="downloading_puzzle">В момента Изтегляне Puzzle</string>
     <string name="error">Изображение не съществуват и Грешка в мрежата</string>
-    <string name="internet">Няма връзка с интернет</string>
+    <string name="internet">Няма връзка с интернет или лоша връзка с интернет</string>
 </resources>

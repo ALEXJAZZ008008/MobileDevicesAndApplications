@@ -471,9 +471,9 @@
                     "position": {
                         "startLine": 21,
                         "startColumn": 4,
-                        "startOffset": 1141,
+                        "startOffset": 1149,
                         "endColumn": 78,
-                        "endOffset": 1215
+                        "endOffset": 1223
                     }
                 }
             },
@@ -528,9 +528,9 @@
                     "position": {
                         "startLine": 22,
                         "startColumn": 4,
-                        "startOffset": 1221,
+                        "startOffset": 1229,
                         "endColumn": 64,
-                        "endOffset": 1281
+                        "endOffset": 1289
                     }
                 }
             },
@@ -547,9 +547,9 @@
                     "position": {
                         "startLine": 23,
                         "startColumn": 4,
-                        "startOffset": 1287,
+                        "startOffset": 1295,
                         "endColumn": 73,
-                        "endOffset": 1356
+                        "endOffset": 1364
                     }
                 }
             },
@@ -585,9 +585,9 @@
                     "position": {
                         "startLine": 24,
                         "startColumn": 4,
-                        "startOffset": 1362,
+                        "startOffset": 1370,
                         "endColumn": 79,
-                        "endOffset": 1437
+                        "endOffset": 1445
                     }
                 }
             },
@@ -615,17 +615,17 @@
                     "startLine": 34,
                     "startColumn": 4,
                     "startOffset": 2945,
-                    "endColumn": 59,
-                    "endOffset": 3000
+                    "endColumn": 86,
+                    "endOffset": 3027
                 },
                 "from": {
                     "file": "C:\\ACW\\app\\src\\main\\res\\values-bg\\strings.xml",
                     "position": {
                         "startLine": 25,
                         "startColumn": 4,
-                        "startOffset": 1443,
-                        "endColumn": 59,
-                        "endOffset": 1498
+                        "startOffset": 1451,
+                        "endColumn": 86,
+                        "endOffset": 1533
                     }
                 }
             },
@@ -633,9 +633,9 @@
                 "to": {
                     "startLine": 35,
                     "startColumn": 4,
-                    "startOffset": 3005,
+                    "startOffset": 3032,
                     "endColumn": 48,
-                    "endOffset": 3049
+                    "endOffset": 3076
                 },
                 "from": {
                     "file": "C:\\ACW\\app\\src\\main\\res\\values-bg\\strings.xml",
@@ -652,9 +652,9 @@
                 "to": {
                     "startLine": 36,
                     "startColumn": 4,
-                    "startOffset": 3054,
+                    "startOffset": 3081,
                     "endColumn": 37,
-                    "endOffset": 3087
+                    "endOffset": 3114
                 },
                 "from": {
                     "file": "C:\\ACW\\app\\src\\main\\res\\values-bg\\strings.xml",
@@ -671,9 +671,9 @@
                 "to": {
                     "startLine": 37,
                     "startColumn": 4,
-                    "startOffset": 3092,
+                    "startOffset": 3119,
                     "endColumn": 45,
-                    "endOffset": 3133
+                    "endOffset": 3160
                 },
                 "from": {
                     "file": "C:\\ACW\\app\\src\\main\\res\\values-bg\\strings.xml",
@@ -690,9 +690,9 @@
                 "to": {
                     "startLine": 38,
                     "startColumn": 4,
-                    "startOffset": 3138,
+                    "startOffset": 3165,
                     "endColumn": 61,
-                    "endOffset": 3195
+                    "endOffset": 3222
                 },
                 "from": {
                     "file": "C:\\ACW\\app\\src\\main\\res\\values-bg\\strings.xml",
@@ -709,9 +709,9 @@
                 "to": {
                     "startLine": 39,
                     "startColumn": 4,
-                    "startOffset": 3200,
-                    "endColumn": 42,
-                    "endOffset": 3238
+                    "startOffset": 3227,
+                    "endColumn": 50,
+                    "endOffset": 3273
                 },
                 "from": {
                     "file": "C:\\ACW\\app\\src\\main\\res\\values-bg\\strings.xml",
@@ -719,8 +719,8 @@
                         "startLine": 20,
                         "startColumn": 4,
                         "startOffset": 1097,
-                        "endColumn": 42,
-                        "endOffset": 1135
+                        "endColumn": 50,
+                        "endOffset": 1143
                     }
                 }
             },
@@ -728,9 +728,9 @@
                 "to": {
                     "startLine": 40,
                     "startColumn": 4,
-                    "startOffset": 3243,
+                    "startOffset": 3278,
                     "endColumn": 39,
-                    "endOffset": 3278
+                    "endOffset": 3313
                 },
                 "from": {
                     "file": "C:\\ACW\\app\\src\\main\\res\\values-bg\\strings.xml",
@@ -747,9 +747,9 @@
                 "to": {
                     "startLine": 41,
                     "startColumn": 4,
-                    "startOffset": 3283,
+                    "startOffset": 3318,
                     "endColumn": 51,
-                    "endOffset": 3330
+                    "endOffset": 3365
                 },
                 "from": {
                     "file": "C:\\ACW\\app\\src\\main\\res\\values-bg\\strings.xml",
@@ -766,9 +766,9 @@
                 "to": {
                     "startLine": 42,
                     "startColumn": 4,
-                    "startOffset": 3335,
+                    "startOffset": 3370,
                     "endColumn": 82,
-                    "endOffset": 3413
+                    "endOffset": 3448
                 },
                 "from": {
                     "file": "C:\\ACW\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-bg\\values-bg.xml",
@@ -785,9 +785,9 @@
                 "to": {
                     "startLine": 43,
                     "startColumn": 4,
-                    "startOffset": 3418,
+                    "startOffset": 3453,
                     "endColumn": 46,
-                    "endOffset": 3460
+                    "endOffset": 3495
                 },
                 "from": {
                     "file": "C:\\ACW\\app\\src\\main\\res\\values-bg\\strings.xml",
@@ -804,9 +804,9 @@
                 "to": {
                     "startLine": 44,
                     "startColumn": 4,
-                    "startOffset": 3465,
+                    "startOffset": 3500,
                     "endColumn": 43,
-                    "endOffset": 3504
+                    "endOffset": 3539
                 },
                 "from": {
                     "file": "C:\\ACW\\app\\src\\main\\res\\values-bg\\strings.xml",
@@ -823,9 +823,9 @@
                 "to": {
                     "startLine": 45,
                     "startColumn": 4,
-                    "startOffset": 3509,
+                    "startOffset": 3544,
                     "endColumn": 100,
-                    "endOffset": 3605
+                    "endOffset": 3640
                 },
                 "from": {
                     "file": "C:\\ACW\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\values-bg\\values-bg.xml",
@@ -842,9 +842,9 @@
                 "to": {
                     "startLine": 46,
                     "startColumn": 4,
-                    "startOffset": 3610,
+                    "startOffset": 3645,
                     "endColumn": 42,
-                    "endOffset": 3648
+                    "endOffset": 3683
                 },
                 "from": {
                     "file": "C:\\ACW\\app\\src\\main\\res\\values-bg\\strings.xml",

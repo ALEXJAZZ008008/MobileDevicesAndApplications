@@ -37,11 +37,13 @@ public class click_game extends SurfaceView implements SurfaceHolder.Callback
 
     private Integer offsetAmount;
 
+    //Default constructor for click_game
     public click_game(Context context)
     {
         super(context);
     }
 
+    //Constructor for click game which builds a game
     public click_game(Context context, puzzle_object inPuzzle, ArrayList<image_object> inImageArray, RelativeLayout inRelativeLayout)
     {
         super(context);
@@ -54,9 +56,11 @@ public class click_game extends SurfaceView implements SurfaceHolder.Callback
 
         canvasSize = new two_dimensional_vector_object(inRelativeLayout.getWidth(), inRelativeLayout.getHeight());
 
+        //Initialises variables
         Initialise();
     }
 
+    //This transposes the given image_object list into the containing bitmap list and then returns the list
     private ArrayList<Bitmap> GetBitmapImageArray(ArrayList<image_object> inImageArray)
     {
         ArrayList<Bitmap> imageArrayBitmapArray = new ArrayList<>();
@@ -69,8 +73,10 @@ public class click_game extends SurfaceView implements SurfaceHolder.Callback
         return imageArrayBitmapArray;
     }
 
+    //This initialises most of the member variables
     private void Initialise()
     {
+        //These variables are used to avoid accessing the same piece of data twice
         Integer rows = Integer.valueOf(puzzle.GetRows());
         Integer columns = puzzle.GetLayout().size() / rows;
 
@@ -252,6 +258,8 @@ public class click_game extends SurfaceView implements SurfaceHolder.Callback
                     clickGameActivity.firstBoolean = true;
                 }
 
+                clickGameActivity.StartButton();
+
                 DrawThread();
             }
 
@@ -269,8 +277,6 @@ public class click_game extends SurfaceView implements SurfaceHolder.Callback
                 }
 
                 ChangeAllImages();
-
-                clickGameActivity.StartButton();
             }
         });
 

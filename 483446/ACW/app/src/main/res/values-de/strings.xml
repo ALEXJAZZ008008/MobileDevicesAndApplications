@@ -23,5 +23,5 @@
     <string name="download_puzzle">Puzzle herunterladen</string>
     <string name="downloading_puzzle">Derzeit Puzzle herunterladen</string>
     <string name="error">Bild existiert nicht und Netzfehler</string>
-    <string name="internet">Keine Internetverbindung</string>
+    <string name="internet">Keine Internetverbindung oder schlechte Internetverbindung</string>
 </resources>

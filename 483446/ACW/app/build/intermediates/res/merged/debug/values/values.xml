@@ -241,7 +241,7 @@
     <string name="drag_mode">Drag Mode</string>
     <string name="error">Image Does Not Exist And Network Error</string>
     <string name="initialScore">0</string>
-    <string name="internet">No Internet Connection</string>
+    <string name="internet">No Internet Connection Or Poor Internet Connection</string>
     <string name="nullTitle">Null\u0020</string>
     <string name="percent">%</string>
     <string name="play">Play:\u0020</string>

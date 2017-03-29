@@ -11,11 +11,11 @@ import java.net.URL;
 import mobile.labs.acw.main_activity;
 import mobile.labs.acw.R;
 
-public class internet_check extends AsyncTask<Void, Void, Boolean>
+public class main_internet_check extends AsyncTask<Void, Void, Boolean>
 {
     private main_activity mainActivity;
 
-    public internet_check(Context context)
+    public main_internet_check(Context context)
     {
         mainActivity = (main_activity)context;
     }
