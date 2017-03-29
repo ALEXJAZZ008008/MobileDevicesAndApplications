@@ -1,19 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="Choose_Game_Type">Zgjidhni lojë Lloji </string>
+    <string name="all"> Të gjithë</string>
     <string name="android_pair_matching_application">Android Palë Koordinim Aplikacion</string>
     <string name="app_name">Android Palë Koordinim Aplikacion</string>
     <string name="click_mode">Kliko Mënyrë</string>
+    <string name="dialog_fragment">dialog_fragment_lojë_lloj_zgjedhje</string>
     <string name="download">Shkarko:\u0020</string>
     <string name="download_list">Shkarko Listë</string>
+    <string name="download_puzzle">Shkarkim Mister</string>
+    <string name="downloading_puzzle">Aktualisht Shkarkim Mister</string>
     <string name="drag_mode">Zvarrit Mënyrë</string>
+    <string name="error">Imazh Bën Nuk Ekzistoj Dhe Rrjet Gabim</string>
     <string name="initialScore">0</string>
+    <string name="internet">Jo Internet Lidhje</string>
     <string name="nullTitle">I pavlefshëm\u0020</string>
     <string name="percent">%</string>
     <string name="play">Luaj:\u0020</string>
     <string name="play_list">Luaj Listë</string>
+    <string name="reset">Rivendos</string>
     <string name="score">rezultat</string>
     <string name="scoreTitle">Rezultat:\u0020</string>
+    <string name="size">Madhësi:u0020</string>
     <string name="state">shtet</string>
     <string name="title">titull</string>
 </resources>

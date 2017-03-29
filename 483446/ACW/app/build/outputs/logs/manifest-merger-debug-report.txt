@@ -55,10 +55,10 @@ MERGED from [com.android.support:support-compat:24.2.1] C:\ACW\app\build\interme
 		ADDED from C:\ACW\app\src\main\AndroidManifest.xml:20:9-38
 	android:theme
 		ADDED from C:\ACW\app\src\main\AndroidManifest.xml:22:9-40
-activity#mobile.labs.acw.MainActivity
+activity#mobile.labs.acw.main_activity
 ADDED from C:\ACW\app\src\main\AndroidManifest.xml:24:9-36:20
 	android:name
-		ADDED from C:\ACW\app\src\main\AndroidManifest.xml:25:13-41
+		ADDED from C:\ACW\app\src\main\AndroidManifest.xml:25:13-42
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
 ADDED from C:\ACW\app\src\main\AndroidManifest.xml:27:13-35:29
 action#android.intent.action.MAIN
@@ -69,20 +69,20 @@ category#android.intent.category.LAUNCHER
 ADDED from C:\ACW\app\src\main\AndroidManifest.xml:32:17-34:23
 	android:name
 		ADDED from C:\ACW\app\src\main\AndroidManifest.xml:33:21-68
-activity#mobile.labs.acw.Menu.MenuActivity
+activity#mobile.labs.acw.menu.menu_activity
 ADDED from C:\ACW\app\src\main\AndroidManifest.xml:38:9-46:20
 	android:name
-		ADDED from C:\ACW\app\src\main\AndroidManifest.xml:39:13-46
+		ADDED from C:\ACW\app\src\main\AndroidManifest.xml:39:13-47
 intent-filter#android.intent.action.MENU
 ADDED from C:\ACW\app\src\main\AndroidManifest.xml:41:13-45:29
 action#android.intent.action.MENU
 ADDED from C:\ACW\app\src\main\AndroidManifest.xml:42:17-44:23
 	android:name
 		ADDED from C:\ACW\app\src\main\AndroidManifest.xml:43:21-62
-activity#mobile.labs.acw.ClickGame.ClickGameActivity
+activity#mobile.labs.acw.click_game.click_game_activity
 ADDED from C:\ACW\app\src\main\AndroidManifest.xml:48:9-74:20
 	android:name
-		ADDED from C:\ACW\app\src\main\AndroidManifest.xml:49:13-56
+		ADDED from C:\ACW\app\src\main\AndroidManifest.xml:49:13-59
 intent-filter#android.intent.action.CLICK+android.intent.action.VIEW+android.intent.category.BROWSABLE+android.intent.category.DEFAULT
 ADDED from C:\ACW\app\src\main\AndroidManifest.xml:51:13-73:29
 action#android.intent.action.CLICK
@@ -109,10 +109,10 @@ ADDED from C:\ACW\app\src\main\AndroidManifest.xml:68:17-72:23
 		ADDED from C:\ACW\app\src\main\AndroidManifest.xml:71:21-42
 	android:pathPrefix
 		ADDED from C:\ACW\app\src\main\AndroidManifest.xml:70:21-47
-activity#mobile.labs.acw.DragGame.DragGameActivity
+activity#mobile.labs.acw.drag_game.drag_game_activity
 ADDED from C:\ACW\app\src\main\AndroidManifest.xml:76:9-102:20
 	android:name
-		ADDED from C:\ACW\app\src\main\AndroidManifest.xml:77:13-54
+		ADDED from C:\ACW\app\src\main\AndroidManifest.xml:77:13-57
 intent-filter#android.intent.action.DRAG+android.intent.action.VIEW+android.intent.category.BROWSABLE+android.intent.category.DEFAULT
 ADDED from C:\ACW\app\src\main\AndroidManifest.xml:79:13-101:29
 action#android.intent.action.DRAG

@@ -17,19 +17,19 @@
         android:icon="@drawable/icon"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
-        <activity android:name="mobile.labs.acw.MainActivity" >
+        <activity android:name="mobile.labs.acw.main_activity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="mobile.labs.acw.Menu.MenuActivity" >
+        <activity android:name="mobile.labs.acw.menu.menu_activity" >
             <intent-filter>
                 <action android:name="android.intent.action.MENU" />
             </intent-filter>
         </activity>
-        <activity android:name="mobile.labs.acw.ClickGame.ClickGameActivity" >
+        <activity android:name="mobile.labs.acw.click_game.click_game_activity" >
             <intent-filter>
                 <action android:name="android.intent.action.CLICK" />
                 <action android:name="android.intent.action.VIEW" />
@@ -43,7 +43,7 @@
                     android:scheme="http" />
             </intent-filter>
         </activity>
-        <activity android:name="mobile.labs.acw.DragGame.DragGameActivity" >
+        <activity android:name="mobile.labs.acw.drag_game.drag_game_activity" >
             <intent-filter>
                 <action android:name="android.intent.action.DRAG" />
                 <action android:name="android.intent.action.VIEW" />
