@@ -10,446 +10,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="a802e7c6-4556-4b99-be98-279362c8de29" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/Fragments/download_list_fragment$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/Fragments/download_list_fragment.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/Fragments/game_choice_fragment$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/Fragments/game_choice_fragment$2.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/Fragments/game_choice_fragment.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/Fragments/play_list_fragment$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/Fragments/play_list_fragment$2.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/Fragments/play_list_fragment.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/Menu/menu_activity.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/Menu/menu_images.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/Menu/menu_json.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/Menu/menu_tasks.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/Objects/drag_square_object.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/Objects/image_object.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/Objects/puzzle_list_item_object.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/Objects/puzzle_object$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/Objects/puzzle_object.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/Objects/square_object.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/Objects/two_dimensional_vector_object.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/Utilities/custom_adapter.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/Utilities/internet_check.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/Utilities/view_holder.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/click_game" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/click_game/click_game$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/click_game/click_game$2.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/click_game/click_game.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/click_game/click_game_activity$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/click_game/click_game_activity.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/click_game/click_game_images.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/click_game/click_game_json.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/click_game/click_game_tasks$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/click_game/click_game_tasks.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/drag_game" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/drag_game/drag_game$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/drag_game/drag_game$2.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/drag_game/drag_game$3.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/drag_game/drag_game.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/drag_game/drag_game_activity$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/drag_game/drag_game_activity.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/drag_game/drag_game_images.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/drag_game/drag_game_json.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/drag_game/drag_game_tasks$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/drag_game/drag_game_tasks.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/main_activity.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/Fragments/download_list_fragment$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/Fragments/download_list_fragment.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/Fragments/game_choice_fragment$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/Fragments/game_choice_fragment$2.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/Fragments/game_choice_fragment.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/Fragments/play_list_fragment$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/Fragments/play_list_fragment$2.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/Fragments/play_list_fragment.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/Menu/menu_activity.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/Menu/menu_images.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/Menu/menu_json.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/Menu/menu_tasks.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/Objects/drag_square_object.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/Objects/image_object.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/Objects/puzzle_list_item_object.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/Objects/puzzle_object$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/Objects/puzzle_object.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/Objects/square_object.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/Objects/two_dimensional_vector_object.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/Utilities/custom_adapter.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/Utilities/internet_check.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/Utilities/view_holder.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/click_game" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/click_game/click_game$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/click_game/click_game$2.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/click_game/click_game.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/click_game/click_game_activity$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/click_game/click_game_activity.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/click_game/click_game_images.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/click_game/click_game_json.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/click_game/click_game_tasks$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/click_game/click_game_tasks.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/drag_game" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/drag_game/drag_game$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/drag_game/drag_game$2.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/drag_game/drag_game$3.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/drag_game/drag_game.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/drag_game/drag_game_activity$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/drag_game/drag_game_activity.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/drag_game/drag_game_images.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/drag_game/drag_game_json.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/drag_game/drag_game_tasks$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/drag_game/drag_game_tasks.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/main_activity.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mobile/labs/acw/Fragments/download_list_fragment$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mobile/labs/acw/Fragments/download_list_fragment.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mobile/labs/acw/Fragments/game_choice_fragment$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mobile/labs/acw/Fragments/game_choice_fragment$2.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mobile/labs/acw/Fragments/game_choice_fragment.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mobile/labs/acw/Fragments/play_list_fragment$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mobile/labs/acw/Fragments/play_list_fragment$2.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mobile/labs/acw/Fragments/play_list_fragment.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mobile/labs/acw/Menu/menu_activity.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mobile/labs/acw/Menu/menu_images.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mobile/labs/acw/Menu/menu_json.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mobile/labs/acw/Menu/menu_tasks.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mobile/labs/acw/Objects/drag_square_object.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mobile/labs/acw/Objects/image_object.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mobile/labs/acw/Objects/puzzle_list_item_object.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mobile/labs/acw/Objects/puzzle_object$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mobile/labs/acw/Objects/puzzle_object.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mobile/labs/acw/Objects/square_object.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mobile/labs/acw/Objects/two_dimensional_vector_object.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mobile/labs/acw/Utilities/custom_adapter.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mobile/labs/acw/Utilities/internet_check.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mobile/labs/acw/Utilities/view_holder.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mobile/labs/acw/click_game" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mobile/labs/acw/click_game/click_game$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mobile/labs/acw/click_game/click_game$2.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mobile/labs/acw/click_game/click_game.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mobile/labs/acw/click_game/click_game_activity$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mobile/labs/acw/click_game/click_game_activity.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mobile/labs/acw/click_game/click_game_images.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mobile/labs/acw/click_game/click_game_json.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mobile/labs/acw/click_game/click_game_tasks$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mobile/labs/acw/click_game/click_game_tasks.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mobile/labs/acw/drag_game" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mobile/labs/acw/drag_game/drag_game$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mobile/labs/acw/drag_game/drag_game$2.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mobile/labs/acw/drag_game/drag_game$3.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mobile/labs/acw/drag_game/drag_game.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mobile/labs/acw/drag_game/drag_game_activity$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mobile/labs/acw/drag_game/drag_game_activity.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mobile/labs/acw/drag_game/drag_game_images.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mobile/labs/acw/drag_game/drag_game_json.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mobile/labs/acw/drag_game/drag_game_tasks$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mobile/labs/acw/drag_game/drag_game_tasks.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mobile/labs/acw/main_activity.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/click_game" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/drag_game" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/utilities" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/values-ar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/spinner_template.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/click_game/click_game.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/click_game/click_game_activity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/click_game/click_game_images.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/click_game/click_game_json.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/click_game/click_game_tasks.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/drag_game/drag_game.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/drag_game/drag_game_activity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/drag_game/drag_game_images.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/drag_game/drag_game_json.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/drag_game/drag_game_tasks.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/spinner_template.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/values-ar/strings.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/androidTest/java/mobile/labs/acw/ApplicationTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/ClickGame/ClickGame.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/ClickGame/ClickGameActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/ClickGame/ClickGameImages.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/ClickGame/ClickGameJSON.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/ClickGame/ClickGameTasks.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/DragGame/DragGame.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/DragGame/DragGameActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/DragGame/DragGameImages.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/DragGame/DragGameJSON.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/DragGame/DragGameTasks.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/fragments/DownloadListFragment.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/fragments/GameChoiceFragment.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/fragments/PlayListFragment.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/menu/MenuActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/menu/MenuImages.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/menu/MenuJSON.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/menu/MenuTasks.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/objects/DragSquareObject.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/objects/ImageObject.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/objects/PuzzleListItemObject.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/objects/PuzzleObject.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/objects/SquareObject.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/objects/TwoDimensionalVectorObject.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/utilities/CustomAdapter.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/utilities/InternetCheck.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/utilities/Preferences.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/utilities/ViewHolder.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/values-w820dp/dimens.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/test/java/mobile/labs/acw/ExampleUnitTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/ClickGame" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/ClickGame/ClickGame$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/ClickGame/ClickGame$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/ClickGame/ClickGame.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/ClickGame/ClickGameActivity.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/ClickGame/ClickGameImages.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/ClickGame/ClickGameJSON.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/ClickGame/ClickGameTasks$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/ClickGame/ClickGameTasks.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/DragGame" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/DragGame/DragGame$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/DragGame/DragGame$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/DragGame/DragGame$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/DragGame/DragGame.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/DragGame/DragGameActivity.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/DragGame/DragGameImages.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/DragGame/DragGameJSON.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/DragGame/DragGameTasks$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/DragGame/DragGameTasks.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/Fragments/DownloadListFragment$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/Fragments/DownloadListFragment.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/Fragments/GameChoiceFragment$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/Fragments/GameChoiceFragment$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/Fragments/GameChoiceFragment.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/Fragments/PlayListFragment$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/Fragments/PlayListFragment.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/MainActivity.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/Menu/MenuActivity.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/Menu/MenuImages.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/Menu/MenuJSON.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/Menu/MenuTasks.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/Objects/DragSquareObject.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/Objects/ImageObject.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/Objects/PuzzleListItemObject.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/Objects/PuzzleObject$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/Objects/PuzzleObject.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/Objects/SquareObject.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/Objects/TwoDimensionalVectorObject.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/Utilities/CustomAdapter.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/Utilities/InternetCheck.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/Utilities/ViewHolder.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/ClickGame" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/ClickGame/ClickGame$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/ClickGame/ClickGame$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/ClickGame/ClickGame.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/ClickGame/ClickGameActivity.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/ClickGame/ClickGameImages.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/ClickGame/ClickGameJSON.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/ClickGame/ClickGameTasks$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/ClickGame/ClickGameTasks.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/DragGame" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/DragGame/DragGame$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/DragGame/DragGame$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/DragGame/DragGame$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/DragGame/DragGame.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/DragGame/DragGameActivity.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/DragGame/DragGameImages.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/DragGame/DragGameJSON.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/DragGame/DragGameTasks$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/DragGame/DragGameTasks.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/Fragments/DownloadListFragment$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/Fragments/DownloadListFragment.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/Fragments/GameChoiceFragment$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/Fragments/GameChoiceFragment$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/Fragments/GameChoiceFragment.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/Fragments/PlayListFragment$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/Fragments/PlayListFragment.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/MainActivity.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/Menu/MenuActivity.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/Menu/MenuImages.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/Menu/MenuJSON.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/Menu/MenuTasks.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/Objects/DragSquareObject.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/Objects/ImageObject.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/Objects/PuzzleListItemObject.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/Objects/PuzzleObject$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/Objects/PuzzleObject.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/Objects/SquareObject.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/Objects/TwoDimensionalVectorObject.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/Utilities/CustomAdapter.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/Utilities/InternetCheck.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/Utilities/ViewHolder.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mobile/labs/acw/ClickGame" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mobile/labs/acw/ClickGame/ClickGame$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mobile/labs/acw/ClickGame/ClickGame$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mobile/labs/acw/ClickGame/ClickGame.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mobile/labs/acw/ClickGame/ClickGameActivity.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mobile/labs/acw/ClickGame/ClickGameImages.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mobile/labs/acw/ClickGame/ClickGameJSON.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mobile/labs/acw/ClickGame/ClickGameTasks$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mobile/labs/acw/ClickGame/ClickGameTasks.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mobile/labs/acw/DragGame" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mobile/labs/acw/DragGame/DragGame$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mobile/labs/acw/DragGame/DragGame$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mobile/labs/acw/DragGame/DragGame$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mobile/labs/acw/DragGame/DragGame.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mobile/labs/acw/DragGame/DragGameActivity.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mobile/labs/acw/DragGame/DragGameImages.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mobile/labs/acw/DragGame/DragGameJSON.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mobile/labs/acw/DragGame/DragGameTasks$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mobile/labs/acw/DragGame/DragGameTasks.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mobile/labs/acw/Fragments/DownloadListFragment$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mobile/labs/acw/Fragments/DownloadListFragment.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mobile/labs/acw/Fragments/GameChoiceFragment$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mobile/labs/acw/Fragments/GameChoiceFragment$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mobile/labs/acw/Fragments/GameChoiceFragment.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/androidTest/java/mobile" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/androidTest/java/mobile/labs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/androidTest/java/mobile/labs/acw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/ClickGame" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/DragGame" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/test/java/mobile" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/test/java/mobile/labs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/test/java/mobile/labs/acw" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/Fragments/DownloadListFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/fragments/download_list_fragment.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/Fragments/GameChoiceFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/fragments/game_choice_fragment.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/Fragments/PlayListFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/fragments/play_list_fragment.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/main_activity.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/Menu/MenuActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/menu/menu_activity.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/Menu/MenuImages.java" afterPath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/menu/menu_images.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/Menu/MenuJSON.java" afterPath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/menu/menu_json.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/Menu/MenuTasks.java" afterPath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/menu/menu_tasks.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/Objects/DragSquareObject.java" afterPath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/objects/drag_square_object.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/Objects/ImageObject.java" afterPath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/objects/image_object.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/Objects/PuzzleListItemObject.java" afterPath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/objects/puzzle_list_item_object.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/Objects/PuzzleObject.java" afterPath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/objects/puzzle_object.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/Objects/SquareObject.java" afterPath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/objects/square_object.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/Objects/TwoDimensionalVectorObject.java" afterPath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/objects/two_dimensional_vector_object.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/Utilities/CustomAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/utilities/custom_adapter.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/Utilities/InternetCheck.java" afterPath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/utilities/internet_check.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/Utilities/Preferences.java" afterPath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/utilities/preferences.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/Utilities/ViewHolder.java" afterPath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/utilities/view_holder.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/cache.properties.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshotsToTreeSnapshotsIndex.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshotsToTreeSnapshotsIndex.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugAndroidTestJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugAndroidTestJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugAndroidTestJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugAndroidTestJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugAndroidTestJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugAndroidTestJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugAndroidTestJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugAndroidTestJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$color.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$color.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$dimen.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$dimen.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$string.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/R$color.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/R$color.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/R$dimen.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/R$dimen.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/R$drawable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/R$drawable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/R$string.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/R$style.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/R$style.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/R$styleable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/R$styleable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/R$xml.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/mobile/labs/acw/R$xml.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/android/support/v7/appcompat/R$color.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/android/support/v7/appcompat/R$color.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/android/support/v7/appcompat/R$dimen.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/android/support/v7/appcompat/R$dimen.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/android/support/v7/appcompat/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/android/support/v7/appcompat/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/android/support/v7/appcompat/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/android/support/v7/appcompat/R$string.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/R$color.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/R$color.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/R$dimen.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/R$dimen.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/R$drawable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/R$drawable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/R$string.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/R$style.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/R$style.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/R$styleable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/R$styleable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/R$xml.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/mobile/labs/acw/R$xml.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-24.2.1_439cab27ac3779a9c3b1bef02f8bcf611f9fe69d.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-24.2.1_439cab27ac3779a9c3b1bef02f8bcf611f9fe69d.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-24.2.1_609292e57304ac5ed189647659a51a3843145cc2.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-24.2.1_609292e57304ac5ed189647659a51a3843145cc2.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.android.support-support-compat-24.2.1_106d2a53599784a84490d885934646e45e6f4614.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.android.support-support-compat-24.2.1_106d2a53599784a84490d885934646e45e6f4614.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-ui-24.2.1_c0009552fce8888f2fb4312a7e58769aa140d61b.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-ui-24.2.1_c0009552fce8888f2fb4312a7e58769aa140d61b.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-utils-24.2.1_f2dc08377c60ff9315c6219c1424a94a851b89b5.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-utils-24.2.1_f2dc08377c60ff9315c6219c1424a94a851b89b5.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.android.support-support-fragment-24.2.1_c919304fadba5ea1eb36094036cba6b590d0d190.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.android.support-support-fragment-24.2.1_c919304fadba5ea1eb36094036cba6b590d0d190.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.android.support-support-media-compat-24.2.1_055e56ea174b61b3f68c3f74e14fbc82f2df4356.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.android.support-support-media-compat-24.2.1_055e56ea174b61b3f68c3f74e14fbc82f2df4356.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-24.2.1_7e1794f59f0ef28ca934a522986da94297996386.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-24.2.1_7e1794f59f0ef28ca934a522986da94297996386.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-24.2.1_96368db6d08e7c11204758692895d5efe830c679.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-24.2.1_96368db6d08e7c11204758692895d5efe830c679.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/instant-run-bootstrap_b7a54b04d4b25b08747ea9f5a04fc894d6849b1f.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/instant-run-bootstrap_b7a54b04d4b25b08747ea9f5a04fc894d6849b1f.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/instant-run_2d59b8a912b04ca88f8e49d0fd3b33f349369d0f.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/instant-run_2d59b8a912b04ca88f8e49d0fd3b33f349369d0f.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_454980486e3f443a1cb0849d25e625d0b1499d93.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_454980486e3f443a1cb0849d25e625d0b1499d93.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_b43a40c5d4b58dc804d619753b37cd47aab82f71.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_b43a40c5d4b58dc804d619753b37cd47aab82f71.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_bd5feaa18b0e3b4d5050a485b53dc706173177d3.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_bd5feaa18b0e3b4d5050a485b53dc706173177d3.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_c793dc1f0d18ab0e168c58816ae57c5c3ddbc803.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_c793dc1f0d18ab0e168c58816ae57c5c3ddbc803.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_e0949a205811395c55b4337b5d869c54e564c780.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_e0949a205811395c55b4337b5d869c54e564c780.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/main_0c17bd58c2ac0c75eb551310017105ed9401effd.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/main_0c17bd58c2ac0c75eb551310017105ed9401effd.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/support-annotations-24.2.1_e8ef0be15cee78671879626edc120aa84c8ba0bc.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/support-annotations-24.2.1_e8ef0be15cee78671879626edc120aa84c8ba0bc.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug.ap_" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/android/support/v7/appcompat/R$color.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/android/support/v7/appcompat/R$color.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/android/support/v7/appcompat/R$dimen.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/android/support/v7/appcompat/R$dimen.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/android/support/v7/appcompat/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/android/support/v7/appcompat/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/android/support/v7/appcompat/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/android/support/v7/appcompat/R$string.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mobile/labs/acw/R$color.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mobile/labs/acw/R$color.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mobile/labs/acw/R$dimen.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mobile/labs/acw/R$dimen.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mobile/labs/acw/R$drawable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mobile/labs/acw/R$drawable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mobile/labs/acw/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mobile/labs/acw/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mobile/labs/acw/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mobile/labs/acw/R$string.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mobile/labs/acw/R$style.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mobile/labs/acw/R$style.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mobile/labs/acw/R$styleable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mobile/labs/acw/R$styleable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mobile/labs/acw/R$xml.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mobile/labs/acw/R$xml.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-unaligned.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-unaligned.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/generated/mockable-android-24.jar" afterPath="$PROJECT_DIR$/build/generated/mockable-android-24.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/appcompat/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/appcompat/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/mobile/labs/acw/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/mobile/labs/acw/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-ar.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-ar.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-bg.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-bg.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-de.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-de.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-sq.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-sq.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/layout.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/layout.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/bundles/debug/instant-run/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/bundles/debug/instant-run/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merger.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/instant-run-support/debug/manifest.crc" afterPath="$PROJECT_DIR$/app/build/intermediates/instant-run-support/debug/manifest.crc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/manifests/full/debug/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/manifests/full/debug/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/activity_game.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/activity_game.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/activity_main.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/activity_main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/activity_menu.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/activity_menu.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/fragment_download_list.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/fragment_download_list.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/fragment_play_list.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/fragment_play_list.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/list_template.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/list_template.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-ar/values-ar.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-ar/values-ar.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-bg/values-bg.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-bg/values-bg.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-de/values-de.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-de/values-de.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-sq/values-sq.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-sq/values-sq.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values/values.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/restart-dex/debug/build-info.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/restart-dex/debug/build-info.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" afterPath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_game.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_game.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_menu.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_menu.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_download_list.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_download_list.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_play_list.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_play_list.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/list_template.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/list_template.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values-bg/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values-bg/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values-de/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values-de/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values-sq/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values-sq/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/Fragments" afterPath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/fragments" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/Menu" afterPath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/menu" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/Objects" afterPath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/objects" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/color-v23.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/color-v23.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-mdpi-v4.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-mdpi-v4.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/drag_game/drag_game.java" afterPath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/drag_game/drag_game.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/drag_game/drag_game_activity.java" afterPath="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/drag_game/drag_game_activity.java" />
     </list>
     <ignored path="ACW.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -469,7 +43,40 @@
     <favorites_list name="ACW" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="drag_game.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/drag_game/drag_game.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.6358885">
+              <caret line="283" column="17" selection-start-line="283" selection-start-column="17" selection-end-line="283" selection-end-column="17" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#20533#20534#0" expanded="true" />
+                <element signature="e#20626#20627#0" expanded="true" />
+                <element signature="e#27479#27480#0" expanded="true" />
+                <element signature="e#27569#27570#0" expanded="true" />
+                <element signature="e#28220#28221#0" expanded="true" />
+                <element signature="e#28268#28269#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="drag_game_activity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/drag_game/drag_game_activity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="111" column="13" selection-start-line="111" selection-start-column="13" selection-end-line="111" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2836#3083#0" expanded="true" />
+                <element signature="e#3082#3083#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -2151,8 +1758,6 @@
         <option value="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/click_game/click_game_images.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/click_game/click_game_json.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/click_game/click_game_tasks.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/drag_game/drag_game.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/drag_game/drag_game_activity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/drag_game/drag_game_images.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/drag_game/drag_game_json.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/drag_game/drag_game_tasks.java" />
@@ -2167,6 +1772,9 @@
         <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/Fragments/download_list_fragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/Fragments/play_list_fragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/objects/two_dimensional_float_vector_object.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/drag_game/drag_game.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/drag_game/drag_game_activity.java" />
       </list>
     </option>
   </component>
@@ -2496,6 +2104,11 @@
   <component name="PropertiesComponent">
     <property name="device.picker.selection" value="Nexus_5X_API_16" />
   </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="mobile.labs.acw.objects" />
+    </key>
+  </component>
   <component name="RunManager" selected="Android Application.app">
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="" />
@@ -2797,11 +2410,18 @@
       <option name="number" value="Default" />
       <updated>1490708838106</updated>
     </task>
+    <task id="LOCAL-00001" summary="help">
+      <created>1490758067592</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1490758067592</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962137" sideWeight="0.49573562" order="7" side_tool="false" content_ui="tabs" />
@@ -2818,7 +2438,7 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -2850,22 +2470,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="3" />
+      <option name="time" value="4" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_play_list.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="57" column="52" selection-start-line="57" selection-start-column="52" selection-end-line="57" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2894,6 +2503,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="115" column="11" selection-start-line="115" selection-start-column="11" selection-end-line="115" selection-end-column="11" />
+          <folding>
+            <element signature="e#2544#2791#0" expanded="true" />
+            <element signature="e#2790#2791#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2909,18 +2522,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/drag_game/drag_game_activity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.043554">
-          <caret line="69" column="24" selection-start-line="69" selection-start-column="24" selection-end-line="69" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2837#3084#0" expanded="true" />
-            <element signature="e#3083#3084#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/drag_game/drag_game_images.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.9773519">
@@ -2928,13 +2529,6 @@
           <folding>
             <element signature="imports" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/drag_game/drag_game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="11.313589">
-          <caret line="385" column="5" selection-start-line="385" selection-start-column="5" selection-end-line="385" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -3071,7 +2665,7 @@
         <state vertical-scroll-proportion="-0.33275262">
           <caret line="42" column="43" selection-start-line="42" selection-start-column="43" selection-end-line="42" selection-end-column="43" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -3300,6 +2894,34 @@
         <state vertical-scroll-proportion="0.815739">
           <caret line="25" column="39" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/drag_game/drag_game_activity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="111" column="13" selection-start-line="111" selection-start-column="13" selection-end-line="111" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2836#3083#0" expanded="true" />
+            <element signature="e#3082#3083#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/mobile/labs/acw/drag_game/drag_game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6358885">
+          <caret line="283" column="17" selection-start-line="283" selection-start-column="17" selection-end-line="283" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#20533#20534#0" expanded="true" />
+            <element signature="e#20626#20627#0" expanded="true" />
+            <element signature="e#27479#27480#0" expanded="true" />
+            <element signature="e#27569#27570#0" expanded="true" />
+            <element signature="e#28220#28221#0" expanded="true" />
+            <element signature="e#28268#28269#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
