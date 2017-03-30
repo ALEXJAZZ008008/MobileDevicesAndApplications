@@ -36,17 +36,20 @@ public class menu_images extends AsyncTask<URL, Void, Bitmap>
     {
         Bitmap bitmap = null;
 
+        //This gets the file to read
         ContextWrapper contextWrapper = new ContextWrapper(menuActivity);
         File file = contextWrapper.getDir(fileName, Context.MODE_PRIVATE);
         File item = new File(file, itemName);
 
         try
         {
+            //This trys to read the file
             FileInputStream reader = new FileInputStream(item);
             bitmap = BitmapFactory.decodeStream(reader);
         }
         catch(Exception e)
         {
+            //This downloads the file if it does not exist
             try
             {
                 bitmap = BitmapFactory.decodeStream((InputStream)url[0].getContent());

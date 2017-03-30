@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import mobile.labs.acw.objects.image_object;
 import mobile.labs.acw.objects.puzzle_object;
 
+//Please see menu_tasks for comments code is similar with minor changes
 public class click_game_tasks extends AsyncTask<puzzle_object, Void, puzzle_object>
 {
     private click_game_activity clickGameActivity;
@@ -51,9 +52,9 @@ public class click_game_tasks extends AsyncTask<puzzle_object, Void, puzzle_obje
         }
     }
 
-    private void GetPuzzleImages(puzzle_object puzzleobject)
+    private void GetPuzzleImages(puzzle_object puzzleObject)
     {
-        String pictureSet = puzzleobject.GetPictureSet();
+        String pictureSet = puzzleObject.GetPictureSet();
 
         GoToJSON("null", new String[] { "PictureFiles" }, parentURL + pictureSetsURL + pictureSet + jsonExtension);
 
@@ -141,9 +142,9 @@ public class click_game_tasks extends AsyncTask<puzzle_object, Void, puzzle_obje
         }
     }
 
-    protected void onPostExecute(puzzle_object puzzleobject)
+    protected void onPostExecute(puzzle_object puzzleObject)
     {
-        if(puzzleobject != null)
+        if(puzzleObject != null)
         {
             clickGameActivity.length = length;
         }

@@ -92,6 +92,7 @@ public class menu_activity extends Activity
         toast[1].cancel();
     }
 
+    //This starts the main list
     private void StartList()
     {
         GoToTasks(new String[] { "StartList" });
@@ -102,11 +103,13 @@ public class menu_activity extends Activity
         new menu_tasks(this, puzzleList).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, taskArgs);
     }
 
+    //This allows the download fragment to access tasks
     public void GoToDownloadTasks(String[] taskArgs)
     {
         new menu_tasks(this, downloadPuzzleList).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, taskArgs);
     }
 
+    //This sets up the containing lists and then sorts/filters them
     public void SetAndUpdateLists()
     {
         ClearLists();
@@ -117,12 +120,14 @@ public class menu_activity extends Activity
 
             GetPreferences(puzzleListItem);
 
+            //This adds a list to the download list
             if(puzzleListItem.GetState().equals(getResources().getString(R.string.download)))
             {
                 downloadPuzzleList.add(puzzleListItem);
             }
             else
             {
+                //This adds a list to the play list
                 puzzleListItem.SetState(getResources().getString(R.string.play));
 
                 try
@@ -139,6 +144,7 @@ public class menu_activity extends Activity
 
                 String layoutSize = String.valueOf(puzzleListItem.GetPuzzle().GetLayout().size());
 
+                //This updates the filter spinner
                 if(!spinnerList.contains(layoutSize))
                 {
                     spinnerList.add(layoutSize);
@@ -146,12 +152,15 @@ public class menu_activity extends Activity
             }
         }
 
+        //This orders the lists
         OrderPlayPuzzleList();
         OrderSpinnerList();
 
+        //This ensures the lists are drawn correctly
         NotifyChanges();
     }
 
+    //This sorts the spinner list
     private void OrderSpinnerList()
     {
         Collections.sort(spinnerList);
@@ -159,6 +168,7 @@ public class menu_activity extends Activity
         spinnerList.add(0, getString(R.string.all));
     }
 
+    //This clears all the lists
     private void ClearLists()
     {
         downloadPuzzleList.clear();
@@ -169,6 +179,7 @@ public class menu_activity extends Activity
         spinnerList.clear();
     }
 
+    //This downloads all relevant information
     private void GetPreferences(puzzle_list_item_object puzzleListItem)
     {
         puzzle_object puzzleListItemPuzzle = puzzleListItem.GetPuzzle();
@@ -221,6 +232,7 @@ public class menu_activity extends Activity
         }
     }
 
+    //This gets the layout of a certain puzzle
     private ArrayList<String> GetLayout(String puzzleListItemPuzzleId)
     {
         String keyRegularExpression = puzzleListItemPuzzleId + "Layout";
@@ -240,6 +252,7 @@ public class menu_activity extends Activity
         return new ArrayList<>(Arrays.asList(puzzleListItemPuzzleLayout));
     }
 
+    //This sorts the playlist
     private void OrderPlayPuzzleList()
     {
         if(playPuzzleList.size() > 1)
@@ -279,6 +292,7 @@ public class menu_activity extends Activity
         AddPlayPuzzleListItemsToFilteredList();
     }
 
+    //This filters the play list
     private void AddPlayPuzzleListItemsToFilteredList()
     {
         for(Integer i = 0; i < playPuzzleList.size(); i++)
@@ -293,6 +307,7 @@ public class menu_activity extends Activity
         }
     }
 
+    //This allows things to be drawn correctly
     private void NotifyChanges()
     {
         downloadCustomAdapter.notifyDataSetChanged();
@@ -301,6 +316,7 @@ public class menu_activity extends Activity
         arrayAdapter.notifyDataSetChanged();
     }
 
+    //This goes to the click game
     public void GoToClickGameActivity(View view, Integer position)
     {
         Intent intent = new Intent(view.getContext(), click_game_activity.class);
@@ -309,6 +325,7 @@ public class menu_activity extends Activity
         startActivityForResult(intent, GAME_ACTIVITY_REQUEST);
     }
 
+    //This goes to the drag game
     public void GoToDragGameActivity(View view, Integer position)
     {
         Intent intent = new Intent(view.getContext(), drag_game_activity.class);
@@ -317,6 +334,7 @@ public class menu_activity extends Activity
         startActivityForResult(intent, GAME_ACTIVITY_REQUEST);
     }
 
+    //This saves the relevant information
     private void SavePreferences()
     {
         for(Integer i = 0; i < puzzleList.size(); i++)
@@ -331,6 +349,7 @@ public class menu_activity extends Activity
         }
     }
 
+    //This saves the relevant information
     private void SavePuzzleListItemPreferences(puzzle_list_item_object puzzleListItem, puzzle_object puzzleListItemPuzzle)
     {
         String puzzleListItemPuzzleId = puzzleListItemPuzzle.GetId();
@@ -351,6 +370,7 @@ public class menu_activity extends Activity
         }
     }
 
+    //This gets the correct information back from the returning activities
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data)
     {

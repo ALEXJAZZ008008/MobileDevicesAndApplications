@@ -40,44 +40,57 @@ public class click_game_activity extends Activity
     public Integer currentMatches;
     public Boolean firstBoolean;
 
+    //This is called when the activity is created
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
 
+        //This sets the layout
         setContentView(R.layout.activity_game);
 
+        //This initialises
         Initialise();
     }
 
+    //This is called as part of creating the the activity
     @Override
     protected void onResume()
     {
         super.onResume();
 
+        //This loads saved data
         GetPreferences();
 
+        //This sets the score
         SetScoreTextView();
     }
 
+    //This is called as part of destroying the the activity
     @Override
     protected void onPause()
     {
+        //If it is the first time the activity has been created
         if(firstBoolean)
         {
+            //This saves relevant data
             SavePreferences();
 
+            //If the activity has been given chance to start correctly
             if(surfaceHolder != null)
             {
+                //Destroy the activity
                 clickGame.surfaceDestroyed(surfaceHolder);
             }
         }
 
+        //This kills all the threads
         KillThreads();
 
         super.onPause();
     }
 
+    //This initialises some member variables
     private void Initialise()
     {
         puzzle = getIntent().getParcelableExtra("puzzle");
@@ -97,6 +110,7 @@ public class click_game_activity extends Activity
         GoToTasks(new puzzle_object[] { });
     }
 
+    //This resets saved variables
     private void ResetPreferencesValues()
     {
         score = 0;
@@ -108,6 +122,7 @@ public class click_game_activity extends Activity
         firstBoolean = false;
     }
 
+    //This is the reset button
     public void StartButton()
     {
         resetButton.setOnClickListener(new View.OnClickListener()
@@ -115,15 +130,19 @@ public class click_game_activity extends Activity
             @Override
             public void onClick(View view)
             {
+                //This resets the saved data
                 ResetPreferences();
 
+                //This resets saved variables
                 ResetPreferencesValues();
 
+                //This recreates the activity
                 recreate();
             }
         });
     }
 
+    //This resets the saved data
     private void ResetPreferences()
     {
         String puzzleId = puzzle.GetId();
@@ -147,11 +166,13 @@ public class click_game_activity extends Activity
         preferences.RemoveKey(this, puzzleId + "Click" + "currentMatches");
     }
 
+    //This an async task to the tasks class
     public void GoToTasks(puzzle_object[] puzzle)
     {
         new click_game_tasks(this, imageArray, length).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, puzzle);
     }
 
+    //This reloads saved data
     private void GetPreferences()
     {
         String puzzleId = puzzle.GetId();
@@ -167,12 +188,14 @@ public class click_game_activity extends Activity
         currentMatches = preferences.ReadInteger(this, puzzleId + "Click" + "currentMatches", currentMatches);
     }
 
+    //This sets the visible score
     public void SetScoreTextView()
     {
         String scoreText = String.valueOf(score);
         textView.setText(scoreText);
     }
 
+    //This saves the data
     private void SavePreferences()
     {
         String puzzleId = puzzle.GetId();
@@ -196,6 +219,7 @@ public class click_game_activity extends Activity
         preferences.WriteInteger(this, puzzleId + "Click" + "currentMatches", currentMatches);
     }
 
+    //This kills all threads
     public void KillThreads()
     {
         if(initialiseThread != null)
@@ -214,6 +238,7 @@ public class click_game_activity extends Activity
         }
     }
 
+    //This returns relevant data when the game ends
     public void OnGameFinished()
     {
         Intent intent = new Intent();

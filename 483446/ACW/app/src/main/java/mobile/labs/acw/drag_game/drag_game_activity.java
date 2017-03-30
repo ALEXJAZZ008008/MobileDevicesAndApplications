@@ -82,6 +82,7 @@ public class drag_game_activity extends Activity
         super.onPause();
     }
 
+    //Please see click_game_activity for comments code is similar with minor changes
     private void Initialise()
     {
         puzzle = getIntent().getParcelableExtra("puzzle");
@@ -103,6 +104,7 @@ public class drag_game_activity extends Activity
         GoToTasks(new puzzle_object[] { });
     }
 
+    //Please see click_game_activity for comments code is similar with minor changes
     private void ResetPreferencesValues()
     {
         score = 0;
@@ -116,6 +118,7 @@ public class drag_game_activity extends Activity
         firstBoolean = false;
     }
 
+    //Please see click_game_activity for comments code is similar with minor changes
     public void StartButton()
     {
         resetButton.setOnClickListener(new View.OnClickListener()
@@ -132,6 +135,7 @@ public class drag_game_activity extends Activity
         });
     }
 
+    //Please see click_game_activity for comments code is similar with minor changes
     private void ResetPreferences()
     {
         String puzzleId = puzzle.GetId();
@@ -159,11 +163,13 @@ public class drag_game_activity extends Activity
         preferences.RemoveKey(this, puzzleId + "Drag" + "currentMatches");
     }
 
+    //Please see click_game_activity for comments code is similar with minor changes
     public void GoToTasks(puzzle_object[] puzzle)
     {
         new drag_game_tasks(this, imageArray, length).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, puzzle);
     }
 
+    //Please see click_game_activity for comments code is similar with minor changes
     private void GetPreferences()
     {
         String puzzleId = puzzle.GetId();
@@ -185,12 +191,14 @@ public class drag_game_activity extends Activity
         currentMatches = preferences.ReadInteger(this, puzzleId + "Drag" + "currentMatches", currentMatches);
     }
 
+    //Please see click_game_activity for comments code is similar with minor changes
     public void SetScoreTextView()
     {
         String scoreText = String.valueOf(score);
         textView.setText(scoreText);
     }
 
+    //Please see click_game_activity for comments code is similar with minor changes
     private void SavePreferences()
     {
         String puzzleId = puzzle.GetId();
@@ -218,6 +226,7 @@ public class drag_game_activity extends Activity
         preferences.WriteInteger(this, puzzleId + "Drag" + "currentMatches", currentMatches);
     }
 
+    //Please see click_game_activity for comments code is similar with minor changes
     public void KillThreads()
     {
         if(initialiseThread != null)
@@ -246,6 +255,7 @@ public class drag_game_activity extends Activity
         }
     }
 
+    //Please see click_game_activity for comments code is similar with minor changes
     public void OnGameFinished()
     {
         Intent intent = new Intent();

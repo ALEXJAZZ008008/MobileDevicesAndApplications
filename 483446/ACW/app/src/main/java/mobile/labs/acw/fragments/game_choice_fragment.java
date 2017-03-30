@@ -22,11 +22,11 @@ public class game_choice_fragment extends DialogFragment
         outView = inView;
         outPosition = inPosition;
 
-        game_choice_fragment gamechoicefragment = new game_choice_fragment();
+        game_choice_fragment gameChoiceFragment = new game_choice_fragment();
         Bundle args = new Bundle();
         args.putString("title", title);
-        gamechoicefragment.setArguments(args);
-        return gamechoicefragment;
+        gameChoiceFragment.setArguments(args);
+        return gameChoiceFragment;
     }
 
     @Override
@@ -53,6 +53,7 @@ public class game_choice_fragment extends DialogFragment
     {
         menuActivity = (menu_activity)getActivity();
 
+        //This sets the buttons and their events in case of a click
         Button clickButton = (Button)view.findViewById(R.id.clickButton);
         Button dragButton = (Button)view.findViewById(R.id.dragButton);
 

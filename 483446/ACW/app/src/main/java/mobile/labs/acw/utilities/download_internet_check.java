@@ -10,6 +10,7 @@ import java.net.URL;
 import mobile.labs.acw.R;
 import mobile.labs.acw.menu.menu_activity;
 
+//Please see main_internet_check for comments code is similar with minor changes
 public class download_internet_check extends AsyncTask<Void, Void, Boolean>
 {
     private menu_activity menuActivity;

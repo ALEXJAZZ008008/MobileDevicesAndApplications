@@ -47,6 +47,7 @@ public class play_list_fragment extends Fragment
         menuActivity.spinner = (Spinner)view.findViewById(R.id.spinner);
     }
 
+    //Please see download_list_fragment for comments code is similar with minor changes
     private void StartList()
     {
         menuActivity.playCustomAdapter = new custom_adapter(menuActivity, menuActivity.filteredPlayPuzzleList);
@@ -63,6 +64,7 @@ public class play_list_fragment extends Fragment
         });
     }
 
+    //This stars the spinner which allows for a choice of filtering for the play list
     private void StartSpinner()
     {
         menuActivity.arrayAdapter = new ArrayAdapter<>(menuActivity, R.layout.spinner_template, menuActivity.spinnerList);
@@ -98,10 +100,11 @@ public class play_list_fragment extends Fragment
         });
     }
 
+    //This starts the fragment which allows for a choice of game mode
     private void ShowGameTypeChoiceDialog(View view, Integer position)
     {
         FragmentManager fragmentManager = getFragmentManager();
-        game_choice_fragment editNameDialogFragment = game_choice_fragment.newInstance(menuActivity.getString(R.string.Choose_Game_Type), view, position);
-        editNameDialogFragment.show(fragmentManager, menuActivity.getString(R.string.dialog_fragment));
+        game_choice_fragment gameChoiceFragment = game_choice_fragment.newInstance(menuActivity.getString(R.string.Choose_Game_Type), view, position);
+        gameChoiceFragment.show(fragmentManager, menuActivity.getString(R.string.dialog_fragment));
     }
 }

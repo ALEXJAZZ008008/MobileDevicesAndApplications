@@ -16,9 +16,11 @@ public class main_activity extends Activity
 
         setContentView(R.layout.activity_main);
 
+        //This checks for an internet connection
         GoToInternetCheck();
     }
 
+    //This checks for an internet connection
     private void GoToInternetCheck()
     {
         try
@@ -31,6 +33,7 @@ public class main_activity extends Activity
         }
     }
 
+    //This goes to the menu activity
     public void GoToMenuActivity()
     {
         Intent intent = new Intent(this, menu_activity.class);
