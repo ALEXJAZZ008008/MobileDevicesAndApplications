@@ -14,6 +14,7 @@ import java.io.InputStreamReader;
 import java.net.URL;
 import java.util.ArrayList;
 
+//Please see menu_json for comments code is similar with minor changes
 public class click_game_json extends AsyncTask<URL, Void, ArrayList<ArrayList<String>>>
 {
     private click_game_activity clickGameActivity;

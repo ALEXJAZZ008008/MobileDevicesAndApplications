@@ -41,15 +41,18 @@ public class menu_json extends AsyncTask<URL, Void, ArrayList<ArrayList<String>>
         {
             String result;
 
+            //This specifically downloads the puzzle index
             if(arguments[0].equals("PuzzleIndex"))
             {
                 result = IndexInput(url[0]);
             }
             else
             {
+                //This does not
                 result = Input(url[0]);
             }
 
+            //This checks to see what kind of json is being read
             if(key.equals("null"))
             {
                 resultLists.add(SingleArray(result, arguments[0]));
@@ -76,6 +79,7 @@ public class menu_json extends AsyncTask<URL, Void, ArrayList<ArrayList<String>>
     {
         String result = "";
 
+        //This gets the file to read
         ContextWrapper contextWrapper = new ContextWrapper(menuActivity);
         File file = contextWrapper.getDir("JSON", Context.MODE_PRIVATE);
 
@@ -83,6 +87,7 @@ public class menu_json extends AsyncTask<URL, Void, ArrayList<ArrayList<String>>
 
         for(String string : arguments)
         {
+            //This gets the name of the file to read
             itemName += "_" + string;
 
             if (isCancelled())
@@ -97,6 +102,7 @@ public class menu_json extends AsyncTask<URL, Void, ArrayList<ArrayList<String>>
 
         try
         {
+            //This downloads the json from the web
             InputStream inputStream = (InputStream) url.getContent();
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
 
@@ -120,6 +126,7 @@ public class menu_json extends AsyncTask<URL, Void, ArrayList<ArrayList<String>>
         }
         catch (Exception e)
         {
+            //If there is no internet connection it attempts to get existing json from the phone
             try
             {
                 fileInputStream = new FileInputStream(item);
@@ -175,6 +182,7 @@ public class menu_json extends AsyncTask<URL, Void, ArrayList<ArrayList<String>>
     {
         String result = "";
 
+        //This gets the file to read
         ContextWrapper contextWrapper = new ContextWrapper(menuActivity);
         File file = contextWrapper.getDir("JSON", Context.MODE_PRIVATE);
 
@@ -196,6 +204,7 @@ public class menu_json extends AsyncTask<URL, Void, ArrayList<ArrayList<String>>
 
         try
         {
+            //This trys to read the data from the phone
             fileInputStream = new FileInputStream(item);
 
             Integer size = fileInputStream.available();
@@ -210,6 +219,7 @@ public class menu_json extends AsyncTask<URL, Void, ArrayList<ArrayList<String>>
         }
         catch(Exception e)
         {
+            //This will download the data if it does not exist
             try
             {
                 InputStream inputStream = (InputStream) url.getContent();
@@ -278,6 +288,7 @@ public class menu_json extends AsyncTask<URL, Void, ArrayList<ArrayList<String>>
         {
             JSONObject jsonObject = new JSONObject(result).getJSONObject(key);
 
+            //This determins what kind of json is being read and acts accordingly
             for (String string : arguments)
             {
                 Object item = jsonObject.get(string);
@@ -309,6 +320,7 @@ public class menu_json extends AsyncTask<URL, Void, ArrayList<ArrayList<String>>
     {
         ArrayList<String> resultList = new ArrayList<>();
 
+        //This downloads a single array from json
         try
         {
             JSONArray jsonArray = new JSONObject(result).getJSONArray(argument);
@@ -327,6 +339,7 @@ public class menu_json extends AsyncTask<URL, Void, ArrayList<ArrayList<String>>
     {
         ArrayList<String> resultList = new ArrayList<>();
 
+        //This downloads the entire json object which may contain further objects
         try
         {
             for (Integer i = 0; i < jsonArray.length(); i++)
@@ -347,6 +360,7 @@ public class menu_json extends AsyncTask<URL, Void, ArrayList<ArrayList<String>>
         return resultList;
     }
 
+    //This deals with a single object
     private ArrayList<String> SingleObject(Object item)
     {
         ArrayList<String> resultList = new ArrayList<>();

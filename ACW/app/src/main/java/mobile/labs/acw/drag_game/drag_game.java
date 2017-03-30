@@ -42,11 +42,13 @@ public class drag_game extends SurfaceView implements SurfaceHolder.Callback
 
     private square_object movingSquare;
 
+    //Please see click_game for comments code is similar with minor changes
     public drag_game(Context context)
     {
         super(context);
     }
 
+    //Please see click_game for comments code is similar with minor changes
     public drag_game(Context context, puzzle_object inPuzzle, ArrayList<image_object> inImageArray, RelativeLayout inRelativeLayout)
     {
         super(context);
@@ -62,6 +64,7 @@ public class drag_game extends SurfaceView implements SurfaceHolder.Callback
         Initialise();
     }
 
+    //Please see click_game for comments code is similar with minor changes
     private ArrayList<Bitmap> GetBitmapImageArray(ArrayList<image_object> inImageArray)
     {
         ArrayList<Bitmap> imageArrayBitmapArray = new ArrayList<>();
@@ -74,6 +77,7 @@ public class drag_game extends SurfaceView implements SurfaceHolder.Callback
         return imageArrayBitmapArray;
     }
 
+    //Please see click_game for comments code is similar with minor changes
     private void Initialise()
     {
         Integer rows = Integer.valueOf(puzzle.GetRows());
@@ -118,6 +122,7 @@ public class drag_game extends SurfaceView implements SurfaceHolder.Callback
         previousPosition = new two_dimensional_vector_object(-1, -1);
     }
 
+    //Please see click_game for comments code is similar with minor changes
     private void SetScaledImageArray(two_dimensional_vector_object size)
     {
         Bitmap image;
@@ -150,11 +155,13 @@ public class drag_game extends SurfaceView implements SurfaceHolder.Callback
         }
     }
 
+    //Please see click_game for comments code is similar with minor changes
     private Bitmap ScaledBitmap(Bitmap image, two_dimensional_vector_object size)
     {
         return Bitmap.createScaledBitmap(image, size.GetX(), size.GetY(), false);
     }
 
+    //Please see click_game for comments code is similar with minor changes
     private void GetExistingSquares(Integer rows, Integer columns, two_dimensional_vector_object size)
     {
         for(Integer i = 0; i < rows; i++)
@@ -204,6 +211,7 @@ public class drag_game extends SurfaceView implements SurfaceHolder.Callback
         }
     }
 
+    //Please see click_game for comments code is similar with minor changes
     private void GetSquares(Integer rows, Integer columns, two_dimensional_vector_object size)
     {
         dragGameActivity.layout = GetLayout(puzzle.GetLayout());
@@ -223,6 +231,7 @@ public class drag_game extends SurfaceView implements SurfaceHolder.Callback
         }
     }
 
+    //Please see click_game for comments code is similar with minor changes
     private ArrayList<Integer> GetLayout(ArrayList<String> layout)
     {
         ArrayList<Integer> layoutIntegerArray = new ArrayList<>();
@@ -235,24 +244,28 @@ public class drag_game extends SurfaceView implements SurfaceHolder.Callback
         return layoutIntegerArray;
     }
 
+    //Please see click_game for comments code is similar with minor changes
     @Override
     public void surfaceChanged(SurfaceHolder surfaceHolder, int format, int width, int height)
     {
 
     }
 
+    //Please see click_game for comments code is similar with minor changes
     @Override
     public void surfaceCreated(SurfaceHolder surfaceHolder)
     {
         InitialiseThread();
     }
 
+    //Please see click_game for comments code is similar with minor changes
     @Override
     public void surfaceDestroyed(SurfaceHolder surfaceHolder)
     {
         dragGameActivity.KillThreads();
     }
 
+    //Please see click_game for comments code is similar with minor changes
     private void InitialiseThread()
     {
         dragGameActivity.initialiseThread = new Thread(new Runnable()
@@ -292,6 +305,7 @@ public class drag_game extends SurfaceView implements SurfaceHolder.Callback
         dragGameActivity.initialiseThread.start();
     }
 
+    //Please see click_game for comments code is similar with minor changes
     private void DrawThread()
     {
         dragGameActivity.drawThread = new Thread(new Runnable()
@@ -317,6 +331,7 @@ public class drag_game extends SurfaceView implements SurfaceHolder.Callback
         dragGameActivity.drawThread.start();
     }
 
+    //Please see click_game for comments code is similar with minor changes
     private void ChangeAllImages()
     {
         for(Integer i = 0; i < dragGameActivity.squares.size(); i++)
@@ -365,6 +380,7 @@ public class drag_game extends SurfaceView implements SurfaceHolder.Callback
                     canvas.drawBitmap(currentSquareObject.GetImage(), currentPositionX, currentPositionY, paint);
                 }
 
+                //This draws the moving square on top of the other squares
                 if(movingSquare != null)
                 {
                     Bitmap movingSquareImage = movingSquare.GetImage();
@@ -381,6 +397,7 @@ public class drag_game extends SurfaceView implements SurfaceHolder.Callback
                 Integer moveRow = moveSquareSquare.GetX();
                 Integer moveColumn = moveSquareSquare.GetY();
 
+                //This draws the moving square on top of the other squares
                 if((moveRow != -1 && moveColumn != -1))
                 {
                     square_object moveSquare = dragGameActivity.squares.get(moveRow).get(moveColumn);
@@ -415,6 +432,7 @@ public class drag_game extends SurfaceView implements SurfaceHolder.Callback
         Integer moveRow = dragGameActivity.moveSquare.GetSquare().GetX();
         Integer moveColumn = dragGameActivity.moveSquare.GetSquare().GetY();
 
+        //This responds to a down event
         if(motionEvent.getAction() == MotionEvent.ACTION_DOWN)
         {
             if(!selectionBoolean)
@@ -428,6 +446,7 @@ public class drag_game extends SurfaceView implements SurfaceHolder.Callback
             }
         }
 
+        //This responds to a move event
         if(motionEvent.getAction() == MotionEvent.ACTION_MOVE)
         {
             if(!selectionBoolean)
@@ -441,6 +460,7 @@ public class drag_game extends SurfaceView implements SurfaceHolder.Callback
             }
         }
 
+        //This responds to a up event
         if(motionEvent.getAction() == MotionEvent.ACTION_UP)
         {
             if(!selectionBoolean)
@@ -450,6 +470,7 @@ public class drag_game extends SurfaceView implements SurfaceHolder.Callback
                     ActionUpEvent(x, y, highlightedRow, highlightedColumn, moveRow, moveColumn);
                 }
 
+                //This resets the positions for dragging a card
                 if(previousPosition.GetX() != -1 || previousPosition.GetY() != -1)
                 {
                     previousPosition = new two_dimensional_vector_object(-1, -1);
@@ -462,6 +483,7 @@ public class drag_game extends SurfaceView implements SurfaceHolder.Callback
         return false;
     }
 
+    //This initialises everything to begin moving squares
     private void BeginMove(Float x, Float y)
     {
         Integer length = dragGameActivity.squares.size();
@@ -477,6 +499,7 @@ public class drag_game extends SurfaceView implements SurfaceHolder.Callback
         }
     }
 
+    //This sets the current square that is being dragged
     private void DownCheckEachSquare(Float x, Float y, Integer i, Integer j, ArrayList<square_object> currentRow)
     {
         square_object currentSquare = currentRow.get(j);
@@ -494,6 +517,7 @@ public class drag_game extends SurfaceView implements SurfaceHolder.Callback
         }
     }
 
+    //This moves the current square being dragged to the distance between where the event is now and where it was before
     private void MoveSquare(Float x, Float y, Integer moveRow, Integer moveColumn)
     {
         square_object moveSquare = dragGameActivity.squares.get(moveRow).get(moveColumn);
@@ -517,6 +541,7 @@ public class drag_game extends SurfaceView implements SurfaceHolder.Callback
         }
     }
 
+    //This is called on an action up event
     private void ActionUpEvent(Float x, Float y, Integer highlightedRow, Integer highlightedColumn, Integer moveRow, Integer moveColumn)
     {
         square_object moveSquare = dragGameActivity.squares.get(moveRow).get(moveColumn);
@@ -543,6 +568,7 @@ public class drag_game extends SurfaceView implements SurfaceHolder.Callback
         }
     }
 
+    //This checks to see if two squares should be swapped
     private void SwapCheck(Float x, Float y, Integer moveRow, Integer moveColumn, Integer length, square_object moveSquare, two_dimensional_vector_object moveSquarePosition)
     {
         for (Integer i = 0; i < length; i++)
@@ -561,6 +587,7 @@ public class drag_game extends SurfaceView implements SurfaceHolder.Callback
         SquareMoveThread(moveSquare, moveSquare.GetPosition(), moveSquarePosition, moveSquarePosition);
     }
 
+    //This checks to see if the current square should be swapped
     private Boolean UpSwapCheckEachSquare(Float x, Float y, Integer moveRow, Integer moveColumn, square_object moveSquare, two_dimensional_vector_object moveSquarePosition, Integer i, Integer j, ArrayList<square_object> currentRow)
     {
         square_object currentSquare = currentRow.get(j);
@@ -595,11 +622,13 @@ public class drag_game extends SurfaceView implements SurfaceHolder.Callback
         return false;
     }
 
+    //This checks to see if the cards are adjacent to each other
     private boolean CheckAdjacentConnection(Integer currentSquareX, Integer currentSquareY, Integer selectionSquareX, Integer selectionSquareY)
     {
         return selectionSquareX.equals(currentSquareX) && ((selectionSquareY == (currentSquareY + 1)) || (selectionSquareY == (currentSquareY - 1))) || (selectionSquareY.equals(currentSquareY) && ((selectionSquareX == (currentSquareX + 1)) || (selectionSquareX == (currentSquareX - 1))));
     }
 
+    //This moves the two squares to eachothers positions and then moves them back again
     private void SquareMoveThread(final square_object square, final two_dimensional_vector_object startPosition, final two_dimensional_vector_object endPosition, final two_dimensional_vector_object resetPosition)
     {
         final Thread currentThread = new Thread(new Runnable()
@@ -609,16 +638,19 @@ public class drag_game extends SurfaceView implements SurfaceHolder.Callback
             {
                 Bitmap squareImage = square.GetImage();
 
+                //This stops disallowed swaps
                 if(squareImage == cardBack || squareImage == cardBackHighlighted)
                 {
                     MoveSquare(square, startPosition, endPosition);
                 }
 
+                //This resets positions
                 square.SetPosition(resetPosition);
 
                 Reset(Thread.currentThread());
             }
 
+            //This moves the square from its previous position to its destined location
             private void MoveSquare(square_object square, two_dimensional_vector_object startPosition, two_dimensional_vector_object endPosition)
             {
                 two_dimensional_vector_object moveAmount = new two_dimensional_vector_object((endPosition.GetX() - startPosition.GetX()) / 30, (endPosition.GetY() - startPosition.GetY()) / 30);
@@ -646,6 +678,7 @@ public class drag_game extends SurfaceView implements SurfaceHolder.Callback
         currentThread.start();
     }
 
+    //This resets all variables associated with the click events
     private void Reset(Thread currentThread)
     {
         if(movingSquare != null)
@@ -690,6 +723,7 @@ public class drag_game extends SurfaceView implements SurfaceHolder.Callback
         }
     }
 
+    //Please see click_game for comments code is similar with minor changes
     private Boolean UpSelectionCheckEachSquare(Float x, Float y, Integer highlightedRow, Integer highlightedColumn, Integer length, Integer i, Integer j, ArrayList<square_object> currentRow)
     {
         square_object currentSquare = currentRow.get(j);
@@ -729,6 +763,7 @@ public class drag_game extends SurfaceView implements SurfaceHolder.Callback
         return false;
     }
 
+    //Please see click_game for comments code is similar with minor changes
     private void FirstSelection(Integer i, Integer j, square_object currentSquare)
     {
         SetCardImageToHighlight(currentSquare);
@@ -737,6 +772,7 @@ public class drag_game extends SurfaceView implements SurfaceHolder.Callback
         dragGameActivity.highlightedSquare.SetY(j);
     }
 
+    //Please see click_game for comments code is similar with minor changes
     private void ResetSelection(square_object currentSquare)
     {
         SetCardImageToCard(currentSquare);
@@ -744,6 +780,7 @@ public class drag_game extends SurfaceView implements SurfaceHolder.Callback
         ResetSquares();
     }
 
+    //Please see click_game for comments code is similar with minor changes
     private Boolean SecondSelectionCheck(Integer i, Integer j, square_object currentSquare, Integer highlightedRow, Integer highlightedColumn, Integer length)
     {
         selectionBoolean = true;
@@ -782,18 +819,20 @@ public class drag_game extends SurfaceView implements SurfaceHolder.Callback
         return false;
     }
 
+    //Please see click_game for comments code is similar with minor changes
     private void ResetSquares()
     {
         dragGameActivity.highlightedSquare.SetX(-1);
         dragGameActivity.highlightedSquare.SetY(-1);
     }
 
-    private Boolean CheckAndUpdateMatch(square_object currentSquareobject, square_object highlightedSquare)
+    //Please see click_game for comments code is similar with minor changes
+    private Boolean CheckAndUpdateMatch(square_object currentSquareObject, square_object highlightedSquare)
     {
         Integer highlightSquareImagePosition = highlightedSquare.GetImagePosition();
-        Integer currentSquareImagePosition = currentSquareobject.GetImagePosition();
+        Integer currentSquareImagePosition = currentSquareObject.GetImagePosition();
 
-        SetSquaresToLayoutImages(currentSquareobject, currentSquareImagePosition, highlightedSquare, highlightSquareImagePosition);
+        SetSquaresToLayoutImages(currentSquareObject, currentSquareImagePosition, highlightedSquare, highlightSquareImagePosition);
 
         if(highlightSquareImagePosition.equals(currentSquareImagePosition))
         {
@@ -807,34 +846,37 @@ public class drag_game extends SurfaceView implements SurfaceHolder.Callback
         {
             UpdateScore();
 
-            ToResetSquaresImages(highlightedSquare, currentSquareobject);
+            ToResetSquaresImages(highlightedSquare, currentSquareObject);
 
             return Return(false);
         }
     }
 
-    private void SetSquaresToLayoutImages(square_object currentSquareobject, Integer currentSquareImagePosition, square_object highlightedSquare, Integer highlightSquareImagePosition)
+    //Please see click_game for comments code is similar with minor changes
+    private void SetSquaresToLayoutImages(square_object currentSquareObject, Integer currentSquareImagePosition, square_object highlightedSquare, Integer highlightSquareImagePosition)
     {
         SetSquareToLayoutImage(highlightedSquare, highlightSquareImagePosition);
-        SetSquareToLayoutImage(currentSquareobject, currentSquareImagePosition);
+        SetSquareToLayoutImage(currentSquareObject, currentSquareImagePosition);
     }
 
-    private void SetSquareToLayoutImage(square_object squareobject, Integer position)
+    //Please see click_game for comments code is similar with minor changes
+    private void SetSquareToLayoutImage(square_object squareObject, Integer position)
     {
-        SetCardImageToFace(squareobject, position);
+        SetCardImageToFace(squareObject, position);
     }
 
-    private void ToResetSquaresImages(final square_object highlightedSquare, final square_object currentSquareobject)
+    //Please see click_game for comments code is similar with minor changes
+    private void ToResetSquaresImages(final square_object highlightedSquare, final square_object currentSquareObject)
     {
         dragGameActivity.updateThread = new Thread(new Runnable()
         {
             @Override
             public void run()
             {
-                ResetSquaresImages(highlightedSquare, currentSquareobject);
+                ResetSquaresImages(highlightedSquare, currentSquareObject);
             }
 
-            private void ResetSquaresImages(square_object previouslyHighlightedSquareobject, square_object currentSquareobject)
+            private void ResetSquaresImages(square_object previouslyHighlightedSquareObject, square_object currentSquareObject)
             {
                 try
                 {
@@ -845,8 +887,8 @@ public class drag_game extends SurfaceView implements SurfaceHolder.Callback
                     e.printStackTrace();
                 }
 
-                ResetSquareImage(previouslyHighlightedSquareobject);
-                ResetSquareImage(currentSquareobject);
+                ResetSquareImage(previouslyHighlightedSquareObject);
+                ResetSquareImage(currentSquareObject);
 
                 selectionBoolean = false;
             }
@@ -855,29 +897,34 @@ public class drag_game extends SurfaceView implements SurfaceHolder.Callback
         dragGameActivity.updateThread.start();
     }
 
-    private void ResetSquareImage(square_object squareobject)
+    //Please see click_game for comments code is similar with minor changes
+    private void ResetSquareImage(square_object squareObject)
     {
-        SetCardImageToCard(squareobject);
+        SetCardImageToCard(squareObject);
     }
 
-    private void SetCardImageToHighlight(square_object squareobject)
+    //Please see click_game for comments code is similar with minor changes
+    private void SetCardImageToHighlight(square_object squareObject)
     {
-        squareobject.SetImage(cardBackHighlighted);
-        squareobject.SetImageState(highlightImage);
+        squareObject.SetImage(cardBackHighlighted);
+        squareObject.SetImageState(highlightImage);
     }
 
-    private void SetCardImageToCard(square_object squareobject)
+    //Please see click_game for comments code is similar with minor changes
+    private void SetCardImageToCard(square_object squareObject)
     {
-        squareobject.SetImage(cardBack);
-        squareobject.SetImageState(cardImage);
+        squareObject.SetImage(cardBack);
+        squareObject.SetImageState(cardImage);
     }
 
-    private void SetCardImageToFace(square_object squareobject, Integer position)
+    //Please see click_game for comments code is similar with minor changes
+    private void SetCardImageToFace(square_object squareObject, Integer position)
     {
-        squareobject.SetImage(imageArray.get(position));
-        squareobject.SetImageState(faceImage);
+        squareObject.SetImage(imageArray.get(position));
+        squareObject.SetImageState(faceImage);
     }
 
+    //Please see click_game for comments code is similar with minor changes
     private void UpdateScoreAttempts()
     {
         dragGameActivity.correctAttempts++;
@@ -885,6 +932,7 @@ public class drag_game extends SurfaceView implements SurfaceHolder.Callback
         UpdateScore();
     }
 
+    //Please see click_game for comments code is similar with minor changes
     private void UpdateScore()
     {
         dragGameActivity.attempts++;
@@ -896,6 +944,7 @@ public class drag_game extends SurfaceView implements SurfaceHolder.Callback
         dragGameActivity.SetScoreTextView();
     }
 
+    //Please see click_game for comments code is similar with minor changes
     private Boolean Return(Boolean returnBool)
     {
         ResetSquares();

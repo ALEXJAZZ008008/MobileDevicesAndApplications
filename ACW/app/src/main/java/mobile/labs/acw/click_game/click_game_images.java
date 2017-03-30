@@ -10,6 +10,7 @@ import java.io.FileInputStream;
 import java.net.URL;
 import mobile.labs.acw.objects.image_object;
 
+//Please see menu_images for comments code is similar with minor changes
 public class click_game_images extends AsyncTask<URL, Void, Bitmap>
 {
     private click_game_activity clickGameActivity;

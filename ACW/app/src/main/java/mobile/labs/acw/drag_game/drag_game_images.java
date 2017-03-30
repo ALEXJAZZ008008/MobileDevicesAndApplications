@@ -10,18 +10,19 @@ import java.io.FileInputStream;
 import java.net.URL;
 import mobile.labs.acw.objects.image_object;
 
+//Please see click_game_images for comments code is similar with minor changes
 public class drag_game_images extends AsyncTask<URL, Void, Bitmap>
 {
     private drag_game_activity dragGameActivity;
 
-    private image_object imageobject;
+    private image_object imageObject;
     private String fileName, itemName;
 
     public drag_game_images(Context context, image_object inImage, String inFileName, String inItemName)
     {
         dragGameActivity = (drag_game_activity)context;
 
-        imageobject = inImage;
+        imageObject = inImage;
 
         fileName = inFileName;
         itemName = inItemName;
@@ -50,7 +51,7 @@ public class drag_game_images extends AsyncTask<URL, Void, Bitmap>
 
     protected void onPostExecute(Bitmap bitmap)
     {
-        imageobject.SetBitmap(bitmap);
-        imageobject.SetBitmapBoolean(true);
+        imageObject.SetBitmap(bitmap);
+        imageObject.SetBitmapBoolean(true);
     }
 }

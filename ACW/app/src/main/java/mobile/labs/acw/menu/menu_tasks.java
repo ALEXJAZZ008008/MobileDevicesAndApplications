@@ -40,6 +40,7 @@ public class menu_tasks extends AsyncTask<String, Void, String>
 
     protected String doInBackground(String... args)
     {
+        //This selects the correct task
         switch(args[0])
         {
             case "StartList":
@@ -61,6 +62,7 @@ public class menu_tasks extends AsyncTask<String, Void, String>
         return args[0];
     }
 
+    //This starts the puzzle list
     private void StartList()
     {
         GoToJSON("null", new String[] { "PuzzleIndex" }, parentURL + indexURL);
@@ -77,6 +79,7 @@ public class menu_tasks extends AsyncTask<String, Void, String>
         jsonArrays.clear();
     }
 
+    //This downloads a given puzzle
     private void GetPuzzle(String arg)
     {
         puzzle_list_item_object puzzleListItem = puzzleList.get(Integer.valueOf(arg));
@@ -85,16 +88,16 @@ public class menu_tasks extends AsyncTask<String, Void, String>
 
         WaitForJSON();
 
-        puzzle_object puzzleobject = puzzleList.get(Integer.valueOf(arg)).GetPuzzle();
+        puzzle_object puzzleObject = puzzleList.get(Integer.valueOf(arg)).GetPuzzle();
 
         ArrayList<String> layoutList = new ArrayList<>();
 
-        puzzleobject.SetPictureSet(jsonArrays.get(1).get(0).split(jsonExtension)[0]);
+        puzzleObject.SetPictureSet(jsonArrays.get(1).get(0).split(jsonExtension)[0]);
 
         GoToTasks(new String[] { "GetPuzzleImages", arg });
 
-        puzzleobject.SetId(jsonArrays.get(0).get(0));
-        puzzleobject.SetRows(jsonArrays.get(2).get(0));
+        puzzleObject.SetId(jsonArrays.get(0).get(0));
+        puzzleObject.SetRows(jsonArrays.get(2).get(0));
 
         ArrayList<String> currentArray = jsonArrays.get(3);
 
@@ -105,16 +108,16 @@ public class menu_tasks extends AsyncTask<String, Void, String>
 
         jsonArrays.clear();
 
-        puzzleobject.SetLayout(layoutList);
+        puzzleObject.SetLayout(layoutList);
 
-        String Id = puzzleobject.GetId();
+        String Id = puzzleObject.GetId();
 
         preferences.WriteString(menuActivity, puzzleListItem.GetTitle(), Id);
 
-        preferences.WriteString(menuActivity, Id + "PictureSet", puzzleobject.GetPictureSet());
-        preferences.WriteString(menuActivity, Id + "Rows", puzzleobject.GetRows());
+        preferences.WriteString(menuActivity, Id + "PictureSet", puzzleObject.GetPictureSet());
+        preferences.WriteString(menuActivity, Id + "Rows", puzzleObject.GetRows());
 
-        ArrayList<String> puzzleListItemPuzzleLayout = puzzleobject.GetLayout();
+        ArrayList<String> puzzleListItemPuzzleLayout = puzzleObject.GetLayout();
 
         for(Integer j = 0; j < puzzleListItemPuzzleLayout.size(); j++)
         {
@@ -122,11 +125,12 @@ public class menu_tasks extends AsyncTask<String, Void, String>
         }
     }
 
+    //This downloads all the images for a given puzzle
     private void GetPuzzleImages(String arg)
     {
         puzzle_list_item_object puzzleListItem = puzzleList.get(Integer.valueOf(arg));
-        puzzle_object puzzleobject = puzzleListItem.GetPuzzle();
-        String pictureSet = puzzleobject.GetPictureSet();
+        puzzle_object puzzleObject = puzzleListItem.GetPuzzle();
+        String pictureSet = puzzleObject.GetPictureSet();
 
         GoToJSON("null", new String[] { "PictureFiles" }, parentURL + pictureSetsURL + pictureSet + jsonExtension);
 
@@ -156,6 +160,7 @@ public class menu_tasks extends AsyncTask<String, Void, String>
         preferences.WriteString(menuActivity, puzzleListItemPuzzleId + "state", puzzleListItem.GetState());
     }
 
+    //This gets the json for a given input
     private void GoToJSON(String key, String[] arguments, String url)
     {
         try
@@ -168,6 +173,7 @@ public class menu_tasks extends AsyncTask<String, Void, String>
         }
     }
 
+    //This ensures all relevant json is downloaded before continuing
     private void WaitForJSON()
     {
         while (jsonArrays.size() == 0)
@@ -188,6 +194,7 @@ public class menu_tasks extends AsyncTask<String, Void, String>
         new menu_tasks(menuActivity, puzzleList).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, taskArgs);
     }
 
+    //This starts the image task
     private void GoToImages(Integer i, String fileName, String itemName, String url)
     {
         try
@@ -200,6 +207,7 @@ public class menu_tasks extends AsyncTask<String, Void, String>
         }
     }
 
+    //This waits for all images to be downloaded
     private void WaitForImages(Integer length)
     {
         for(Integer i = 0; i < length; i++)

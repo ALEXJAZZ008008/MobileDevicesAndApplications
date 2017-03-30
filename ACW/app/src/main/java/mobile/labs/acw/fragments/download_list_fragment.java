@@ -44,10 +44,12 @@ public class download_list_fragment extends Fragment
 
     private void StartList()
     {
+        //This starts the list in the download fragment
         menuActivity.downloadCustomAdapter = new custom_adapter(menuActivity, menuActivity.downloadPuzzleList);
 
         menuActivity.downloadListView.setAdapter(menuActivity.downloadCustomAdapter);
 
+        //This is the listener for a click event on the download list
         menuActivity.downloadListView.setOnItemClickListener(new AdapterView.OnItemClickListener()
         {
             @Override
@@ -58,6 +60,7 @@ public class download_list_fragment extends Fragment
         });
     }
 
+    //This checks for an internet connection
     private void GoToInternetCheck(Integer position)
     {
         try

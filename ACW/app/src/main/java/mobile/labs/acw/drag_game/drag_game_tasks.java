@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import mobile.labs.acw.objects.image_object;
 import mobile.labs.acw.objects.puzzle_object;
 
+//Please see click_game_tasks for comments code is similar with minor changes
 public class drag_game_tasks extends AsyncTask<puzzle_object, Void, puzzle_object>
 {
     private drag_game_activity dragGameActivity;
@@ -141,9 +142,9 @@ public class drag_game_tasks extends AsyncTask<puzzle_object, Void, puzzle_objec
         }
     }
 
-    protected void onPostExecute(puzzle_object puzzleobject)
+    protected void onPostExecute(puzzle_object puzzleObject)
     {
-        if(puzzleobject != null)
+        if(puzzleObject != null)
         {
             dragGameActivity.length = length;
         }

@@ -30,6 +30,7 @@ public class main_internet_check extends AsyncTask<Void, Void, Boolean>
         {
             try
             {
+                //This pings google
                 URL url = new URL("http://www.google.com/");
 
                 HttpURLConnection httpURLConnection = (HttpURLConnection)url.openConnection();
@@ -38,6 +39,7 @@ public class main_internet_check extends AsyncTask<Void, Void, Boolean>
                 httpURLConnection.setConnectTimeout(1000); // mTimeout is in seconds
                 httpURLConnection.connect();
 
+                //This returns the result of pinging google
                 return (httpURLConnection.getResponseCode() == 200);
             }
             catch(Exception e)
