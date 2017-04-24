@@ -1,10 +1,18 @@
 [
     {
+        "merged": "Z:\\Mobile Devices and Applications\\Week3\\Lab_3_2_PirateJokesWithStaticFragments\\app\\build\\intermediates\\res\\merged\\debug\\color-v11\\abc_background_cache_hint_selector_material_light.xml",
+        "source": "Z:\\Mobile Devices and Applications\\Week3\\Lab_3_2_PirateJokesWithStaticFragments\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.1\\res\\color-v11\\abc_background_cache_hint_selector_material_light.xml"
+    },
+    {
         "merged": "C:\\Week3\\Lab_3_2_PirateJokesWithStaticFragments\\app\\build\\intermediates\\res\\merged\\debug\\color-v11\\abc_background_cache_hint_selector_material_dark.xml",
         "source": "C:\\Week3\\Lab_3_2_PirateJokesWithStaticFragments\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.1\\res\\color-v11\\abc_background_cache_hint_selector_material_dark.xml"
     },
     {
         "merged": "C:\\Week3\\Lab_3_2_PirateJokesWithStaticFragments\\app\\build\\intermediates\\res\\merged\\debug\\color-v11\\abc_background_cache_hint_selector_material_light.xml",
         "source": "C:\\Week3\\Lab_3_2_PirateJokesWithStaticFragments\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.1\\res\\color-v11\\abc_background_cache_hint_selector_material_light.xml"
+    },
+    {
+        "merged": "Z:\\Mobile Devices and Applications\\Week3\\Lab_3_2_PirateJokesWithStaticFragments\\app\\build\\intermediates\\res\\merged\\debug\\color-v11\\abc_background_cache_hint_selector_material_dark.xml",
+        "source": "Z:\\Mobile Devices and Applications\\Week3\\Lab_3_2_PirateJokesWithStaticFragments\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.1\\res\\color-v11\\abc_background_cache_hint_selector_material_dark.xml"
     }
 ]
