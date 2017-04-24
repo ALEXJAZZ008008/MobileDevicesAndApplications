@@ -1,5 +1,9 @@
 [
     {
+        "merged": "Z:\\Mobile Devices and Applications\\Week3\\Lab_3_2_PirateJokesWithStaticFragments\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_launcher.png",
+        "source": "Z:\\Mobile Devices and Applications\\Week3\\Lab_3_2_PirateJokesWithStaticFragments\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
         "merged": "C:\\Week3\\Lab_3_2_PirateJokesWithStaticFragments\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_launcher.png",
         "source": "C:\\Week3\\Lab_3_2_PirateJokesWithStaticFragments\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
     }

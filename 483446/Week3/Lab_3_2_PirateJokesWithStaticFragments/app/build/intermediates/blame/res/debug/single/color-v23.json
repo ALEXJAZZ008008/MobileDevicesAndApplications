@@ -4,6 +4,14 @@
         "source": "C:\\Week3\\Lab_3_2_PirateJokesWithStaticFragments\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.1\\res\\color-v23\\abc_tint_switch_thumb.xml"
     },
     {
+        "merged": "Z:\\Mobile Devices and Applications\\Week3\\Lab_3_2_PirateJokesWithStaticFragments\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_edittext.xml",
+        "source": "Z:\\Mobile Devices and Applications\\Week3\\Lab_3_2_PirateJokesWithStaticFragments\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.1\\res\\color-v23\\abc_tint_edittext.xml"
+    },
+    {
+        "merged": "Z:\\Mobile Devices and Applications\\Week3\\Lab_3_2_PirateJokesWithStaticFragments\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_color_highlight_material.xml",
+        "source": "Z:\\Mobile Devices and Applications\\Week3\\Lab_3_2_PirateJokesWithStaticFragments\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.1\\res\\color-v23\\abc_color_highlight_material.xml"
+    },
+    {
         "merged": "C:\\Week3\\Lab_3_2_PirateJokesWithStaticFragments\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_seek_thumb.xml",
         "source": "C:\\Week3\\Lab_3_2_PirateJokesWithStaticFragments\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.1\\res\\color-v23\\abc_tint_seek_thumb.xml"
     },
@@ -12,8 +20,20 @@
         "source": "C:\\Week3\\Lab_3_2_PirateJokesWithStaticFragments\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.1\\res\\color-v23\\abc_tint_spinner.xml"
     },
     {
+        "merged": "Z:\\Mobile Devices and Applications\\Week3\\Lab_3_2_PirateJokesWithStaticFragments\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_btn_checkable.xml",
+        "source": "Z:\\Mobile Devices and Applications\\Week3\\Lab_3_2_PirateJokesWithStaticFragments\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.1\\res\\color-v23\\abc_tint_btn_checkable.xml"
+    },
+    {
         "merged": "C:\\Week3\\Lab_3_2_PirateJokesWithStaticFragments\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_switch_track.xml",
         "source": "C:\\Week3\\Lab_3_2_PirateJokesWithStaticFragments\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.1\\res\\color-v23\\abc_tint_switch_track.xml"
+    },
+    {
+        "merged": "Z:\\Mobile Devices and Applications\\Week3\\Lab_3_2_PirateJokesWithStaticFragments\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_btn_colored_borderless_text_material.xml",
+        "source": "Z:\\Mobile Devices and Applications\\Week3\\Lab_3_2_PirateJokesWithStaticFragments\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.1\\res\\color-v23\\abc_btn_colored_borderless_text_material.xml"
+    },
+    {
+        "merged": "Z:\\Mobile Devices and Applications\\Week3\\Lab_3_2_PirateJokesWithStaticFragments\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_seek_thumb.xml",
+        "source": "Z:\\Mobile Devices and Applications\\Week3\\Lab_3_2_PirateJokesWithStaticFragments\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.1\\res\\color-v23\\abc_tint_seek_thumb.xml"
     },
     {
         "merged": "C:\\Week3\\Lab_3_2_PirateJokesWithStaticFragments\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_default.xml",
@@ -28,11 +48,27 @@
         "source": "C:\\Week3\\Lab_3_2_PirateJokesWithStaticFragments\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.1\\res\\color-v23\\abc_color_highlight_material.xml"
     },
     {
+        "merged": "Z:\\Mobile Devices and Applications\\Week3\\Lab_3_2_PirateJokesWithStaticFragments\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_switch_track.xml",
+        "source": "Z:\\Mobile Devices and Applications\\Week3\\Lab_3_2_PirateJokesWithStaticFragments\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.1\\res\\color-v23\\abc_tint_switch_track.xml"
+    },
+    {
+        "merged": "Z:\\Mobile Devices and Applications\\Week3\\Lab_3_2_PirateJokesWithStaticFragments\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_switch_thumb.xml",
+        "source": "Z:\\Mobile Devices and Applications\\Week3\\Lab_3_2_PirateJokesWithStaticFragments\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.1\\res\\color-v23\\abc_tint_switch_thumb.xml"
+    },
+    {
         "merged": "C:\\Week3\\Lab_3_2_PirateJokesWithStaticFragments\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_btn_colored_borderless_text_material.xml",
         "source": "C:\\Week3\\Lab_3_2_PirateJokesWithStaticFragments\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.1\\res\\color-v23\\abc_btn_colored_borderless_text_material.xml"
     },
     {
+        "merged": "Z:\\Mobile Devices and Applications\\Week3\\Lab_3_2_PirateJokesWithStaticFragments\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_default.xml",
+        "source": "Z:\\Mobile Devices and Applications\\Week3\\Lab_3_2_PirateJokesWithStaticFragments\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.1\\res\\color-v23\\abc_tint_default.xml"
+    },
+    {
         "merged": "C:\\Week3\\Lab_3_2_PirateJokesWithStaticFragments\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_btn_checkable.xml",
         "source": "C:\\Week3\\Lab_3_2_PirateJokesWithStaticFragments\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.1\\res\\color-v23\\abc_tint_btn_checkable.xml"
+    },
+    {
+        "merged": "Z:\\Mobile Devices and Applications\\Week3\\Lab_3_2_PirateJokesWithStaticFragments\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_spinner.xml",
+        "source": "Z:\\Mobile Devices and Applications\\Week3\\Lab_3_2_PirateJokesWithStaticFragments\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.1\\res\\color-v23\\abc_tint_spinner.xml"
     }
 ]
